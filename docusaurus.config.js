@@ -43,16 +43,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/hashdata-org/docs/tree/main/',
-            // 'https://github.com/hashdata-org/docs/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/hashdata-org/docs/tree/master/'
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/hashdata-org/docs/tree/main/',
-            // 'https://github.com/hashdata-org/docs/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/hashdata-org/docs/tree/master/'
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -65,7 +63,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/hashdata-social-card.webp',
       navbar: {
         title: 'Hashdata\'s Documentation',
         logo: {
@@ -90,42 +88,38 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Web',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
+                label: 'Main home page',
+                to: 'https://www.hashdata.app',
+              }
             ],
           },
           {
-            title: 'Community',
+            title: 'Apps',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Android App',
+                to: 'https://play.google.com/store/apps/details?id=br.com.hashdata.mobileapp',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'iOS App (Apple)',
+                to: 'https://itunes.apple.com/br/app/hashdata/id1379827155?ls=1&mt=8',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
+                label: 'Forms Web App',
+                to: 'https://my.hashdata.app',
+              }
             ],
           },
           {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
+                label: 'YouTube',
+                to: 'https://www.youtube.com/@hashdata9298/videos',
+              }
             ],
           },
         ],
