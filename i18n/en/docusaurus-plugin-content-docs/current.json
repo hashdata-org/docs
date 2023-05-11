@@ -4,19 +4,19 @@
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.Tutorial - Basics": {
-    "message": "Tutorial - Basics (pt-BR)",
+    "message": "Tutorial - Basics",
     "description": "The label for category Tutorial - Basics in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Tutorial - Basics.link.generated-index.description": {
-    "message": "5 minutes to learn the most important Docusaurus concepts.  (pt-BR)",
+    "message": "5 minutes to learn the most important Docusaurus concepts.",
     "description": "The generated-index page description for category Tutorial - Basics in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Tutorial - Extras": {
-    "message": "Tutorial - Extras  (pt-BR)",
+    "message": "Tutorial - Extras",
     "description": "The label for category Tutorial - Extras in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Test-abc: label-json": {
-    "message": "Test-abc_BR: label-BR-json",
+  "sidebar.tutorialSidebar.category.Test-abc-BR: etiqueta-json": {
+    "message": "Test-abc: label-json",
     "description": "The label for category Test-abc: label-json in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Test-abc: label-json.link.generated-index.description": {
@@ -24,19 +24,11 @@
     "description": "The generated-index page description for category Test-abc: label-json in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Campo Calculado (Fórmulas)": {
-    "message": "Campo Calculado (Fórmulas)",
+    "message": "Script field (calculations)",
     "description": "The label for category Campo Calculado (Fórmulas) in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Campo Calculado (Fórmulas).link.generated-index.description": {
     "message": "Aprenda a criar campos calculados (fórmulas) para realizar cálculos com os dados de um formulário.",
     "description": "The generated-index page description for category Campo Calculado (Fórmulas) in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Test-abc-BR: etiqueta-json": {
-    "message": "Test-abc-BR: etiqueta-json",
-    "description": "The label for category Test-abc-BR: etiqueta-json in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Test-abc-BR: etiqueta-json.link.generated-index.description": {
-    "message": "Test-abc-br: descrição json",
-    "description": "The generated-index page description for category Test-abc-BR: etiqueta-json in sidebar tutorialSidebar"
   }
 }

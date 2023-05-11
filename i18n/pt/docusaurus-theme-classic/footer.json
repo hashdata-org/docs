@@ -1,7 +1,7 @@
 {
   "link.title.Apps": {
     "message": "Aplicativos",
-    "description": "The title of the footer links column with title=Aplicativos in the footer"
+    "description": "The title of the footer links column with title=Apps in the footer"
   },
   "link.title.Docs": {
     "message": "Docs",
