@@ -246,3 +246,32 @@ Somente as perguntas que aparecem antes deste elemento serão analisadas.
  Retorna "true" caso o valor informado seja "undefined", "null", [] ou uma string vazia.
 
 ## Exemplos
+
+Este é um exemplo: `código`.
+
+```typescritp
+function add(x, y) {
+   return x + y
+}
+```
+
+:::tip Isto é uma dica
+kdjshvkshv kjds
+sdvsdv
+:::
+
+:::info Isto é uma dica
+kdjshvkshv kjds
+sdvsdv
+:::
+
+:::caution ATENçao
+kjsdksjhfk j
+fwfelfw
+:::
+
+
+:::danger ATENçao
+kjsdksjhfk j
+fwfelfw
+:::
