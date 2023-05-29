@@ -1,8 +1,8 @@
 {
-  "label": "Campo Calculado (Fórmulas)",
+  "label": "Campo Calculado (Script)",
   "position": 5,
   "link": {
     "type": "generated-index",
-    "description": "Aprenda a criar campos calculados (fórmulas) para realizar cálculos com os dados de um formulário."
+    "description": "Aprenda a criar campos calculados (scripts) para realizar cálculos complexos com os dados de um formulário."
   }
 }

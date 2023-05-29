@@ -1,5 +1,5 @@
 
-# Campo Calculado (Fórmula Matemática)
+# Campo Calculado (Script)
 
 ## Introdução
 
@@ -102,7 +102,7 @@ Conteúdo textual da resposta, disponível para questões do tipo:
 
 :::tip Caracter "?" 
 O caracter "?" indica que o atributo é opcional, ou seja, ele pode ou não existir.
-Se o usuário responder a questão o atributo existirá, caso contrário, ele não existirá.
+Se o usuário responder à questão o atributo existirá, caso contrário, ele não existirá.
 :::
 
 ### label
@@ -164,11 +164,14 @@ Disponível apenas nas questões do tipo `Ordenação`
 
 ## Funções disponíveis
 
+As funções abaixo são ferramentas que auxiliam na criação de fórmulas, permitindo que você realize cálculos complexos
+em dezenas ou centenas de respostas com apenas uma linha de código.
 
 ### all
 `function all(): IResponse[];`
 
-Retorna uma lista (array) com todas as respostas existentes até o momento de execução do código, ou seja, as repostas das perguntas que aparecem antes deste elemento.
+Retorna uma lista (array) com todas as respostas existentes até o momento de execução do código, ou seja, 
+as repostas das perguntas que aparecem antes deste elemento.
 
 :::caution Atenção
 Note que nem sempre existirá resposta para uma pergunta posicionada antes da fórmula, pois as
@@ -185,7 +188,8 @@ Somente as perguntas que aparecem antes deste elemento serão analisadas.
 
 Exemplo:
 
-A função abaixo retorna a quantidade de respostas que possuem a tag `#peso`, ou seja, a quantidade de amostras preenchidas pelo usuário.
+A função abaixo retorna a quantidade de respostas que possuem a tag `#peso`, ou seja, 
+a quantidade de amostras preenchidas pelo usuário.
 
 ```typescript
 function calculateValue() {
@@ -202,6 +206,20 @@ Calcula a média dos valores numéricos das respostas que possuem as tags especi
 Respostas que não possuem valor numérico são ignoradas.
 
 Somente as perguntas que aparecem antes deste elemento serão analisadas.
+
+:::tip Dica
+Evite calcular médias de forma manual, pois se alguma das respostas estiver em branco (não preenchida) o resultado final 
+poderá diferir do esperado.
+
+Ex.: Se o você usar a seguinte fórmula para calcular a média de 3 pesos: `(peso1 + peso2 + peso3) / 3`, o resultado
+só será correto se todas as 3 amostras forem preenchidas. Caso contrário, o resultado será incorreto.
+
+Image que o usuário preencheu apenas 2 amostras, ou seja, `peso1` e `peso2`, e deixou a terceira amostra em branco,
+neste caso, o resultado da fórmula será: `(peso1 + peso2) / 3`, que é diferente do resultado correto: `(peso1 + peso2) / 2`.
+
+Para evitar esse tipo de situação, recomenda-se usar a função `avgByTag` para calcular a média, 
+pois ela trata adequadamente as respostas em branco, ou seja, o resultado será sempre correto.
+:::
 
 ### sumByTag
 `function sumByTag(...oneOrMoreTagNames: string[]): number;`
@@ -238,11 +256,113 @@ Somente as perguntas que aparecem antes deste elemento serão analisadas.
 ### hasContent
 `declare function hasContent(value: any): boolean;`
 
- Retorn "true" caso o valor informado seja diferente de "undefined", "null", [] ou uma string vazia.
+ Retorna `true` caso o valor informado seja diferente de `undefined`, `null`, `[]` ou uma string vazia (`''`).
 
 ### isEmpty
 `declare function isEmpty(value: any): boolean;`
 
- Retorna "true" caso o valor informado seja "undefined", "null", [] ou uma string vazia.
+ Retorna `true` caso o valor informado seja `undefined`, `null`, `[]` ou uma string vazia (`''`).
 
 ## Exemplos
+
+### Exemplo 1
+
+Neste exemplo iremos mostrar como calcular os valores da Fórmula de Bhaskara.
+O objetivo deste exemplo é mostrar como armazenar valores parciais em variáveis 
+e como usar esses valores para realizar cálculos mais complexos.
+
+Neste exemplo veremos, também, como usar funções matemáticas pré-definas, como `Math.sqrt` e `Math.pow`.
+
+Definição da fórmula de Bhaskara:
+
+![Fórmula de Bhaskara](./images/bhaskara.jpg)
+
+```typescript
+function calculateValue() {
+    let a = resp.a.number;
+    let b = resp.b.number;
+    let c = resp.c.number;
+    
+    let delta = Math.pow(b, 2) - 4 * a * c;
+    
+    let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+    let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+    return x1; // ou x2
+}
+```
+
+Onde:
+`Math.pow(b, 2)` é equivalente a `b²` <br/>
+`Math.sqrt(delta)` é equivalente a `√delta`
+
+### Exemplo 2
+
+Neste exemplo veremos como calcular a sequência de Fibonacci.
+O Objetivo deste exemplo é mostrar que é possível definir e usar funções diversas, inclusive funções recursivas,
+permitindo assim, a criação de cálculos mais complexos.
+
+```typescript
+function calculateValue() {
+    const n = resp.any_question_answer.number;
+    return fibonacci(n);
+}
+
+function fibonacci(n: number): number {
+    if (n <= 1) {
+        return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+```
+
+## Funções matemáticas pré-definidas
+
+| Name           | 	Description                                                                             |
+|----------------|------------------------------------------------------------------------------------------|
+| abs(x)	        | Retorna o valor absoluto de x                                                            |
+| acos(x)	       | Retorna o arco cosseno de x, em radianos                                                 |
+| acosh(x)	      | Retorna o arco cosseno hiperbólico de x                                                  |
+| asin(x)	       | Retorna o arco seno de x, em radianos                                                    |
+| asinh(x)	      | Retorna o arco-seno hiperbólico de x                                                     |
+| atan(x)	       | Retorna o arco tangente de x como um valor numérico entre -PI/2 e PI/2 radianos          |
+| atan2(y, x)	   | Retorna o arco tangente do quociente de seus argumentos                                  |
+| atanh(x)	      | Retorna o arco tangente hiperbólico de x                                                 |
+| cbrt(x)	       | Retorna a raiz cúbica de x                                                               |
+| ceil(x)	       | Retorna x, arredondado para cima para o inteiro mais próximo                             |
+| clz32(x)	      | Retorna o número de zeros à esquerda em uma representação binária de 32 bits de x        |
+| cos(x)	        | Retorna o cosseno de x (x está em radianos)                                              |
+| cosh(x)	       | Retorna o cosseno hiperbólico de x                                                       |
+| exp(x)	        | Retorna o valor de Ex                                                                    |
+| expm1(x)	      | Retorna o valor de Ex menos 1                                                            |
+| floor(x)	      | Retorna x, arredondado para baixo para o inteiro mais próximo                            |
+| fround(x)	     | Retorna a representação flutuante mais próxima (precisão única de 32 bits) de um número  |
+| log(x)	        | Retorna o logaritmo natural de x                                                         |
+| log10(x)	      | Retorna o logaritmo de base 10 de x                                                      |
+| log1p(x)	      | Retorna o logaritmo natural de 1 + x                                                     |
+| log2(x)	       | Retorna o logaritmo de base 2 de x                                                       |
+| max(x1,x2,..)	 | Retorna o número com o maior valor                                                       |
+| min(x1,x2,..)	 | Retorna o número com o menor valor                                                       |
+| pow(x, y)	     | Retorna o valor de x elevado a y                                                         |
+| random()	      | Retorna um número aleatório entre 0 e 1                                                  |
+| round(x)	      | Arredonda x para o inteiro mais próximo                                                  |
+| sign(x)	       | Retorna o sinal de um número (verifica se é positivo, negativo ou zero)                  |
+| sin(x)	        | Retorna o seno de x (x está em radianos)                                                 |
+| sinh(x)	       | Retorna o seno hiperbólico de x                                                          |
+| sqrt(x)	       | Retorna a raiz quadrada de x                                                             |
+| tan(x)	        | Retorna a tangente de um ângulo                                                          |
+| tanh(x)	       | Retorna a tangente hiperbólica de um número                                              |
+| trunc(x)	      | Retorna a parte inteira de um número (x)                                                 |
+
+
+## Constantes matemáticas pré-definidas
+
+| Nome         | Descrição                                          |
+|--------------|----------------------------------------------------|
+| Math.E       | Retorna o número de Euler (aprox. 2,718)           |
+| Math.PI      | Retorna PI (aprox. 3,14)                           |
+| Math.SQRT2   | Retorna a raiz quadrada de 2 (aprox. 1,414)        |
+| Math.SQRT1_2 | Retorna a raiz quadrada de 1/2 (aprox. 0,707)      |
+| Math.LN2     | Retorna o logaritmo natural de 2 (aprox. 0,693)    |
+| Math.LN10    | Retorna o logaritmo natural de 10 (aprox. 2,302)   |
+| Math.LOG2E   | Retorna o logaritmo de base 2 de E (aprox. 1,442)  |
+| Math.LOG10E  | Retorna o logaritmo de base 10 de E (aprox. 0,434) |
