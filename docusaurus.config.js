@@ -29,7 +29,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'pt',
-    locales: ['en', 'pt'],
+    locales: ['pt', 'en', 'es'],
   },
 
   presets: [
@@ -65,7 +65,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/hashdata-social-card.webp',
       navbar: {
-        title: 'Hashdata\'s Documentation',
+        title: 'Documentação Hashdata',
         logo: {
           alt: 'Hashdata Docs',
           src: 'img/logo.svg',
@@ -91,7 +91,7 @@ const config = {
             title: 'Web',
             items: [
               {
-                label: 'Main home page',
+                label: 'Página Inicial',
                 to: 'https://www.hashdata.app',
               }
             ],
@@ -114,7 +114,7 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: 'Mais',
             items: [
               {
                 label: 'YouTube',
