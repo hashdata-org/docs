@@ -3,40 +3,28 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.Tutorial - Basics": {
-    "message": "Tutorial - Basics (pt-BR)",
-    "description": "The label for category Tutorial - Basics in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Tutorial - Basics.link.generated-index.description": {
-    "message": "5 minutes to learn the most important Docusaurus concepts.  (pt-BR)",
-    "description": "The generated-index page description for category Tutorial - Basics in sidebar tutorialSidebar"
-  },
   "sidebar.tutorialSidebar.category.Tutorial - Extras": {
-    "message": "Tutorial - Extras  (pt-BR)",
+    "message": "Tutorial - Extras",
     "description": "The label for category Tutorial - Extras in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Test-abc: label-json": {
-    "message": "Test-abc_BR: label-BR-json",
-    "description": "The label for category Test-abc: label-json in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Campo Calculado (Script)": {
+    "message": "Campo Calculado (Script)",
+    "description": "The label for category Campo Calculado (Script) in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Test-abc: label-json.link.generated-index.description": {
-    "message": "Test-abc: description json",
-    "description": "The generated-index page description for category Test-abc: label-json in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Campo Calculado (Script).link.generated-index.description": {
+    "message": "Aprenda a criar campos calculados (scripts) para realizar cálculos complexos com os dados de um formulário.",
+    "description": "The generated-index page description for category Campo Calculado (Script) in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Campo Calculado (Fórmulas)": {
-    "message": "Campo Calculado (Fórmulas)",
-    "description": "The label for category Campo Calculado (Fórmulas) in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Como Criar um Formulário": {
+    "message": "Como Criar um Formulário",
+    "description": "The label for category Como Criar um Formulário in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Campo Calculado (Fórmulas).link.generated-index.description": {
+  "sidebar.tutorialSidebar.category.Como Criar um Formulário.link.generated-index.description": {
     "message": "Aprenda a criar campos calculados (fórmulas) para realizar cálculos com os dados de um formulário.",
-    "description": "The generated-index page description for category Campo Calculado (Fórmulas) in sidebar tutorialSidebar"
+    "description": "The generated-index page description for category Como Criar um Formulário in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Test-abc-BR: etiqueta-json": {
-    "message": "Test-abc-BR: etiqueta-json",
-    "description": "The label for category Test-abc-BR: etiqueta-json in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Test-abc-BR: etiqueta-json.link.generated-index.description": {
-    "message": "Test-abc-br: descrição json",
-    "description": "The generated-index page description for category Test-abc-BR: etiqueta-json in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.tutorial-basics": {
+    "message": "tutorial-basics",
+    "description": "The label for category tutorial-basics in sidebar tutorialSidebar"
   }
 }

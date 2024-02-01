@@ -1,4 +1,4 @@
-project_id: 'hashdata-docs'
+project_id: '645058'
 api_token_env: CROWDIN_PERSONAL_TOKEN
 preserve_hierarchy: true
 languages_mapping: &languages_mapping
@@ -20,7 +20,7 @@ files:
   - source: /blog/**/*
     translation: /i18n/%two_letters_code%/docusaurus-plugin-content-blog/**/%original_file_name%
     languages_mapping: *languages_mapping
-  - source: /src/pages/**/*
-    translation: /i18n/%two_letters_code%/docusaurus-plugin-content-pages/**/%original_file_name%
-    ignore: [/**/*.js, /**/*.jsx, /**/*.ts, /**/*.tsx, /**/*.css]
-    languages_mapping: *languages_mapping
+#  - source: /src/pages/**/*
+#    translation: /i18n/%two_letters_code%/docusaurus-plugin-content-pages/**/%original_file_name%
+#    ignore: [/**/*.js, /**/*.jsx, /**/*.ts, /**/*.tsx, /**/*.css]
+#    languages_mapping: *languages_mapping
