@@ -15,6 +15,14 @@
     "message": "Aprenda a criar campos calculados (scripts) para realizar cálculos complexos com os dados de um formulário.",
     "description": "The generated-index page description for category Campo Calculado (Script) in sidebar tutorialSidebar"
   },
+  "sidebar.tutorialSidebar.category.collaborators": {
+    "message": "collaborators",
+    "description": "The label for category collaborators in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.forms": {
+    "message": "forms",
+    "description": "The label for category forms in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.tutorial-basics": {
     "message": "tutorial-basics",
     "description": "The label for category tutorial-basics in sidebar tutorialSidebar"
