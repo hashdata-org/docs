@@ -25,7 +25,7 @@ jobs:
         run: |
           npm i -g @crowdin/cli
           bash ./write-translations.sh
-          crowdin upload
+          crowdin upload || echo "continue with errors"
           crowdin download
 
       - name: Build website
