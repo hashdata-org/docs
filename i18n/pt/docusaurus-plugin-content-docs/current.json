@@ -15,14 +15,6 @@
     "message": "Aprenda a criar campos calculados (scripts) para realizar cálculos complexos com os dados de um formulário.",
     "description": "The generated-index page description for category Campo Calculado (Script) in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Como Criar um Formulário": {
-    "message": "Como Criar um Formulário",
-    "description": "The label for category Como Criar um Formulário in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Como Criar um Formulário.link.generated-index.description": {
-    "message": "Aprenda a criar campos calculados (fórmulas) para realizar cálculos com os dados de um formulário.",
-    "description": "The generated-index page description for category Como Criar um Formulário in sidebar tutorialSidebar"
-  },
   "sidebar.tutorialSidebar.category.tutorial-basics": {
     "message": "tutorial-basics",
     "description": "The label for category tutorial-basics in sidebar tutorialSidebar"
