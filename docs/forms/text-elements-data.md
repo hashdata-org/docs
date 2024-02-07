@@ -118,14 +118,6 @@ Exemplo:
 
 ### Botões
 
-## Elementos de seleção única
-
-### Menu suspenso
-
-### Radio
-
-### Botões
-
 ## Elementos de múltipla seleção
 
 ### Caixa de seleção

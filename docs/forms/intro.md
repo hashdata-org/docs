@@ -1,7 +1,6 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
-
 # Formulário
 
 Para criar um novo formulário e/ou gerenciar as funcionalidade de um formulário, acesse o botão ![icon-form](./images/icon-form.png) no menu principal.
