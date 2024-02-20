@@ -3,9 +3,9 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.Tutorial - Extras": {
-    "message": "Tutorial - Extras",
-    "description": "The label for category Tutorial - Extras in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Formulários": {
+    "message": "Formulários",
+    "description": "The label for category Formulários in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Campo Calculado (Script)": {
     "message": "Campo Calculado (Script)",
@@ -14,17 +14,5 @@
   "sidebar.tutorialSidebar.category.Campo Calculado (Script).link.generated-index.description": {
     "message": "Aprenda a criar campos calculados (scripts) para realizar cálculos complexos com os dados de um formulário.",
     "description": "The generated-index page description for category Campo Calculado (Script) in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.collaborators": {
-    "message": "collaborators",
-    "description": "The label for category collaborators in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.forms": {
-    "message": "forms",
-    "description": "The label for category forms in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.tutorial-basics": {
-    "message": "tutorial-basics",
-    "description": "The label for category tutorial-basics in sidebar tutorialSidebar"
   }
 }

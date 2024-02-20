@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Configurações
@@ -13,7 +13,7 @@ Para acessar as configurações, abra a tela de edição de formulários e cliqu
 ![main-config](./images/main-config.png)
 
 
-## Apresentação 
+## Apresentação {#presentation}
 
 ![config1](./images/config1.png)
 
