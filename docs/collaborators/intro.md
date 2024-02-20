@@ -20,6 +20,8 @@ Posteriormente insira o/os e-mail/s dos colaboradores que serão convidados, sel
 
 As permissões são os níveis de acesso que os colaboradores terão em sua conta. A seguir detalhamos cada uma delas. 
 
+## Permissões (níveis de acesso)
+
 ### Gerenciar dados coletados:
   - Visualizar dados coletados (listagem de coletas)
   - Visualizar gráficos (dados agregados)

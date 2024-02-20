@@ -11,7 +11,7 @@ Na seção formulário, abra o formulário desejado e vá em "resultados".
 
 ![result1](./images/result1.png)
 
-### Dados
+## Dados
 
 As tabelas de respostas são geradas automaticamente, basta acessar a a seção "resultados" e então "dados".
 
@@ -25,7 +25,7 @@ Também é possível acessar cada uma das coletas individualmente e exportar em 
 
 ![export](./images/export.png)
 
-### Gráficos
+## Gráficos
 
 Os gráficos são gerados automaticamente, basta acessar a a seção "resultados" e então "gráficos".
 
@@ -42,6 +42,8 @@ Há três tipos de gráficos na versão básica do Hashdata: barras, pizza e lin
 ### Linha
 
 ![line](./images/line.png)
+
+## Download de fotos
 
 ![photo](./images/photo.png)
 
