@@ -112,6 +112,8 @@ Exemplo:
 
 ## Elementos de seleção única
 
+Os elementos de seleção única são aqueles em que a entrada de dados permite selecionar uma dentre várias opções (questão de múltipla escolha com apenas uma resposta). Nesse tipo de entrada de dados é possível realizar cálculos automáticos e também são gerados os seguintes relatórios: análises gráficas, extrato de coletas e tabela de respostas, as quais podem ser exportadas em PDF e XLS.
+
 ### Menu suspenso
 
 ### Radio
@@ -119,6 +121,8 @@ Exemplo:
 ### Botões
 
 ## Elementos de múltipla seleção
+
+Os elementos de múltipla seleção são aqueles em que a entrada de dados permite selecionar uma ou mais opções dentre várias (questão de múltipla escolha com mais de uma resposta). Nesse tipo de entrada de dados é possível realizar cálculos automáticos e também são gerados os seguintes relatórios: análises gráficas, extrato de coletas e tabela de respostas, as quais podem ser exportadas em PDF e XLS.
 
 ### Caixa de seleção
 
@@ -134,6 +138,8 @@ Exemplo:
 
 ## Elementos de avaliação
 
+Os elementos de avaliação são aqueles em que a entrada de dados permite selecionar uma dentre várias opções (questão de múltipla escolha com apenas uma resposta), no entanto com recurso gráfico (emojis). Nesse tipo de entrada de dados é possível realizar cálculos automáticos e também são gerados os seguintes relatórios: análises gráficas, extrato de coletas e tabela de respostas, as quais podem ser exportadas em PDF e XLS.
+
 ### Expressões faciais
 
 ### Emojis
@@ -147,6 +153,8 @@ Exemplo:
 ### Campo calculado (fórmula)
 
 ### Campo calculado (script)
+
+Para essa funcionalidade acesse:
 
 ### Ordenar / priorizar
 

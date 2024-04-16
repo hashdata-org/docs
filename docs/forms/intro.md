@@ -2,11 +2,10 @@
 sidebar_position: 1
 slug: intro
 ---
-# Formulário
+# Criar Formulário 
 
 Para criar um novo formulário e/ou gerenciar as funcionalidade de um formulário, acesse o botão ![icon-form](./images/icon-form.png) no menu principal.
 
-## Criar novo formulário
 
 Para criar um novo formulário vá em “Novo formulário”.  
 ![new-form](./images/new-form.png)

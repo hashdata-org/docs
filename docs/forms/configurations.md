@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
-# Configurações
+# Configurações do Formulário
 
 Nesta seção é onde são encontradas as configurações gerais do formulário, tais como: nome, disponibilidade (WEB ou APP), acesso ao formulário (público ou privado), definições do cabeçalho, padrão de enumeração, opção de exibir o botão de responder novamente o formulário e pergutnas de acompanhamento (follow-up).
 
