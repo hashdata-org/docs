@@ -2,9 +2,11 @@
 sidebar_position: 3
 ---
 
-# Colaboradores
+# Colaboradores e Usuários Dispositivo
 
-Os colaboradores, que são os usuários que contribuirão com sua conta, a depender do nível de acesso, que pode ser desde coletor de dados, até gestor da conta. 
+Nesta nova versão do Hashdata, há uma distinção entre colaboradores e usuários dispotivo. Os colaboradores são superusers de outras contas, mas que, caso convidados podem colaborar com sua conta, onde você estabalece o nível de acesso que eles terão aos seus dados, que pode ser desde coletor de dados, até gestor da conta (superuser). Os usuários dispositivo, por outro lado, não têm conta própria e são criados pelo proprio gestor da conta. Este tipo de usuário é utilizado apenas para realizar coletas.
+
+## Colaboradores
 
 Para gerenciar os colaboradores, acesse o ícone ![icon-collaborators](./images/icon-collaborators.png) no menu principal.
 
