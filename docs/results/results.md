@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 ---
-# Resultados {Results}
+# Resultados{Results}
 
 Nesta seção são geradas as análises automáticas pelo sistema, que podem ser planilhas consolidadas com todos os resultados em XLS, extratos individuais das coletas, os quais podem ser exportados em PDF e gráficos (pizza, barras e linhas) que podem ser exportados em DOCX.
 
