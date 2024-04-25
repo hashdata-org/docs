@@ -6,13 +6,5 @@
   "sidebar.tutorialSidebar.category.Formulários": {
     "message": "Formulários",
     "description": "The label for category Formulários in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Campo Calculado (Script)": {
-    "message": "Campo Calculado (Script)",
-    "description": "The label for category Campo Calculado (Script) in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Campo Calculado (Script).link.generated-index.description": {
-    "message": "Aprenda a criar campos calculados (scripts) para realizar cálculos complexos com os dados de um formulário.",
-    "description": "The generated-index page description for category Campo Calculado (Script) in sidebar tutorialSidebar"
   }
 }
