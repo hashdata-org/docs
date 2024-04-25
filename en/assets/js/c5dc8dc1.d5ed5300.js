@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhd_docs=self.webpackChunkhd_docs||[]).push([[99],{6272:e=>{e.exports=JSON.parse('{"title":"Forms","slug":"/category/formul\xe1rios","permalink":"/docs/en/category/formul\xe1rios","navigation":{"previous":{"title":"Main Menu (Overview)","permalink":"/docs/en/main-menu/"},"next":{"title":"Create Form","permalink":"/docs/en/forms/intro"}}}')}}]);
