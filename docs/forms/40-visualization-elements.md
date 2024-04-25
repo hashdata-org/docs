@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+slug: visualization-elements
 ---
 
 # Elementos (Visualização)

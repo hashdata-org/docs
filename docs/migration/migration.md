@@ -7,3 +7,6 @@ A migração de conta é o procedimento específico para as contas que já utili
 
 ![migration](./images/migration.png)  
 
+Após informar seu e-mail e escolher uma senha, você receberá um e-mail de confirmação. 
+Clique no link de confirmação e pronto! Seu e-mail foi confirmado com sucesso.
+

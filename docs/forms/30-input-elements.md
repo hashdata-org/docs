@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+slug: input-elements
 ---
 
 # Elementos (Entrada de Dados)
@@ -154,7 +154,7 @@ Os elementos de avaliação são aqueles em que a entrada de dados permite selec
 
 ### Campo calculado (script)
 
-Para essa funcionalidade acesse:
+Para essa funcionalidade acesse: [Campo calculado (script)](script-field/)
 
 ### Ordenar / priorizar
 

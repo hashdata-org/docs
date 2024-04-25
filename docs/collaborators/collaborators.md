@@ -4,12 +4,15 @@ sidebar_position: 3
 
 # Colaboradores e Usuários Dispositivo
 
-Nesta nova versão do Hashdata, há uma distinção entre **colaboradores** e **usuários dispositivo**. Os **colaboradores** são superusers de outras contas no Hashdata, mas que, caso convidados podem colaborar com sua conta, onde você estabalece o nível de acesso que eles terão, que pode ser desde coletor de dados, até gestor da conta, adiante detalhamos cada um dos níveis de acesso. Os usuários dispositivo, por outro lado, não têm conta própria e são criados pelo proprio gestor da conta. 
+## Colaborador vs Usuário dispositivo
+Nesta nova versão do Hashdata, há uma distinção entre **colaboradores** e **usuários dispositivo**. Os **colaboradores** são **pessoas** que possuem uma conta no Hashdata e que foram convidadas a colaborar na sua conta. Neste caso, você estabelece o nível de acesso que eles terão, que pode ser desde coletor de dados, até gestor da conta, adiante detalhamos cada um dos níveis de acesso. Os usuários dispositivo, por outro lado, não têm conta própria e são criados pelo próprio gestor da conta. 
 
 Os **usuários de dispositivos** são tipos especiais de usuários vinculados a dispositivos móveis, como smartphones e tablets. Eles não possuem acesso à versão web do HashData.
 Eles só possuem permissão para realizar coletas em formulários selecionados, na área de trabalho em que foram criados. Este tipo de usuário não pode ser destinatário de notificações e e-mails, bem como não pode ser convidado a colaborar em outras áreas de trabalho.
 
-## Colaboradores
+Exemplos comuns de usuários dispositivos: `tablet1`, `tablet2`, `pesquisador3`, etc.
+
+## Colaboradores {#collaborators}
 
 Para gerenciar os colaboradores, acesse o ícone ![icon-collaborators](./images/icon-collaborators.png) no menu principal.
 
@@ -25,7 +28,7 @@ Posteriormente insira o/os e-mail/s dos colaboradores que serão convidados, sel
 
 As permissões são os níveis de acesso que os colaboradores terão em sua conta. A seguir detalhamos cada uma delas. Após aceito o convite, o colaborador aparecerá em sua conta com os níveis de acesso estabelecidos no convite e que podem ser alterados a qualquer momento clicando sobre o nome do colaborador a ser editado.
 
-## Permissões (níveis de acesso)
+## Permissões (níveis de acesso) {#permissions}
 
 ### Coletar dados
 - Coletar dados
@@ -68,7 +71,7 @@ As permissões são os níveis de acesso que os colaboradores terão em sua cont
 
 ## Usuários Dispositivo
 
-Para gerenciar os usuários dispositivo, acesse o ícone ![icon-collaborators](./images/icon-collaborators.png) no menu principal.
+Para gerenciar os usuários dispositivos, acesse o ícone ![icon-collaborators](./images/icon-collaborators.png) no menu principal.
 
 ## Adicionar Usuários Dispositivo
 
