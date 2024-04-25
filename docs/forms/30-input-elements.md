@@ -154,7 +154,7 @@ Os elementos de avaliação são aqueles em que a entrada de dados permite selec
 
 ### Campo calculado (script)
 
-Para essa funcionalidade acesse: [Campo calculado (script)](script-field/)
+Para essa funcionalidade acesse: Campo calculado (script)
 
 ### Ordenar / priorizar
 
