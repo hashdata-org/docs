@@ -278,7 +278,7 @@ Neste exemplo veremos, também, como usar funções matemáticas pré-definas, c
 
 Definição da fórmula de Bhaskara:
 
-![Fórmula de Bhaskara](images/bhaskara.jpg)
+![Fórmula de Bhaskara](images/bhaskara.png)
 
 ```typescript
 function calculateValue() {
