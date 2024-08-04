@@ -44,7 +44,7 @@
     "description": "The label of footer link with label=Main home page linking to https://www.hashdata.app"
   },
   "copyright": {
-    "message": "Copyright © 2023 Hashdata, Inc.",
+    "message": "Copyright © 2024 Hashdata, Inc.",
     "description": "The footer copyright"
   },
   "link.title.Web": {

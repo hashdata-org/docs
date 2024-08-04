@@ -65,7 +65,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/hashdata-social-card.webp',
       navbar: {
-        title: 'Documentação Hashdata',
+        title: 'Hashdata - Guia do Usuário ',
         logo: {
           alt: 'Hashdata Docs',
           src: 'img/logo.svg',
@@ -100,15 +100,15 @@ const config = {
             title: 'Apps',
             items: [
               {
-                label: 'Android App',
+                label: 'Android',
                 to: 'https://play.google.com/store/apps/details?id=br.com.hashdata.mobileapp',
               },
               {
-                label: 'iOS App (Apple)',
+                label: 'iOS (Apple)',
                 to: 'https://itunes.apple.com/br/app/hashdata/id1379827155?ls=1&mt=8',
               },
               {
-                label: 'Forms Web App',
+                label: 'Desktop',
                 to: 'https://my.hashdata.app',
               }
             ],
