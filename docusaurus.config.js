@@ -1,135 +1,127 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const {themes} = require('prism-react-renderer');
+const lightTheme = themes.github;
+const darkTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Hashdata Docs',
-  tagline: 'Documentation of Hashdata\'s Softwares',
-  favicon: 'img/favicon.ico',
+    markdown: {
+        mermaid: true,
+    },
+    themes: ['@docusaurus/theme-mermaid'],
 
-  // Set the production url of your site here
-  url: 'https://docs.hashdata.app',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docs/',
+    title: 'Hashdata Docs',
+    tagline: 'Documentation of Hashdata\'s Softwares',
+    favicon: 'img/favicon.ico',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'hashdata-org', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+    // Set the production url of your site here
+    url: 'https://docs.hashdata.app', // Set the /<baseUrl>/ pathname under which your site is served
+    // For GitHub pages deployment, it is often '/<projectName>/'
+    baseUrl: '/docs/',
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+    // GitHub pages deployment config.
+    // If you aren't using GitHub pages, you don't need these.
+    organizationName: 'hashdata-org', // Usually your GitHub org/user name.
+    projectName: 'docs', // Usually your repo name.
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'pt',
-    locales: ['pt', 'en', 'es'],
-  },
+    onBrokenLinks: 'throw',
+    onBrokenMarkdownLinks: 'warn',
 
-  presets: [
-    [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/hashdata-org/docs/tree/master/'
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/hashdata-org/docs/tree/master/'
-        },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      }),
-    ],
-  ],
+    // Even if you don't use internalization, you can use this field to set useful
+    // metadata like html lang. For example, if your site is Chinese, you may want
+    // to replace "en" with "zh-Hans".
+    i18n: {
+        defaultLocale: 'pt', locales: ['pt', 'en', 'es'],
+    },
 
-  themeConfig:
+    presets: [['classic', /** @type {import('@docusaurus/preset-classic').Options} */
+        ({
+            docs: {
+                routeBasePath: '/', sidebarPath: require.resolve('./sidebars.js'), // Please change this to your repo.
+                // Remove this to remove the "edit this page" links.
+                editUrl: 'https://github.com/hashdata-org/docs/tree/master/'
+            }, blog: {
+                showReadingTime: true, // Please change this to your repo.
+                // Remove this to remove the "edit this page" links.
+                editUrl: 'https://github.com/hashdata-org/docs/tree/master/'
+            }, theme: {
+                customCss: require.resolve('./src/css/custom.css'),
+            },
+        }),],],
+
+    themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
-      image: 'img/hashdata-social-card.webp',
-      navbar: {
-        title: 'Hashdata - Guia do Usuário ',
-        logo: {
-          alt: 'Hashdata Docs',
-          src: 'img/logo.svg',
-        },
-        items: [
-          {
-            type: 'localeDropdown',
-            position: 'right',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Docs',
-          },
-          // {to: '/blog', label: 'Blog', position: 'left'}
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Web',
-            items: [
-              {
-                label: 'Página Inicial',
-                to: 'https://www.hashdata.app',
-              }
-            ],
-          },
-          {
-            title: 'Apps',
-            items: [
-              {
-                label: 'Android',
-                to: 'https://play.google.com/store/apps/details?id=br.com.hashdata.mobileapp',
-              },
-              {
-                label: 'iOS (Apple)',
-                to: 'https://itunes.apple.com/br/app/hashdata/id1379827155?ls=1&mt=8',
-              },
-              {
-                label: 'Desktop',
-                to: 'https://my.hashdata.app',
-              }
-            ],
-          },
-          {
-            title: 'Mais',
-            items: [
-              {
-                label: 'YouTube',
-                to: 'https://www.youtube.com/@hashdata9298/videos',
-              }
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Hashdata, Inc.`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-    }),
+        ({
+            // Replace with your project's social card
+            image: 'img/hashdata-social-card.webp',
+            navbar: {
+                title: 'Hashdata - Guia do Usuário ',
+                logo: {
+                    alt: 'Hashdata Docs',
+                    src: 'img/logo.svg',
+                },
+                items: [
+                    {
+                        type: 'localeDropdown',
+                        position: 'right',
+                    },
+                    {
+                        type: 'docSidebar',
+                        sidebarId: 'tutorialSidebar',
+                        position: 'left',
+                        label: 'Docs',
+                    },
+                    // {to: '/blog', label: 'Blog', position: 'left'}
+                ],
+            },
+            footer: {
+                style: 'dark',
+                links: [
+                    {
+                        title: 'Portal Web',
+                        items: [
+                            {
+                                label: 'Página Inicial',
+                                to: 'https://www.hashdata.app',
+                            }
+                        ],
+                    },
+                    {
+                        title: 'Aplicativos',
+                        items: [
+                            {
+                                label: 'Android',
+                                to: 'https://play.google.com/store/apps/details?id=br.com.hashdata.mobileapp',
+                            },
+                            {
+                                label: 'iOS (Apple)',
+                                to: 'https://itunes.apple.com/br/app/hashdata/id1379827155?ls=1&mt=8',
+                            },
+                            {
+                                label: 'Desktop',
+                                to: 'https://my.hashdata.app',
+                            }
+                        ],
+                    },
+                    {
+                        title: 'Redes Sociais',
+                        items: [
+                            {
+                                label: 'YouTube',
+                                to: 'https://www.youtube.com/@hashdata9298/videos',
+                            }
+                        ],
+                    },
+                ],
+                copyright: `Copyright © ${new Date().getFullYear()} Hashdata, Inc.`,
+            },
+            prism: {
+                theme: lightTheme,
+                darkTheme: darkTheme,
+            },
+        }),
 };
 
 module.exports = config;
