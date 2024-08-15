@@ -7,6 +7,10 @@ const darkTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+    plugins: [
+        'plugin-image-zoom'
+    ],
+
     markdown: {
         mermaid: true,
     },
@@ -53,7 +57,28 @@ const config = {
 
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-        ({
+        {
+            imageZoom: {
+                // CSS selector to apply the plugin to, defaults to '.markdown img'
+                selector: '.markdown img',
+                // Optional medium-zoom options
+                // see: https://www.npmjs.com/package/medium-zoom#options
+                options: {
+                    margin: 60,
+                    background: '#FFFFFF',
+                    scrollOffset: 10,
+                    container: {
+                        width: 1920,
+                        height: 1080,
+                        // top: 64,
+                        // bottom: 64,
+                        right: 0,
+                        left: 0,
+                    },
+                    // template: '#zoom-template',
+                },
+            },
+
             // Replace with your project's social card
             image: 'img/hashdata-social-card.webp',
             navbar: {
@@ -121,7 +146,7 @@ const config = {
                 theme: lightTheme,
                 darkTheme: darkTheme,
             },
-        }),
+        },
 };
 
 module.exports = config;
