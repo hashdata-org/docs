@@ -57,7 +57,7 @@ const config = {
             // Replace with your project's social card
             image: 'img/hashdata-social-card.webp',
             navbar: {
-                title: 'Hashdata - Guia do Usuário ',
+                title: 'Documentação HashData ',
                 logo: {
                     alt: 'Hashdata Docs',
                     src: 'img/logo.svg',

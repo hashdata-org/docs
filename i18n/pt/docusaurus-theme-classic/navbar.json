@@ -1,15 +1,15 @@
 {
   "title": {
-    "message": "Hashdata - Guia do Usuário",
+    "message": "Documentação Hashdata",
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "Hashdata - Guia do Usuário",
+    "message": "Documentação Hashdata",
     "description": "The alt text of navbar logo"
   },
   "item.label.Docs": {
-    "message": "Documentação",
-    "description": "Navbar item with label Docs"
+    "message": "Guia do Usuário",
+    "description": "Guia do Usuário"
   },
   "item.label.Blog": {
     "message": "Blog",
