@@ -1,49 +1,76 @@
 ---
 sidebar_position: 1
 ---
-
-import desktopEditImage from './images/header_desktop_edit.webp';
+import React from 'react';
+export const standardCaption = '. Clique na imagem para ampliá-la'
+export const initialScreamCaption = 'Apresentação da Tela Inicial do Hashdata' + standardCaption;
+export const headerCaption = 'Cabeçalho do Hashdata' + standardCaption;
+export const headerOptionsCaption = 'Opções disponíveis no cabeçalho do Hashdata' + standardCaption;
 
 # Tela Inicial
 
-A tela inicial do Hasdata foi projetada para maximizar a eficiência e a facilidade do uso do sistema. Nela estão disponíveis
+A tela inicial do Hashdata foi projetada para maximizar a eficiência e a facilidade do uso do sistema. Nela estão disponíveis
 as funcionalidades essenciais para gerenciar as tarefas de coleta e análise de dados. O cabeçalho da página e o barra lateral
 esquerda, onde fica o **Menu Principal**, sempre serão exibidas. A maior parte da tela será ocupada pelo conteúdo da **Área de
 Trabalho**.
 
-> :bulb: **Dica:** A figura a seguir mostra todas as funcionalidades presentes na **Tela Inicial**, clique nela para maximizá-la.
-
-![initial_scream](./images/initial_scream.gif)
+![{initialScreamCaption}](./images/initial_scream.gif)
+<p className="image-caption">{initialScreamCaption}</p>
 
 ## Cabeçalho {#header}
 
-Dá esquerda para a direita, estão disponíveis as seguintes seções no cabeçalho do aplicativo Hashdata.
+![headerCaption](./images/header.webp)
+<p className="image-caption">{headerCaption}</p>
 
-![header](./images/header.webp)
+Dá esquerda para a direita, estão disponíveis as seguintes seções no cabeçalho do aplicativo Hashdata.
+- Logomarca Hashdata;
+- Mudar Área de Trabalho;
+- Pesquisa Global;
+- Seleção de Tema;
+- Seleção de Idioma;
+- Usuário;
+
+![{headerOptionsText}](./images/header.gif)
+<p className="image-caption">{headerOptionsCaption}</p>
 
 ### Logomarca Hashdata {#logo}
 Clicando na logomarca Hashdata, a aplicação retornará para a **Página Inicial**.
 
 ### Mudar Área de Trabalho {#change-desktop}
-A opção **Mudar Área de Trabalho** permite a inclusão e a escolha de áreas de trabalho. A funcionalidade possibilita ao
-**proprietário** mudar da área de trabalho  de acordo com uma área específica de negócio ou para compartilhar determinados
-formulários com um colaborador.
+A opção **Mudar Área de Trabalho** permite que você escolha entre as áreas de trabalho disponíveis em sua conta.
+A funcionalidade possibilita mudar da área de trabalho de acordo com uma área específica de negócio.
 
-**Para mudar a Área de Trabalho**:
+:::tip[Dica]
+Utilize o campo de pesquisa (lupa) para localizar a área de trabalho desejada.
+:::
 
+Na opção **Mudar Área de Trabalho** é possível também:
+- **Editar o nome da área de trabalho**;
+- **Acessar as informações do proprietário**.
 
-![Mudar Área de Trabalho](./images/header_desktop.webp)
+### Pesquisa Global {#global-search}
+No campo **Pesquisa Global** é possível informar um termo de pesquisa para buscar formulários, pastas, colaboradores,
+grupos ou menus.
 
-> :bulb: **Dica:** Utilize o campo de pesquisa (lupa) para localizar a área de trabalho desejada.
+### Seleção de Tema {#theme-toggle}
+O Hashdata disponibiliza a opção de **Seleção de Tema** entre modo claro e escuro, permitindo ajuste a interface de acordo
+com a preferência ou condições de iluminação. Essa personalização melhora a experiência do usuário, tornando a visualização
+mais confortável em diferentes ambientes.
 
-Para editar a área de trabalho:
-1. Clique em *Editar* <img src={desktopEditImage} className="inline" alt="Editar Área de Trabalho" style={{width: 200, borderRadius: 20}}/>
-2. Altere o nome da área de trabalho conforme desejado
-3. Clique em salvar.
+### Seleção de Idioma {#languages}
+A opção de **Idioma** permite a configuração do Hashdata entre diferentes idiomas, garantindo que a plataforma seja acessível
+e fácil de usar para falantes de várias línguas. Isso é essencial para equipes multinacionais e para a personalização da
+experiência do usuário.
 
-![Editar Área de Trabalho](./images/header_desktop_edit_detail.webp)
+### Usuário {#user-profile}
+Ao clicar na foto do perfil do **Usuário**, serão mostradas opções de:
+- **Perfil**: alteração das informações pessoais, como nome, e-mail e foto de perfil;
+- **Conta e Credenciais**: gerenciamento das configurações de segurança, como alterar a forma de autenticação e
+alteração da senha de acesso;
+- **Meu plano**:  detalhes do plano atual, incluindo opções de *upgrade*;
+- **Sair**: finaliza a sessão do sistema Hashdata de forma segura.
 
-### Menu Principal {#main-menu}
+## Menu Principal {#main-menu}
 O **Menu Principal**, localizado à esquerda da tela, é a espinha dorsal da navegação no Hashdata. Ele fornece acesso
 às funcionalidades principais da plataforma:
 
@@ -56,28 +83,14 @@ O **Menu Principal**, localizado à esquerda da tela, é a espinha dorsal da nav
 - Acessar este Guia de Usuário, e;
 - Utilizar o Hashdata Advanced Reports (para mais informações,  [entre em contato conosco](../intro.mdx#user-support)).
 
-### Área de Trabalho
+## Área de Trabalho
 A maior parte da tela inicial é ocupada pela **Área de Trabalho**. Nela, são apresentados um gráfico com a quantidade de
 de respostas (no mês corrente e no mês anterior) de formulários publicados e uma lista com todos os formulários respondidos
 recentemente.
 
-### Pesquisa
-No campo **Pesquisa** é possível informar um termo de pesquisa para buscar formulários, pastas, colaboradores, grupos ou menus.
 
-### Tema
-O Hashdata disponibiliza a opção de **Seleção de Tema** entre modo claro e escuro, permitindo ajuste a interface de acordo
-com a preferência ou condições de iluminação. Essa personalização melhora a experiência do usuário, tornando a visualização
-mais confortável em diferentes ambientes.
 
-### Idiomas
-A opção de **Idiomas** permite a configuração do Hashdata entre diferentes idiomas, garantindo que a plataforma seja acessível
-e fácil de usar para falantes de várias línguas. Isso é essencial para equipes multinacionais e para a personalização da
-experiência do usuário.
 
-### Usuário
-Ao clicar na foto do perfil do **Usuário**, serão mostradas opções de:
-- **Perfil**: alteração das informações pessoais, como nome, e-mail e foto de perfil;
-- **Conta e Credenciais**: gerenciamento das configurações de segurança, como alterar a forma de autenticação;
-- **Plano**:  detalhes do  plano atual, incluindo opções de *upgrade*.
-- **Sair**: finaliza a sessão do sistema Hashdata de forma segura.
+
+
 

@@ -6,30 +6,42 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2196F3;
-  --ifm-color-primary-dark: #1769aa;
-  --ifm-color-primary-darker: #125386;
-  --ifm-color-primary-darkest: #0d3c61;
-  --ifm-color-primary-light: #2196f3;
-  --ifm-color-primary-lighter: #42a5f3;
-  --ifm-color-primary-lightest: #4aabfa;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+    --ifm-color-primary: #2196F3;
+    --ifm-color-primary-dark: #1769aa;
+    --ifm-color-primary-darker: #125386;
+    --ifm-color-primary-darkest: #0d3c61;
+    --ifm-color-primary-light: #2196f3;
+    --ifm-color-primary-lighter: #42a5f3;
+    --ifm-color-primary-lightest: #4aabfa;
+    --ifm-color-primary-contrast: #3e3e3e;
+    --ifm-code-font-size: 95%;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #4da9f1;
-  --ifm-color-primary-dark: #387aaf;
-  --ifm-color-primary-darker: #417dab;
-  --ifm-color-primary-darkest: #3b6a91;
-  --ifm-color-primary-light: #6eb8f3;
-  --ifm-color-primary-lighter: #71b9f1;
-  --ifm-color-primary-lightest: #70b2e7;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+    --ifm-color-primary: #4da9f1;
+    --ifm-color-primary-dark: #387aaf;
+    --ifm-color-primary-darker: #417dab;
+    --ifm-color-primary-darkest: #3b6a91;
+    --ifm-color-primary-light: #6eb8f3;
+    --ifm-color-primary-lighter: #71b9f1;
+    --ifm-color-primary-lightest: #70b2e7;
+    --ifm-color-primary-contrast: #e1e1e1;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
 blockquote {
-  border-left: 6px solid var(--ifm-color-primary);
-  padding: 18px;
+    border-left: 6px solid var(--ifm-color-primary);
+    padding: 18px;
 }
+
+/* src/css/custom-styles.css */
+.image-caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.8rem;
+    color: var(--ifm-color-primary-contrast);
+    font-weight: bold;
+}
+

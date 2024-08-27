@@ -2,10 +2,15 @@
 sidebar_position: 1
 slug: /
 ---
-
+import React from 'react';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Mermaid from '@theme/Mermaid';
+
+export const standardCaption = ' Clique na imagem para ampliá-la'
+export const createAccountUsingValidEmail = 'Passo a passo para criar uma conta no Hashdata utilizando um e-mail válido.' + standardCaption;
+export const createAccountUsingGoogleMicrosoftApple = 'Passo a passo para criar uma conta no Hashdata validando seu acesso por meio de uma ' +
+    'conta Google, Microsoft ou Apple.' + standardCaption;
 
 # Introdução {#introduction}
 
@@ -147,16 +152,27 @@ compartilhá-los com seu público-alvo e analisar as respostas de forma integrad
 
 </Tabs>
 
-
 ## Crie sua conta {#create-your-account}
-Antes de acessar a plataforma *web* do Hashdata, é necessário criar uma conta gratuíta. Para isso, são disponibilizadas
+Antes de acessar a plataforma *web* do Hashdata, é necessário criar uma conta gratuita. Para isso, são disponibilizadas
 duas formas de cadastro:
-- **Utilizando um e-mail válido, ou;**
-- **Validando seu acesso por meio de uma conta Google, Microsoft ou Apple.**
+- **Utilizando um e-mail válido**, ou;
+- **Validando seu acesso por meio de uma conta Google, Microsoft ou Apple**.
 
-Veja como criar uma conta de usuário no Hashdata para as duas formas de cadastro disponíveis:
+:::tip[Termos de Uso e Política de Privacidade]
+Ao criar uma conta no Hashdata, você confirma que leu e aceitou nosso [Termos de Uso](https://hashdata.com.br/pub/licenca/en/licenca.xhtml)
+e [Política de Privacidade](https://hashdata.com.br/pub/licenca/en/privacidade.xhtml).
+:::
+
+:::info[Área de Trabalho Gratuíta]
+Uma **área de trabalho gratuita** é criada automaticamente quando você criar uma conta no Hashdata. Com a **área de trabalho gratuita**,
+você pode criar formulários, coletar e analisar dados. Contudo, não lhe é permitido convidar colaboradores essa área de trabalho.
+Para mais informações sobre Áreas de Trabalho, acesse [**Áreas de Trabalho, Atores e Responsabilidades**](#desktop-actors-responsibilities).
+:::
 
 ### Utilizando um E-mail Válido {#use-valid-email}
+
+![{crateUserCaption}}](./sign_up.gif)
+<p className="image-caption">{createAccountUsingValidEmail}</p>
 
 #### Passo 1: Acessar a página inicial do Hashdata {#step1-goes-to-initial-page}
 1. Abra o navegador de sua preferência e acesse a página de login do Hashdata em [my.hashdata.app](https://my.hashdata.app).
@@ -180,28 +196,37 @@ e para identificar seu perfil em colaborações com outros usuários.
 2. **Crie uma senha**:
 - Crie uma senha forte para proteger sua conta. Veja a seguir como criar uma senha forte.
 
-:::note[Recomendação para Criar uma Senha Forte]
+:::info[Recomendação para Criar uma Senha Forte]
 
-Criar uma senha forte é essencial para proteger suas informações e contas online. Uma senha forte deve ter no mínimo 8 caracteres e incluir uma combinação de letras maiúsculas, letras minúsculas, números e caracteres especiais. Aqui estão algumas dicas para criar uma senha segura:
+Criar uma senha forte é essencial para proteger suas informações e contas online. Uma senha forte deve ter no mínimo 8
+caracteres e incluir uma combinação de letras maiúsculas, letras minúsculas, números e caracteres especiais. Aqui estão
+algumas dicas para criar uma senha segura:
 
 1. **Comprimento Mínimo**: Use no mínimo 8 caracteres. Quanto mais longa a senha, mais difícil será de ser adivinhada ou quebrada.
 
 2. **Combinação de Caracteres**:
 - **Letras Minúsculas e Maiúsculas**: Inclua tanto letras minúsculas (a-z) quanto maiúsculas (A-Z). Isso aumenta a complexidade da senha.
 - **Números**: Adicione números (0-9) para diversificar ainda mais a sua senha.
-- **Caracteres Especiais**: Utilize caracteres especiais como `!`, `@`, `#`, `$`, `%`, `^`, `&`, `*`, `(`, `)`, `_`, `+`, `-`, `=` para tornar a senha mais robusta.
+- **Caracteres Especiais**: Utilize caracteres especiais, como: `!`, `@`, `#`, `$`, `%`, `^`, `&`, `*`, `(`, `)`, `_`,
+`+`, `-`, `=`, para tornar a senha mais robusta.
 
-3. **Evite Informações Pessoais**: Não use informações fáceis de adivinhar, como seu nome, data de nascimento, nome de familiares ou animais de estimação.
+3. **Evite Informações Pessoais**: Não use informações fáceis de adivinhar, como seu nome, data de nascimento, nome de
+familiares ou animais de estimação.
 
-4. **Crie uma Frase ou Sequência Única**: Combine palavras ou frases que façam sentido para você, mas que sejam difíceis para os outros adivinharem. Por exemplo, "MeuCãoCorre@123!" é mais segura do que "senha123".
+4. **Crie uma Frase ou Sequência Única**: Combine palavras ou frases que façam sentido para você, mas que sejam difíceis
+para os outros adivinharem. Por exemplo, "MeuCãoCorre@123!" é mais segura do que "senha123".
 
-5. **Evite Sequências e Padrões Comuns**: Não use sequências de teclado simples como "123456", "qwerty", ou "abcdef", pois são fáceis de serem descobertas.
+5. **Evite Sequências e Padrões Comuns**: Não use sequências de teclado simples como "123456", "qwerty", ou "abcdef",
+pois são fáceis de serem descobertas.
 
-6. **Use um Gerenciador de Senhas**: Considere utilizar um gerenciador de senhas para gerar e armazenar senhas complexas e únicas para cada uma das suas contas. Isso evita a necessidade de memorizar senhas complicadas e reduz o risco de reutilização de senhas.
+6. **Use um Gerenciador de Senhas**: Considere utilizar um gerenciador de senhas para gerar e armazenar senhas complexas
+e únicas para cada uma das suas contas. Isso evita a necessidade de memorizar senhas complicadas e reduz o risco de reutilização de senhas.
 
-7. **Atualize Suas Senhas Regularmente**: Mude suas senhas periodicamente para aumentar a segurança, especialmente se houver suspeita de que sua conta possa estar comprometida.
+7. **Atualize Suas Senhas Regularmente**: Mude suas senhas periodicamente para aumentar a segurança, especialmente se
+houver suspeita de que sua conta possa estar comprometida.
 
-Seguindo essas recomendações, você pode criar senhas seguras que ajudam a proteger suas informações e reduzir o risco de acesso não autorizado às suas contas.
+Seguindo essas recomendações, você pode criar senhas seguras que ajudam a proteger suas informações e reduzir o risco de
+acesso não autorizado à sua conta.
 :::
 
 3. **Clique no botão Continuar**.
@@ -221,41 +246,43 @@ Seguindo essas recomendações, você pode criar senhas seguras que ajudam a pro
 - Após a verificação do e-mail, será apresentada uma tela de confirmação.
 
 2. **Clique em Continuar**:
-- Após o primeiro login, o sistema irá apresentar um tutorial de suas principais funcionalidades e você poderá configurar
-preferências iniciais, como idioma e tema do sistema (claro ou escuro).
+- Após o primeiro *login*, o sistema irá apresentar um tutorial de suas principais funcionalidades e você poderá configurar
+suas preferências iniciais, como idioma e tema do sistema (claro ou escuro).
 
 #### Dicas Adicionais {#aditional-tips}
 1. **Mantenha suas Credenciais Seguras**: nunca compartilhe sua senha com terceiros.
-2. **Atualização de Informações**: caso precise atualizar suas informações pessoais, como senha ou e-mail, isso pode ser feito nas configurações do usuário após o login.
-
- ![Crie sua conta utilizando um e-mail válido](./sign_up.gif)
+2. **Atualização de Informações**: caso precise atualizar suas informações pessoais, como senha ou e-mail, isso pode ser
+feito nas configurações do usuário após o *login*.
 
 ### Validando seu Acesso por meio de uma Conta Google, Microsoft ou Apple {#validating-your-access-with-a-google-microsoft-or-apple-account}
-Para acessar o Hashdata através de uma Conta Google, Microsoft ou Apple, siga as etapas abaixo:
+
+![{createAccountUsingGoogleMicrosoftApple}](./google_account.gif)
+<p className="image-caption">{createAccountUsingGoogleMicrosoftApple}</p>
 
 #### Passo 1. Acesse a Página de Login {#step-1-access-the-login-page}
 1. Abra o navegador de sua preferência e acesse a página de login do Hashdata em [my.hashdata.app](https://my.hashdata.app).
 2. Na página inicial, procure pela opção **Criar conta gratuíta** e clique no *link* disponível.
 
-#### 2. Escolha a Opção de Login Social {#step-2-choose-the-social-login-option}
+#### Passo 2. Escolha a Opção de Login Social {#step-2-choose-the-social-login-option}
 1. Na tela de login, você verá opções para fazer login usando diferentes métodos.
-2. Clique na opção correspondente ao serviço que você deseja usar para validar seu acesso:
+2. Escolha o serviço que você deseja usar para validar seu acesso. Ao continuar, você confirma que leu e aceitou nosso
+[Termos de Uso](https://hashdata.com.br/pub/licenca/en/licenca.xhtml) e [Política de Privacidade](https://hashdata.com.br/pub/licenca/en/privacidade.xhtml):
 - **Continuar com Google** para usar sua Conta Google.
 - **Continuar com Microsoft** para usar sua Conta Microsoft.
 - **Continuar com Apple** para usar sua Conta Apple.
 
-#### 3. Autorize o Acesso {#step-3-authorize-access}
+#### Passo 3. Autorize o Acesso {#step-3-authorize-access}
 1. Após selecionar a opção de login desejada, você será redirecionado para a página de autenticação do provedor escolhido
 (Google, Microsoft ou Apple).
 2. Insira seu endereço de e-mail e senha associados à sua conta no provedor escolhido.
 3. Pode ser necessário completar a autenticação de dois fatores (2FA), se estiver ativada na sua conta.
 
-#### 4. Permita o Acesso à Conta Hashdata {#step-4-allow-access-to-hashdata-account}
+#### Passo 4. Permita o Acesso à Conta Hashdata {#step-4-allow-access-to-hashdata-account}
 1. Após inserir suas credenciais, você pode ser solicitado a conceder permissão ao Hashdata para acessar certas informações
 básicas do seu perfil (como nome e e-mail). Isso é necessário para criar ou vincular sua conta no Hashdata.
 2. Clique em **"Permitir"** ou **"Autorizar"** para conceder as permissões necessárias.
 
-#### 5. Acesso Completo {#step-5-complete-access}
+#### Passo 5. Acesso Completo {#step-5-complete-access}
 1. Uma vez que todas as etapas foram concluídas, você terá acesso à sua conta no Hashdata.
 2. Agora você pode começar a usar todas as funcionalidades oferecidas pela plataforma.
 
@@ -265,9 +292,7 @@ básicas do seu perfil (como nome e e-mail). Isso é necessário para criar ou v
 camada extra de segurança à sua conta Google, Microsoft ou Apple.
 3. **Verifique as permissões concedidas**: Revise regularmente as permissões que você concedeu ao Hashdata ou a qualquer outra aplicação.
 
-![Crie sua conta uma Conta Google, Microsoft ou Apple](./google_account.gif)
-
-## Áreas de trabalho, atores e responsabilidades {#desktop-actors-responsibilities}
+## Áreas de Trabalho, Atores e Responsabilidades {#desktop-actors-responsibilities}
 
 ### Área de Trabalho {#desktop}
 No Hashdata, as **áreas de trabalho** funcionam como **espaços colaborativos**, onde os formulários, os dados de coleta e os
@@ -286,7 +311,7 @@ somente um dispositivo *mobile* pode oferecer.
 - **Área de Trabalho Gratuita**: o Hashdata permite qualquer pessoa criar uma conta no sistema, que lhe dá acesso
 tanto na plataforma *web* quanto na *mobile*. Com uma conta, é permitido ao usuário criar uma **área de trabalho gratuita**,
 a qual pode ser utilizada para avaliar o sistema. Com a **área de trabalho gratuita**, o usuário pode criar formulários,
-coletar e analisar dados. Contudo, não lhe é permitido convidar colaboradores sua **área de trabalho gratuita**.
+coletar e analisar dados. Contudo, não lhe é permitido convidar colaboradores para essa área de trabalho.
 
 - **Área de Trabalho Licenciada**: para que um usuário possa criar uma área de trabalho sem limitações, além da área de trabalho
 gratuita, é necessário que ele contrate uma licença de uso do Hashdata. A licença de uso é associada a uma determinada área
