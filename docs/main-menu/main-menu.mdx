@@ -2,10 +2,13 @@
 sidebar_position: 1
 ---
 import React from 'react';
+import {Link} from 'react-router-dom';
 export const standardCaption = '. Clique na imagem para ampliá-la'
 export const initialScreamCaption = 'Apresentação da Tela Inicial do Hashdata' + standardCaption;
 export const headerCaption = 'Cabeçalho do Hashdata' + standardCaption;
 export const headerOptionsCaption = 'Opções disponíveis no cabeçalho do Hashdata' + standardCaption;
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 # Tela Inicial
 
@@ -41,7 +44,7 @@ A opção **Mudar Área de Trabalho** permite que você escolha entre as áreas 
 A funcionalidade possibilita mudar da área de trabalho de acordo com uma área específica de negócio.
 
 :::tip[Dica]
-Utilize o campo de pesquisa (lupa) para localizar a área de trabalho desejada.
+Utilize o campo de pesquisa 🔍 para localizar a área de trabalho desejada.
 :::
 
 Na opção **Mudar Área de Trabalho** é possível também:
@@ -89,8 +92,36 @@ de respostas (no mês corrente e no mês anterior) de formulários publicados e 
 recentemente.
 
 
+export const mainMenuData = [
+    {imgSrc: "img/main-menu/start.webp", label: "Início", link: "/home"},
+    {imgSrc: "img/main-menu/forms.webp", label: "Formulários", link: "/documents"},
+    {imgSrc: "img/main-menu/collaborators.webp", label: "Colaboradores", link: "/analytics"},
+    {imgSrc: "img/main-menu/invitations.webp", label: "Convites", link: "/settings"},
+    {imgSrc: "img/main-menu/shared-with-me.webp", label: "Compartilhados comigo", link: "/search"},
+    {imgSrc: "img/main-menu/pending-answers.webp", label: "Respostas pendentes", link: "/messages"},
+    {imgSrc: "img/main-menu/importing-data.webp", label: "Importar dados", link: "/files"},
+    {imgSrc: "img/main-menu/integrations.webp", label: "Integrações", link: "/history"},
+    {imgSrc: "img/main-menu/user-guide.webp", label: "Guia do usuário", link: "/users"},
+    {imgSrc: "img/main-menu/advanced-reports.webp", label: "Hashdata Advanced Reports", link: "/calendar"},
+];
 
-
-
-
-
+<table>
+    <tbody>
+    {mainMenuData.map((item, index) => (
+        <tr key={index}>
+            <td>
+                <Link to={item.link}>
+                    <button style={{display: 'flex', alignItems: 'center'}}>
+                        <img
+                            src={useBaseUrl(item.imgSrc)}
+                            alt={item.label}
+                            style={{width: '4em', height: '4em'}}
+                        />
+                    </button>
+                </Link>
+            </td>
+            {index % 2 === 1 && <tr/>}
+        </tr>
+    ))}
+    </tbody>
+</table>

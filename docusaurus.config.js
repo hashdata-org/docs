@@ -16,6 +16,7 @@ const config = {
     projectName: 'docs', // Usually your repo name.
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
+    staticDirectories: ['static'],
 
     themeConfig: {
         imageZoom: {
