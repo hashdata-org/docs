@@ -20,7 +20,7 @@ const config = {
 
     themeConfig: {
         imageZoom: {
-            zoomSelector: '.markdown :not(em) > img',
+            selector: '.markdown img:not(.no-zoom)',
             options: {
                 margin: 24,
                 background: '#d6d6d6',

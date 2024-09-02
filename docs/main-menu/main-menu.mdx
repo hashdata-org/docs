@@ -7,8 +7,8 @@ export const standardCaption = '. Clique na imagem para ampliá-la'
 export const initialScreamCaption = 'Apresentação da Tela Inicial do Hashdata' + standardCaption;
 export const headerCaption = 'Cabeçalho do Hashdata' + standardCaption;
 export const headerOptionsCaption = 'Opções disponíveis no cabeçalho do Hashdata' + standardCaption;
+export const desktopOptionsCaption = 'Opções disponíveis no desktop do Hashdata' + standardCaption;
 import useBaseUrl from '@docusaurus/useBaseUrl';
-
 
 # Tela Inicial
 
@@ -17,12 +17,20 @@ as funcionalidades essenciais para gerenciar as tarefas de coleta e análise de 
 esquerda, onde fica o **Menu Principal**, sempre serão exibidas. A maior parte da tela será ocupada pelo conteúdo da **Área de
 Trabalho**.
 
-![{initialScreamCaption}](./images/initial_scream.gif)
+<img
+    src={useBaseUrl('img/main-menu/initial_scream.gif')}
+    alt={initialScreamCaption}
+    title={initialScreamCaption}
+/>
 <p className="image-caption">{initialScreamCaption}</p>
 
 ## Cabeçalho {#header}
 
-![headerCaption](./images/header.webp)
+<img
+    src={useBaseUrl('img/main-menu/header.webp')}
+    alt={headerCaption}
+    title={headerCaption}
+/>
 <p className="image-caption">{headerCaption}</p>
 
 Dá esquerda para a direita, estão disponíveis as seguintes seções no cabeçalho do aplicativo Hashdata.
@@ -33,7 +41,11 @@ Dá esquerda para a direita, estão disponíveis as seguintes seções no cabeç
 - Seleção de Idioma;
 - Usuário;
 
-![{headerOptionsText}](./images/header.gif)
+<img
+    src={useBaseUrl('img/main-menu/header.gif')}
+    alt={headerOptionsCaption}
+    title={headerOptionsCaption}
+/>
 <p className="image-caption">{headerOptionsCaption}</p>
 
 ### Logomarca Hashdata {#logo}
@@ -77,51 +89,113 @@ alteração da senha de acesso;
 O **Menu Principal**, localizado à esquerda da tela, é a espinha dorsal da navegação no Hashdata. Ele fornece acesso
 às funcionalidades principais da plataforma:
 
-- Criar e gerir formulários;
-- Criar e gerir colaboradores e usuários;
-- Emitir convites para que colaboradores possam atuar em determinada área de trabalho;
-- Filtrar e analisar respostas pendentes de formulários;
-- Importar dados externos para o Hashdata;
-- Realizar integrações com outros sistemas;
-- Acessar este Guia de Usuário, e;
-- Utilizar o Hashdata Advanced Reports (para mais informações,  [entre em contato conosco](../intro.mdx#user-support)).
-
-## Área de Trabalho
-A maior parte da tela inicial é ocupada pela **Área de Trabalho**. Nela, são apresentados um gráfico com a quantidade de
-de respostas (no mês corrente e no mês anterior) de formulários publicados e uma lista com todos os formulários respondidos
-recentemente.
-
-
 export const mainMenuData = [
-    {imgSrc: "img/main-menu/start.webp", label: "Início", link: "/home"},
-    {imgSrc: "img/main-menu/forms.webp", label: "Formulários", link: "/documents"},
-    {imgSrc: "img/main-menu/collaborators.webp", label: "Colaboradores", link: "/analytics"},
-    {imgSrc: "img/main-menu/invitations.webp", label: "Convites", link: "/settings"},
-    {imgSrc: "img/main-menu/shared-with-me.webp", label: "Compartilhados comigo", link: "/search"},
-    {imgSrc: "img/main-menu/pending-answers.webp", label: "Respostas pendentes", link: "/messages"},
-    {imgSrc: "img/main-menu/importing-data.webp", label: "Importar dados", link: "/files"},
-    {imgSrc: "img/main-menu/integrations.webp", label: "Integrações", link: "/history"},
-    {imgSrc: "img/main-menu/user-guide.webp", label: "Guia do usuário", link: "/users"},
-    {imgSrc: "img/main-menu/advanced-reports.webp", label: "Hashdata Advanced Reports", link: "/calendar"},
+    {imgSrc: "/img/main-menu/start.webp", label: "Início", link: "/docs/main-menu/"},
+    {imgSrc: "/img/main-menu/forms.webp", label: "Formulários", link: "/docs/category/"},
+    {imgSrc: "/img/main-menu/collaborators.webp", label: "Colaboradores", link: "/analytics"},
+    {imgSrc: "/img/main-menu/invitations.webp", label: "Convites", link: "/settings"},
+    {imgSrc: "/img/main-menu/shared-with-me.webp", label: "Compartilhados comigo", link: "/search"},
+    {imgSrc: "/img/main-menu/pending-answers.webp", label: "Respostas pendentes", link: "/messages"},
+    {imgSrc: "/img/main-menu/importing-data.webp", label: "Importar dados", link: "/files"},
+    {imgSrc: "/img/main-menu/integrations.webp", label: "Integrações", link: "/history"},
+    {imgSrc: "/img/main-menu/user-guide.webp", label: "Guia do usuário", link: "/docs/"},
+    {imgSrc: "/img/main-menu/advanced-reports.webp", label: "Hashdata Advanced Reports", link: "/calendar"},
 ];
 
-<table>
+<table style={{display: 'flex', justifyContent: "space-around", flexWrap: 'wrap'}}>
     <tbody>
-    {mainMenuData.map((item, index) => (
-        <tr key={index}>
-            <td>
+    <tr style={{border: 'none'}}>
+        {mainMenuData.map((item) => (
+            <td style={{border: 'none', padding: '0.5rem'}}>
                 <Link to={item.link}>
-                    <button style={{display: 'flex', alignItems: 'center'}}>
-                        <img
-                            src={useBaseUrl(item.imgSrc)}
-                            alt={item.label}
-                            style={{width: '4em', height: '4em'}}
+                    <button style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        border: "none",
+                        padding: '.5em',
+                        cursor: "pointer"
+                    }}>
+                        <img className="no-zoom"
+                             src={useBaseUrl(item.imgSrc)}
+                             alt={item.label}
+                             title={item.label}
+                             style={{cursor: "pointer", width: '100%'}}
                         />
                     </button>
                 </Link>
             </td>
-            {index % 2 === 1 && <tr/>}
-        </tr>
-    ))}
+        ))}
+    </tr>
     </tbody>
 </table>
+
+
+1. **Retornar à Tela Inicial**;
+2. **Criar e gerir Formulários**;
+3. **Criar e gerir Colaboradores e Contas de Dispositivo**;
+4. **Emitir convites para que Colaboradores possam atuar em determinada área de trabalho**;
+5. **Acessar os formulários compartilhadas para você**;
+6. **Filtrar e analisar respostas pendentes de formulários**;
+7. **Importar dados externos para o Hashdata**;
+8. **Realizar integrações com outros sistemas**;
+9. **Acessar este Guia de Usuário**, e;
+10. **Utilizar o Hashdata Advanced Reports** (para mais informações,  [entre em contato conosco](../intro.mdx#user-support)).
+
+## Área de Trabalho {#desktop}
+Grande parte da tela inicial é ocupada pela **Área de Trabalho**. Nela, são apresentados um gráfico com a quantidade de
+de respostas de formulários publicados, o qual pode ser filtrado pelas respostas no mês corrente e pelas respostas no mês
+anterior, e uma lista com todos os formulários respondidos recentemente.
+
+<img
+    src={useBaseUrl('img/main-menu/desktop.gif')}
+    alt={desktopOptionsCaption}
+    title={desktopOptionsCaption}
+/>
+<p className="image-caption">{desktopOptionsCaption}</p>
+
+Ao clicar em <img style={{width: '4%', verticalAlign:'middle'}} src={useBaseUrl('img/main-menu/ellipsis.webp')} alt="Icon"
+className="no-zoom" />, disponível a direita de cada formulário da lista de **formulários respondidos recentemente**,
+será exibido um **menu suspenso** com as seguintes opções:
+
+<ol style={{display: 'flex', flexDirection: 'column', paddingBottom: '1em', gap: '1em'}}>
+    <li>
+        <Link to={'docs/forms'}>
+            <img style={{cursor: "pointer", width: '20%', verticalAlign: 'middle'}}
+                 src={useBaseUrl('img/main-menu/edit_form.webp')}
+                 alt={'Editar Formulário'}
+                 title={'Editar Formulário'}
+            />
+        </Link>
+    </li>
+    <li>
+        <Link to={'docs/forms'}>
+            <img style={{cursor: "pointer", width: '20%', verticalAlign: 'middle'}}
+                 src={useBaseUrl('img/main-menu/publish_info.webp')}
+                 alt={'Info. Publicação'}
+                 title={'Info. Publicação'}
+            />
+        </Link>
+    </li>
+    <li>
+        <Link to={'docs/forms'}>
+            <img style={{cursor: "pointer", width: '20%', verticalAlign: 'middle'}}
+                 src={useBaseUrl('img/main-menu/see_answers.webp')}
+                 alt={'Ver Respostas'}
+                 title={'Ver Respostas'}
+            />
+        </Link>
+    </li>
+    <li>
+        <Link to={'docs/forms'}>
+            <img style={{cursor: "pointer", width: '20%', verticalAlign: 'middle'}}
+                 src={useBaseUrl('img/main-menu/graph_analysis.webp')}
+                 alt={'Análise Gráfica'}
+                 title={'Análise Gráfica'}
+            />
+        </Link>
+    </li>
+</ol>
+
+:::tip[Saiba mais]
+Clique nas imagens acima para saber mais de cada uma das funcionalidades do menu suspenso.
+:::

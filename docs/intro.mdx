@@ -7,6 +7,7 @@ import React from 'react';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Mermaid from '@theme/Mermaid';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 export const standardCaption = ' Clique na imagem para ampliá-la'
 export const createAccountUsingValidEmail = 'Passo a passo para criar uma conta no Hashdata utilizando um e-mail válido.' + standardCaption;
 export const createAccountUsingGoogleMicrosoftApple = 'Passo a passo para criar uma conta no Hashdata validando seu acesso por meio de uma ' +
@@ -158,7 +159,7 @@ duas formas de cadastro:
 - **Utilizando um e-mail válido**, ou;
 - **Validando seu acesso por meio de uma conta Google, Microsoft ou Apple**.
 
-:::tip[Termos de Uso e Política de Privacidade]
+:::info[Termos de Uso e Política de Privacidade]
 Ao criar uma conta no Hashdata, você confirma que leu e aceitou nosso [Termos de Uso](https://hashdata.com.br/pub/licenca/en/licenca.xhtml)
 e [Política de Privacidade](https://hashdata.com.br/pub/licenca/en/privacidade.xhtml).
 :::
@@ -171,7 +172,11 @@ Para mais informações sobre Áreas de Trabalho, acesse [**Áreas de Trabalho, 
 
 ### Utilizando um E-mail Válido {#use-valid-email}
 
-![{crateUserCaption}}](./sign_up.gif)
+<img
+    src={useBaseUrl('img/intro/sign_up.gif')}
+    alt={createAccountUsingValidEmail}
+    title={createAccountUsingValidEmail}
+/>
 <p className="image-caption">{createAccountUsingValidEmail}</p>
 
 #### Passo 1: Acessar a página inicial do Hashdata {#step1-goes-to-initial-page}
@@ -256,7 +261,11 @@ feito nas configurações do usuário após o *login*.
 
 ### Validando seu Acesso por meio de uma Conta Google, Microsoft ou Apple {#validating-your-access-with-a-google-microsoft-or-apple-account}
 
-![{createAccountUsingGoogleMicrosoftApple}](./google_account.gif)
+<img
+    src={useBaseUrl('img/intro/google_account.gif')}
+    alt={createAccountUsingGoogleMicrosoftApple}
+    title={createAccountUsingGoogleMicrosoftApple}
+/>
 <p className="image-caption">{createAccountUsingGoogleMicrosoftApple}</p>
 
 #### Passo 1. Acesse a Página de Login {#step-1-access-the-login-page}
