@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 import React from 'react';
 import {Link} from 'react-router-dom';
-export const standardCaption = '. Clique na imagem para ampliá-la'
+export const standardCaption = '. Clique na imagem para ampliá-la.'
 export const initialScreamCaption = 'Apresentação da Tela Inicial do Hashdata' + standardCaption;
 export const headerCaption = 'Cabeçalho do Hashdata' + standardCaption;
 export const headerOptionsCaption = 'Opções disponíveis no cabeçalho do Hashdata' + standardCaption;
@@ -86,23 +86,34 @@ alteração da senha de acesso;
 - **Sair**: finaliza a sessão do sistema Hashdata de forma segura.
 
 ## Menu Principal {#main-menu}
-O **Menu Principal**, localizado à esquerda da tela, é a espinha dorsal da navegação no Hashdata. Ele fornece acesso
-às funcionalidades principais da plataforma:
+O **Menu Principal**, localizado na barra lateral esquerda da tela, é a espinha dorsal da navegação no Hashdata.
+Ele fornece acesso às funcionalidades principais do sistema:
+
+1. **Retornar à Tela Inicial**;
+2. **Criar e gerir Formulários**;
+3. **Criar e gerir Colaboradores e Contas de Dispositivo**;
+4. **Emitir convites para que Colaboradores possam atuar em determinada área de trabalho**;
+5. **Acessar os formulários compartilhados com você**;
+6. **Filtrar e analisar respostas pendentes de formulários**;
+7. **Importar dados externos para o Hashdata**;
+8. **Realizar integrações com outros sistemas**;
+9. **Acessar este Guia de Usuário**, e;
+10. **Utilizar o Hashdata Advanced Reports** (para mais informações,  [entre em contato conosco](../intro.mdx#user-support)).
 
 export const mainMenuData = [
-    {imgSrc: "/img/main-menu/start.webp", label: "Início", link: "/docs/main-menu/"},
-    {imgSrc: "/img/main-menu/forms.webp", label: "Formulários", link: "/docs/category/"},
-    {imgSrc: "/img/main-menu/collaborators.webp", label: "Colaboradores", link: "/analytics"},
-    {imgSrc: "/img/main-menu/invitations.webp", label: "Convites", link: "/settings"},
-    {imgSrc: "/img/main-menu/shared-with-me.webp", label: "Compartilhados comigo", link: "/search"},
-    {imgSrc: "/img/main-menu/pending-answers.webp", label: "Respostas pendentes", link: "/messages"},
-    {imgSrc: "/img/main-menu/importing-data.webp", label: "Importar dados", link: "/files"},
-    {imgSrc: "/img/main-menu/integrations.webp", label: "Integrações", link: "/history"},
-    {imgSrc: "/img/main-menu/user-guide.webp", label: "Guia do usuário", link: "/docs/"},
-    {imgSrc: "/img/main-menu/advanced-reports.webp", label: "Hashdata Advanced Reports", link: "/calendar"},
+    {imgSrc: "/img/main-menu/start.webp", label: "1. Início", link: "/docs/main-menu/"},
+    {imgSrc: "/img/main-menu/forms.webp", label: "2. Formulários", link: "/docs/category/"},
+    {imgSrc: "/img/main-menu/collaborators.webp", label: "3. Colaboradores", link: "/analytics"},
+    {imgSrc: "/img/main-menu/invitations.webp", label: "4. Convites", link: "/settings"},
+    {imgSrc: "/img/main-menu/shared-with-me.webp", label: "5. Compartilhados comigo", link: "/search"},
+    {imgSrc: "/img/main-menu/pending-answers.webp", label: "6. Respostas pendentes", link: "/messages"},
+    {imgSrc: "/img/main-menu/importing-data.webp", label: "7. Importar dados", link: "/files"},
+    {imgSrc: "/img/main-menu/integrations.webp", label: "8. Integrações", link: "/history"},
+    {imgSrc: "/img/main-menu/user-guide.webp", label: "9. Guia do usuário", link: "/docs/"},
+    {imgSrc: "/img/main-menu/advanced-reports.webp", label: "10. Hashdata Advanced Reports", link: "/calendar"},
 ];
 
-<table style={{display: 'flex', justifyContent: "space-around", flexWrap: 'wrap'}}>
+<table style={{display: 'flex', justifyContent: "space-around", flexWrap: 'wrap', paddingTop: '1rem', paddingBottom: '1rem'}}>
     <tbody>
     <tr style={{border: 'none'}}>
         {mainMenuData.map((item) => (
@@ -129,17 +140,10 @@ export const mainMenuData = [
     </tbody>
 </table>
 
+:::tip[Saiba mais]
+Clique nos ícones acima para conhecer as funcionalidades do menu principal do Hashdata.
+:::
 
-1. **Retornar à Tela Inicial**;
-2. **Criar e gerir Formulários**;
-3. **Criar e gerir Colaboradores e Contas de Dispositivo**;
-4. **Emitir convites para que Colaboradores possam atuar em determinada área de trabalho**;
-5. **Acessar os formulários compartilhadas para você**;
-6. **Filtrar e analisar respostas pendentes de formulários**;
-7. **Importar dados externos para o Hashdata**;
-8. **Realizar integrações com outros sistemas**;
-9. **Acessar este Guia de Usuário**, e;
-10. **Utilizar o Hashdata Advanced Reports** (para mais informações,  [entre em contato conosco](../intro.mdx#user-support)).
 
 ## Área de Trabalho {#desktop}
 Grande parte da tela inicial é ocupada pela **Área de Trabalho**. Nela, são apresentados um gráfico com a quantidade de
@@ -164,6 +168,7 @@ será exibido um **menu suspenso** com as seguintes opções:
                  src={useBaseUrl('img/main-menu/edit_form.webp')}
                  alt={'Editar Formulário'}
                  title={'Editar Formulário'}
+                 className="no-zoom"
             />
         </Link>
     </li>
@@ -173,6 +178,7 @@ será exibido um **menu suspenso** com as seguintes opções:
                  src={useBaseUrl('img/main-menu/publish_info.webp')}
                  alt={'Info. Publicação'}
                  title={'Info. Publicação'}
+                 className="no-zoom"
             />
         </Link>
     </li>
@@ -182,6 +188,7 @@ será exibido um **menu suspenso** com as seguintes opções:
                  src={useBaseUrl('img/main-menu/see_answers.webp')}
                  alt={'Ver Respostas'}
                  title={'Ver Respostas'}
+                 className="no-zoom"
             />
         </Link>
     </li>
@@ -191,6 +198,7 @@ será exibido um **menu suspenso** com as seguintes opções:
                  src={useBaseUrl('img/main-menu/graph_analysis.webp')}
                  alt={'Análise Gráfica'}
                  title={'Análise Gráfica'}
+                 className="no-zoom"
             />
         </Link>
     </li>

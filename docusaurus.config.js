@@ -19,6 +19,12 @@ const config = {
     staticDirectories: ['static'],
 
     themeConfig: {
+        docs: {
+          sidebar: {
+              hideable: true,
+              autoCollapseCategories: true,
+          },
+        },
         imageZoom: {
             selector: '.markdown img:not(.no-zoom)',
             options: {
@@ -98,8 +104,9 @@ const config = {
             darkTheme: darkTheme,
         },
     },
+
     presets: [
-        ['classic',
+        ['@docusaurus/preset-classic',
             ({
                 docs: {
                     routeBasePath: '/', sidebarPath: require.resolve('./sidebars.js'), // Please change this to your repo.
