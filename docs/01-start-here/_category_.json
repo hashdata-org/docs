@@ -1,6 +1,5 @@
 {
   "label": "Começe aqui",
-  "slug": "start-here",
   "position": 1,
   "link": {
     "type": "generated-index"

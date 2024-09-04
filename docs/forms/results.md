@@ -9,21 +9,21 @@ Nesta seção são geradas as análises automáticas pelo sistema, que podem ser
 
 Na seção formulário, abra o formulário desejado e vá em "resultados".
 
-![result1](./images/result1.png)
+![result1](images/result1.png)
 
 ## Dados {#Data}
 
 As tabelas de respostas são geradas automaticamente, basta acessar a a seção "resultados" e então "dados".
 
-![data](./images/data.png)
+![data](images/data.png)
 
 Nesta seção serão exibidas todas as coletas por ordem cronológica. É possível filtrar as coletas por datas específicas, por resposta e exportar os resultados em XLS.
 
-![table](./images/table.png)
+![table](images/table.png)
 
 Também é possível acessar cada uma das coletas individualmente e exportar em PDF.
 
-![export](./images/export.png)
+![export](images/export.png)
 
 ## Gráficos {#Charts}
 
@@ -33,17 +33,17 @@ Há três tipos de gráficos na versão básica do Hashdata: barras, pizza e lin
 
 ### Barras {#Bars}
 
-![bar](./images/bar.png)
+![bar](images/bar.png)
 
 ### Pizza {#Pie}
 
-![pie](./images/pie.png)
+![pie](images/pie.png)
 
 ### Linha {#Line}
 
-![line](./images/line.png)
+![line](images/line.png)
 
 ## Download de fotos {#Photos Download}
 
-![photo](./images/photo.png)
+![photo](images/photo.png)
 
