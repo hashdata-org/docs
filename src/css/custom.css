@@ -45,3 +45,7 @@ blockquote {
     font-weight: bold;
 }
 
+.image-between-texts {
+    width: 4%;
+    vertical-align: middle;
+}

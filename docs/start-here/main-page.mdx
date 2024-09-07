@@ -1,0 +1,218 @@
+---
+slug: main-page
+sidebar_position: 2
+sidebar_label: Conhecendo a Tela Inicial
+---
+
+import React from 'react';
+import {Link} from 'react-router-dom';
+export const standardCaption = '. Clique na imagem para ampliá-la.'
+export const initialScreamCaption = 'Apresentação da Tela Inicial do Hashdata' + standardCaption;
+export const headerCaption = 'Cabeçalho do Hashdata' + standardCaption;
+export const headerOptionsCaption = 'Opções disponíveis no cabeçalho do Hashdata' + standardCaption;
+export const desktopOptionsCaption = 'Opções disponíveis no desktop do Hashdata' + standardCaption;
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+# Tela Inicial
+
+A tela inicial do Hashdata foi projetada para maximizar a eficiência e a facilidade do uso do sistema. Nela estão disponíveis
+as funcionalidades essenciais para gerenciar as tarefas de coleta e análise de dados. O cabeçalho da página e o barra lateral
+esquerda, onde fica o **Menu Principal**, sempre serão exibidas. A maior parte da tela será ocupada pelo conteúdo da **Área de
+Trabalho**.
+
+<img
+    src={useBaseUrl('img/start-here/main-menu/initial_scream.gif')}
+    alt={initialScreamCaption}
+    title={initialScreamCaption}
+/>
+<p className="image-caption">{initialScreamCaption}</p>
+
+## Cabeçalho {#header}
+
+<img
+    src={useBaseUrl('img/start-here/main-menu/header.webp')}
+    alt={headerCaption}
+    title={headerCaption}
+/>
+<p className="image-caption">{headerCaption}</p>
+
+Dá esquerda para a direita, estão disponíveis as seguintes seções no cabeçalho do aplicativo Hashdata.
+- Logomarca Hashdata;
+- Mudar Área de Trabalho;
+- Pesquisa Global;
+- Seleção de Tema;
+- Seleção de Idioma;
+- Usuário;
+
+<img
+    src={useBaseUrl('img/start-here/main-menu/header.gif')}
+    alt={headerOptionsCaption}
+    title={headerOptionsCaption}
+/>
+<p className="image-caption">{headerOptionsCaption}</p>
+
+### Logomarca Hashdata {#logo}
+Clicando na logomarca Hashdata, a aplicação retornará para a **tela inicial**.
+
+### Mudar Área de Trabalho {#change-desktop}
+A opção **Mudar Área de Trabalho** permite que você escolha entre as áreas de trabalho disponíveis em sua conta.
+A funcionalidade possibilita mudar da área de trabalho de acordo com uma área específica de negócio.
+
+:::tip[Dica]
+Utilize o campo de pesquisa 🔍 para localizar a área de trabalho desejada.
+:::
+
+Na opção **Mudar Área de Trabalho** é possível também:
+- **Editar o nome da área de trabalho**;
+- **Acessar as informações do proprietário**.
+
+### Pesquisa Global {#global-search}
+No campo **Pesquisa Global** é possível informar um termo de pesquisa para buscar formulários, pastas, colaboradores,
+grupos ou menus.
+
+### Seleção de Tema {#theme-toggle}
+O Hashdata disponibiliza a opção de **Seleção de Tema** entre modo claro e escuro, permitindo ajuste a interface de acordo
+com a preferência ou condições de iluminação. Essa personalização melhora a experiência do usuário, tornando a visualização
+mais confortável em diferentes ambientes.
+
+### Seleção de Idioma {#languages}
+A opção de **Idioma** permite a configuração do Hashdata entre diferentes idiomas, garantindo que a plataforma seja acessível
+e fácil de usar para falantes de várias línguas. Isso é essencial para equipes multinacionais e para a personalização da
+experiência do usuário.
+
+### Usuário {#user-profile}
+Ao clicar na foto do perfil do **Usuário**, serão mostradas opções de:
+- **Perfil**: alteração das informações pessoais, como nome, e-mail e foto de perfil;
+- **Conta e Credenciais**: gerenciamento das configurações de segurança, como alterar a forma de autenticação e
+alteração da senha de acesso;
+- **Meu plano**:  detalhes do plano atual, incluindo opções de *upgrade*;
+- **Sair**: finaliza a sessão do sistema Hashdata de forma segura.
+
+## Menu Principal {#main-menu}
+O **Menu Principal**, localizado na barra lateral esquerda da tela, é a espinha dorsal da navegação no Hashdata.
+Ele fornece acesso às funcionalidades principais do sistema:
+
+1. **Retornar à Tela Inicial**;
+2. **Criar e gerir Formulários**;
+3. **Criar e gerir Colaboradores e Contas de Dispositivo**;
+4. **Emitir convites para que Colaboradores possam atuar em determinada área de trabalho**;
+5. **Acessar os formulários compartilhados com você**;
+6. **Filtrar e analisar respostas pendentes de formulários**;
+7. **Importar dados externos para o Hashdata**;
+8. **Realizar integrações com outros sistemas**;
+9. **Acessar este Guia de Usuário**, e;
+10. **Utilizar o Hashdata Advanced Reports** (para mais informações,  [entre em contato conosco](../intro.mdx#user-support)).
+
+export const mainMenuData = [
+    {imgSrc: "/img/start-here/main-menu/start.webp", label: "1. Início", link: "/docs/start-here/main-page"},
+    {imgSrc: "/img/start-here/main-menu/forms.webp", label: "2. Formulários", link: "/docs/managing-forms/how-to-create-a-form"},
+    {imgSrc: "/img/start-here/main-menu/collaborators.webp", label: "3. Colaboradores", link: "/analytics"},
+    {imgSrc: "/img/start-here/main-menu/invitations.webp", label: "4. Convites", link: "/settings"},
+    {imgSrc: "/img/start-here/main-menu/shared-with-me.webp", label: "5. Compartilhados comigo", link: "/search"},
+    {imgSrc: "/img/start-here/main-menu/pending-answers.webp", label: "6. Respostas pendentes", link: "/messages"},
+    {imgSrc: "/img/start-here/main-menu/import-data.webp", label: "7. Importar dados", link: "/files"},
+    {imgSrc: "/img/start-here/main-menu/integrations.webp", label: "8. Integrações", link: "/history"},
+    {imgSrc: "/img/start-here/main-menu/user-guide.webp", label: "9. Guia do usuário", link: "/docs/"},
+    {imgSrc: "/img/start-here/main-menu/advanced-reports.webp", label: "10. Hashdata Advanced Reports", link: "/calendar"},
+];
+
+<table style={{
+    display: 'flex',
+    justifyContent: "space-around",
+    flexWrap: 'wrap',
+    paddingTop: '1rem',
+    paddingBottom: '1rem'
+}}>
+    <tbody>
+    <tr style={{border: 'none'}}>
+        {mainMenuData.map((item) => (
+            <td style={{border: 'none', padding: '0.5rem'}}>
+                <Link to={item.link}>
+                    <button style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        border: "none",
+                        padding: '.5em',
+                        cursor: "pointer"
+                    }}>
+                        <img className="no-zoom"
+                             src={useBaseUrl(item.imgSrc)}
+                             alt={item.label}
+                             title={item.label}
+                             style={{cursor: "pointer", width: '100%'}}
+                        />
+                    </button>
+                </Link>
+            </td>
+        ))}
+    </tr>
+    </tbody>
+</table>
+
+:::tip[Saiba mais]
+Clique nos ícones acima para conhecer as funcionalidades do menu principal do Hashdata.
+:::
+
+
+## Área de Trabalho {#desktop}
+Grande parte da tela inicial é ocupada pela **Área de Trabalho**. Nela, são apresentados um gráfico com a quantidade de
+de respostas de formulários publicados, o qual pode ser filtrado pelas respostas no mês corrente e pelas respostas no mês
+anterior, e uma lista com todos os formulários respondidos recentemente.
+
+<img
+    src={useBaseUrl('img/start-here/main-menu/desktop.gif')}
+    alt={desktopOptionsCaption}
+    title={desktopOptionsCaption}
+/>
+<p className="image-caption">{desktopOptionsCaption}</p>
+
+Ao clicar em <img src={useBaseUrl('img/start-here/main-menu/ellipsis.webp')} alt="Icon" className="no-zoom image-between-texts" />,
+disponível a direita de cada formulário da lista de **formulários respondidos recentemente**, será exibido um **menu suspenso**
+com as seguintes opções:
+
+<ol style={{display: 'flex', flexDirection: 'column', paddingBottom: '1em', gap: '1em'}}>
+    <li>
+        <Link to={'docs/forms'}>
+            <img style={{cursor: "pointer", width: '20%', verticalAlign: 'middle'}}
+                 src={useBaseUrl('img/start-here/main-menu/edit_form.webp')}
+                 alt={'Editar Formulário'}
+                 title={'Editar Formulário'}
+                 className="no-zoom"
+            />
+        </Link>
+    </li>
+    <li>
+        <Link to={'docs/forms'}>
+            <img style={{cursor: "pointer", width: '20%', verticalAlign: 'middle'}}
+                 src={useBaseUrl('img/start-here/main-menu/publish_info.webp')}
+                 alt={'Info. Publicação'}
+                 title={'Info. Publicação'}
+                 className="no-zoom"
+            />
+        </Link>
+    </li>
+    <li>
+        <Link to={'docs/forms'}>
+            <img style={{cursor: "pointer", width: '20%', verticalAlign: 'middle'}}
+                 src={useBaseUrl('img/start-here/main-menu/see_answers.webp')}
+                 alt={'Ver Respostas'}
+                 title={'Ver Respostas'}
+                 className="no-zoom"
+            />
+        </Link>
+    </li>
+    <li>
+        <Link to={'docs/forms'}>
+            <img style={{cursor: "pointer", width: '20%', verticalAlign: 'middle'}}
+                 src={useBaseUrl('img/start-here/main-menu/graph_analysis.webp')}
+                 alt={'Análise Gráfica'}
+                 title={'Análise Gráfica'}
+                 className="no-zoom"
+            />
+        </Link>
+    </li>
+</ol>
+
+:::tip[Saiba mais]
+Clique nas imagens acima para saber mais de cada uma das funcionalidades do menu suspenso.
+:::

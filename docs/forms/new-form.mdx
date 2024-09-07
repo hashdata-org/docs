@@ -1,0 +1,97 @@
+---
+slug: how-to-create-and-edit-forms
+sidebar_position: 1
+sidebar_label: Criar ou Editar Formulários
+---
+
+export const standardCaption = '. Clique na imagem para ampliá-la.'
+export const initialScreamCaption = 'Apresentação das principais funcionalidades da tela Formulários' + standardCaption;
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+# Criar ou Editar Formulários
+Os formulários são a principal ferramenta para a realização da coleta de dados.
+A criação correta de um formulário influencia diretamente no sucesso da análise dos dados coletados, pois garante as
+informações relevantes sejam capturadas de maneira organizada.
+
+A definição adequada das perguntas e dos tipos de resposta, como campos de números, de texto, data e hora ou múltipla escolha,
+é fundamental para que os dados possam ser facilmente analisados e convertidos em conhecimentos para as tomadas de decisão.
+
+Para criar ou editar um formulário, gerenciando suas funcionalidades, clique em <img src={useBaseUrl('img/start-here/main-menu/forms.webp')} alt="Formulário"
+className="no-zoom image-between-texts" />, disponível no [Menu Principal](/start-here/main-page#main-menu).
+
+<img
+    src={useBaseUrl('img/forms/new-form/new-form.gif')}
+    alt={initialScreamCaption}
+    title={initialScreamCaption}
+/>
+<p className="image-caption">{initialScreamCaption}</p>
+
+
+## Defina a Área de Trabalho {#set-the-desktop}
+Certifique-se que a área de trabalho ativa é aquela na qual você deseja criar o formulário. Formulários irão pertencer
+à área de trabalho que estiver ativa no momento de sua criação.
+
+:::tip[Mudar Área de Trabalho]
+[Clique aqui](/start-here/main-page#change-desktop) e veja mais detalhes de como mudar a área de trabalho ativa.
+:::
+
+## Organize os Formulários em Pastas {#organize-the-forms-into-folders}
+Organizar formulários em pastas permite uma gestão mais eficiente, especialmente quando se lida com um grande volume de formulários.
+
+As pastas e subpastas ajudam a categorizar os formulários por temas, projetos, datas ou departamentos, garantindo que cada um esteja no
+local correto. Além disso, essa estruturação possibilita uma visualização rápida, facilitando a localização de formulários
+antigos ou específicos, melhorando a colaboração entre equipes.
+
+Quando um formulário for criado, será mostrada opção para que seja definida qual a pasta ou ou subpasta que o formulário
+deverá ser criado.
+
+### Gerenciamento de Pastas {#folders-management}
+No gerenciamento de pastas, você pode:
+* Incluir uma nova pasta;
+* Incluir uma subpasta;
+* Alterar o nome de uma pasta;
+* Definir os grupos de colaboradores que terão acesso à uma determinada pasta, e;
+* Excluir uma pasta.
+
+## Criando um Formulário {#creating-a-form}
+
+1. Clique em <img style={{width: '13%'}}  src={useBaseUrl('/img/forms/new-form/click-to-new-form.webp')} alt="Novo formulário"
+className="no-zoom image-between-texts" />;
+2. Defina o nome do formulário;
+3. Selecione a pasta ou subpasta de destino;
+4. Clique em "Criar" ou utilize a tecla de atalho "Ctrl+S.
+
+
+:::tip[Gerenciamento de pastas e criação de formulários]
+Veja a figura no início desta paǵina. Ela mostra as principais funcionalidades da tela **Formulários**, incluíndo o
+**gerenciamento de pastas** e a **criação de um formulário**.
+:::
+
+## Adicionando Elementos ao Formulário {#add-elements-to-the-form}
+Após a criação do formulário, será aberta a tela de edição da estrutura e das funcionalidades formulário criado. Os **elementos**
+são os componentes que constituem a **estrutura** de um formulário, permitindo a coleta e organização de dados.
+
+Os elementos são compostos pelos seguintes campos:
+* **Texto**: usados para capturar respostas abertas, como nomes, endereços, comentários ou e-mails;
+* **Numéricos**: usados para salvar valores inteiros ou decimais;
+* **Seleção Única**: Permitem a escolha de uma opção detre uma lista de opções;
+* **Múltipla Seleção**: Permitem a escolha de múltiplas opções de uma lista de opções;
+* **Data e Hora**: facilitam a entrada de datas ou horas por meio de um calendário;
+* **Avaliação**: permite pesquisa de satisfação por meio de expressões faciais ou emojis;
+* **Exibição**: possibilita a exibição de imagens ou textos;
+* **Outros**: como, enviar arquivo, GPS, campo calculado (*script* ou fórmula), ordenar/priorizar, fotos/imagens e assinatura.
+
+### 1. Para adicionar elementos ao formulário:
+1. Clique em <img style={{width: '13%'}}  src={useBaseUrl('/img/forms/new-form/add-element.webp')} alt="Adicionar elemento"
+className="no-zoom image-between-texts" />;
+2. Escolha o elemento desejado, observe que eles estão organizados em abas: **"Entrada de dados"** e **"Exibição"**;
+3. Clique no elemento desejado e ele será incluído no formulário.
+
+### 2. Para configurar os elementos
+ Após adicionar o elemento no formulário, será mostrada uma tela de edição do elemento, nesta tela é possível:
+
+* Alterar o tipo do elemento;
+* Incluir um título, uma pergunta, etc.;
+* Fazer uma descrição opcional do elemento;
+* Inserir ações condicionais, do tipo Se/Então;
+* Configurar conteúdo condicional (multi-conteúdo)
