@@ -5,10 +5,11 @@ sidebar_label: Criar ou Editar Formulários
 ---
 
 export const standardCaption = '. Clique na imagem para ampliá-la.'
-export const initialScreamCaption = 'Apresentação das principais funcionalidades da tela Formulários' + standardCaption;
+export const initialScreamCaption = 'Apresentação das principais funcionalidades da tela Formulários, como gerenciamento ' +
+    'de pastas e criação de formulários' + standardCaption;
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-# Criar ou Editar Formulários
+# Como Criar ou Editar Formulários
 Os formulários são a principal ferramenta para a realização da coleta de dados.
 A criação correta de um formulário influencia diretamente no sucesso da análise dos dados coletados, pois garante as
 informações relevantes sejam capturadas de maneira organizada.
@@ -53,7 +54,7 @@ No gerenciamento de pastas, você pode:
 * Definir os grupos de colaboradores que terão acesso à uma determinada pasta, e;
 * Excluir uma pasta.
 
-## Criando um Formulário {#creating-a-form}
+## Crie um Formulário {#creating-a-form}
 
 1. Clique em <img style={{width: '13%'}}  src={useBaseUrl('/img/forms/new-form/click-to-new-form.webp')} alt="Novo formulário"
 className="no-zoom image-between-texts" />;
@@ -67,31 +68,226 @@ Veja a figura no início desta paǵina. Ela mostra as principais funcionalidades
 **gerenciamento de pastas** e a **criação de um formulário**.
 :::
 
-## Adicionando Elementos ao Formulário {#add-elements-to-the-form}
+## Adicione Elementos ao Formulário {#add-elements-to-the-form}
 Após a criação do formulário, será aberta a tela de edição da estrutura e das funcionalidades formulário criado. Os **elementos**
 são os componentes que constituem a **estrutura** de um formulário, permitindo a coleta e organização de dados.
 
+:::danger Importante
+As configurações realizadas nessa etapa definirão como o formulário será apresentado para a coleta de dados.
+:::
+
 Os elementos são compostos pelos seguintes campos:
-* **Texto**: usados para capturar respostas abertas, como nomes, endereços, comentários ou e-mails;
-* **Numéricos**: usados para salvar valores inteiros ou decimais;
-* **Seleção Única**: Permitem a escolha de uma opção detre uma lista de opções;
+* **Texto**:
+* **Numéricos**: ;
+* **Seleção Única**: ;
 * **Múltipla Seleção**: Permitem a escolha de múltiplas opções de uma lista de opções;
 * **Data e Hora**: facilitam a entrada de datas ou horas por meio de um calendário;
 * **Avaliação**: permite pesquisa de satisfação por meio de expressões faciais ou emojis;
 * **Exibição**: possibilita a exibição de imagens ou textos;
 * **Outros**: como, enviar arquivo, GPS, campo calculado (*script* ou fórmula), ordenar/priorizar, fotos/imagens e assinatura.
 
-### 1. Para adicionar elementos ao formulário:
+
+
+### 1. Para adicionar elementos {#to-add-elements}
 1. Clique em <img style={{width: '13%'}}  src={useBaseUrl('/img/forms/new-form/add-element.webp')} alt="Adicionar elemento"
-className="no-zoom image-between-texts" />;
+className="no-zoom image-between-texts" />, disponível na porção inferior esquerda da tela;
 2. Escolha o elemento desejado, observe que eles estão organizados em abas: **"Entrada de dados"** e **"Exibição"**;
 3. Clique no elemento desejado e ele será incluído no formulário.
 
-### 2. Para configurar os elementos
- Após adicionar o elemento no formulário, será mostrada uma tela de edição do elemento, nesta tela é possível:
+#### Entrada de dados
 
-* Alterar o tipo do elemento;
-* Incluir um título, uma pergunta, etc.;
-* Fazer uma descrição opcional do elemento;
-* Inserir ações condicionais, do tipo Se/Então;
-* Configurar conteúdo condicional (multi-conteúdo)
+<table>
+    <thead>
+    <tr>
+        <th style={{textAlign: 'start'}}>Tipo</th>
+        <th style={{textAlign: 'start', width: '30%'}}>Elementos</th>
+        <th style={{textAlign: 'start'}}>Descrição</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Texto</td>
+        <td>
+            <ul>
+                <li>Linha única</li>
+                <li>Várias linhas</li>
+                <li>Email</li>
+                <li>Máscara</li>
+            </ul>
+        </td>
+        <td>Usados para capturar respostas abertas, como nomes, endereços, comentários, e-mails, textos formatados  (CPF, RG etc.).</td>
+    </tr>
+    <tr>
+        <td>Número</td>
+        <td>
+            <ul>
+                <li>Inteiro</li>
+                <li>Decimal</li>
+                <li>Quantidade (Emojis)</li>
+            </ul>
+        </td>
+        <td>Usados para salvar valores inteiros ou decimais.</td>
+    </tr>
+    <tr>
+        <td>Seleção única<br/>(várias opções, uma resposta)</td>
+        <td>
+            <ul>
+                <li>Seleção única (Menu)</li>
+                <li>Seleção única (Check)</li>
+                <li>Seleção única (Botões)</li>
+            </ul>
+        </td>
+        <td>Permitem a escolha de uma opção detre uma lista de opções.</td>
+    </tr>
+    <tr>
+        <td>Múltipla seleção<br/>(várias opções, várias respostas)</td>
+        <td>
+
+            <ul>
+                <li>Seleção única (Menu)</li>
+                <li>Seleção única (Check)</li>
+                <li>Seleção única (Botões)</li>
+            </ul>
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Data e hora</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Avaliação</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Outros</td>
+        <td></td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+### 2. Para configurar os elementos {#to-setup-elements}
+Os elementos adicionados ao formulário serão mostrados na porção central da tela e, ao redor desses elementos, serão
+apresentadas as seguintes opções de configuração:
+
+<table>
+    <thead>
+    <tr>
+        <th style={{textAlign: 'start'}}>Opção</th>
+        <th style={{textAlign: 'start'}}>Descrição</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Texto principal do elemento</td>
+        <td>
+            O texto principal do elemento pode ser uma pergunta ou simplesmente um título. Por exemplo, para coletar o nome completo, pode-se usar:
+            <ul>
+                <li><strong>Nome Completo:</strong>, ou;</li>
+                <li><strong>Qual o seu nome completo?</strong>.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Descrição</td>
+        <td>
+            Embora seja opcional, a descrição do elemento pode ser utilizada para instruir a resposta. Por exemplo, em um campo para coleta do nome completo, pode-se usar a seguinte descrição:
+            <ul>
+                <li><strong>Informe seu nome completo, sem abreviações</strong>.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Alterar o tipo da pergunta (elemento)</td>
+        <td>
+            Permite a alteração de um tipo do elemento para outros tipos relacionados, após ter sido incluído no formulário.<br />
+            Por exemplo, altere um elemento do tipo <strong>Linha única</strong> para número <strong>Inteiro</strong>, ou um elemento <strong>Multi-seleção (Check)</strong> para <strong>Multi-seleção (Botões)</strong>.
+        </td>
+    </tr>
+    <tr>
+        <td>Ações condicionais</td>
+        <td>
+            São blocos do tipo "SE/ENTÃO": SE (condição acontecer) ENTÃO (faça a ação). <a href="#conditional-actions-learn-more">Saiba mais...</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Conteúdo condicional (multiconteúdo)</td>
+        <td>
+            Criar vários conteúdos para a mesma pergunta, incluindo opções de respostas diversas. <a href="#conditional-content-learn-more">Saiba mais...</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Opções de resposta</td>
+        <td>
+            Opção específica para alguns elementos que requerem configurações adicionais, como aqueles que permitem <strong>Seleção Única</strong> ou <strong>Múltipla Seleção</strong>.
+        </td>
+    </tr>
+    <tr>
+        <td>Clonar</td>
+        <td>
+            Gera cópias do elemento (pergunta). É possível escolher a quantidade de clones e a posição que devem ser inseridos no formulário.
+        </td>
+    </tr>
+    <tr>
+        <td>Mover</td>
+        <td>Move o elemento (pergunta) para uma determinada posição no formulário.</td>
+    </tr>
+    <tr>
+        <td>Excluir</td>
+        <td>Excluir o elemento (pergunta) do formulário.</td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+
+<details id={"conditional-actions-lear-more"}>
+    <summary>Saiba mais sobre **Ações Condicionais**</summary>
+
+    Ações condicionais são aplicadas automaticamente nos elementos do formulário quando determinadas condições
+    acontecem. São blocos do tipo **"SE/ENTÃO"**:
+    * **SE** (condição acontecer) **ENTÃO** (faça a ação).
+
+    Exemplo:
+
+    Utilize as **ações condicionais** para ocultar ou exibir elementos do formulário quando determinada condição
+    acontecer, tal como:
+    * **SE* a opção X da questão Y for selecionada, **ENTÃO** oculte as questões A, B, C e exiba as questões D, E, F.
+
+
+    > :warning: **Atenção**: As **ações condicionais** são processadas **SEMPRE** que uma resposta do formulário é
+    alterada.
+
+    [**Clique aqui**](#to-setup-elements) para retornar onde você estava.
+</details>
+
+<details id={"conditional-content-learn-more"}>
+    <summary>Saiba mais sobre **Configurar Conteúdo Condicional (multiconteúdo)**</summary>
+
+    É possível criar vários conteúdos para a mesma pergunta, incluindo opções de respostas diversas, escolhendo qual
+    conteúdo deve ser exibido de acordo com condições configuráveis. Por exemplo, imagine duas perguntas:
+
+    * Qual o Estado?
+    * Qual a Cidade?
+
+    Para facilitar a dinâmica ao responder o formulário, podemos exibir na listagem de cidades apenas as Cidades
+    contidas no
+    Estado selecionado. Para isso, basta habilitar o multiconteúdo (conteúdo condicional) na pergunta "Qual a Cidade?".
+
+    Assim, é possível criar uma lista de cidades para cada Estado e vincular a exibição de cada lista com a seleção do
+    Estado.
+
+    A mesma lógica se aplica a vários outros cenários, por exemplo:
+
+    - Setores, Áreas &larr &rarr ↔️ Departamentos
+    - Departamentos ↔️ Pessoas, Gerentes
+    - Categorias ↔️ Produtos, Itens etc.
+
+    [**Clique aqui**](#to-setup-elements) para retornar onde você estava.
+</details>
