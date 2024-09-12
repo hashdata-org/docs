@@ -1,6 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
 const {themes} = require('prism-react-renderer');
 const lightTheme = themes.github;
 const darkTheme = themes.dracula;
@@ -111,7 +114,10 @@ const config = {
                 docs: {
                     routeBasePath: '/', sidebarPath: require.resolve('./sidebars.js'), // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
-                    editUrl: 'https://github.com/hashdata-org/docs/tree/master/'
+                    editUrl: 'https://github.com/hashdata-org/docs/tree/master/',
+                    path: 'docs',
+                    remarkPlugins: [remarkMath],
+                    rehypePlugins: [rehypeKatex],
                 }, blog: {
                     showReadingTime: true, // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.

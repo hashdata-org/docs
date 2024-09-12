@@ -62,35 +62,25 @@ className="no-zoom image-between-texts" />;
 3. Selecione a pasta ou subpasta de destino;
 4. Clique em "Criar" ou utilize a tecla de atalho "Ctrl+S.
 
-
 :::tip[Gerenciamento de pastas e criação de formulários]
 Veja a figura no início desta paǵina. Ela mostra as principais funcionalidades da tela **Formulários**, incluíndo o
 **gerenciamento de pastas** e a **criação de um formulário**.
 :::
 
 ## Adicione Elementos ao Formulário {#add-elements-to-the-form}
-Após a criação do formulário, será aberta a tela de edição da estrutura e das funcionalidades formulário criado. Os **elementos**
-são os componentes que constituem a **estrutura** de um formulário, permitindo a coleta e organização de dados.
+Após a criação do formulário, será aberta a tela de edição da estrutura e das funcionalidades do formulário criado.
+Na barra lateral esquerda dessa tela, estão disponíveis os **elementos**.
+
+Os **elementos** são os componentes que constituem a **estrutura** do formulário, permitindo a coleta dos dados.
+Em outros termos, os elementos são os tipos de perguntas disponíveis para serem inseridoas em um formulário.
 
 :::danger Importante
 As configurações realizadas nessa etapa definirão como o formulário será apresentado para a coleta de dados.
 :::
 
-Os elementos são compostos pelos seguintes campos:
-* **Texto**:
-* **Numéricos**: ;
-* **Seleção Única**: ;
-* **Múltipla Seleção**: Permitem a escolha de múltiplas opções de uma lista de opções;
-* **Data e Hora**: facilitam a entrada de datas ou horas por meio de um calendário;
-* **Avaliação**: permite pesquisa de satisfação por meio de expressões faciais ou emojis;
-* **Exibição**: possibilita a exibição de imagens ou textos;
-* **Outros**: como, enviar arquivo, GPS, campo calculado (*script* ou fórmula), ordenar/priorizar, fotos/imagens e assinatura.
-
-
-
 ### 1. Para adicionar elementos {#to-add-elements}
-1. Clique em <img style={{width: '13%'}}  src={useBaseUrl('/img/forms/new-form/add-element.webp')} alt="Adicionar elemento"
-className="no-zoom image-between-texts" />, disponível na porção inferior esquerda da tela;
+1. Na barra lateral esquerda **Elementos do formulário**, clique em <img style={{width: '13%'}}  src={useBaseUrl('/img/forms/new-form/add-element.webp')} alt="Adicionar elemento"
+className="no-zoom image-between-texts" />, disponível na porção inferior da barra lateral;
 2. Escolha o elemento desejado, observe que eles estão organizados em abas: **"Entrada de dados"** e **"Exibição"**;
 3. Clique no elemento desejado e ele será incluído no formulário.
 
@@ -99,8 +89,8 @@ className="no-zoom image-between-texts" />, disponível na porção inferior esq
 <table>
     <thead>
     <tr>
-        <th style={{textAlign: 'start'}}>Tipo</th>
-        <th style={{textAlign: 'start', width: '30%'}}>Elementos</th>
+        <th style={{textAlign: 'start', width: '20%'}}>Tipo</th>
+        <th style={{textAlign: 'start', width: '40%'}}>Elementos</th>
         <th style={{textAlign: 'start'}}>Descrição</th>
     </tr>
     </thead>
@@ -109,67 +99,189 @@ className="no-zoom image-between-texts" />, disponível na porção inferior esq
         <td>Texto</td>
         <td>
             <ul>
-                <li>Linha única</li>
-                <li>Várias linhas</li>
-                <li>Email</li>
-                <li>Máscara</li>
+                <li>
+                    **Linha única**: entrada de texto com inserção de várias linhas e parágrafos;
+                </li>
+                <li>
+                    **Várias linhas**: entrada de texto com inserção de várias linhas e parágrafos;
+                </li>
+                <li>
+                    **Email**: pré-formatado para endereços de correio eletrônico;
+                </li>
+                <li>
+                    **Máscara**: entrada de texto personalizada, onde somente serão aceitos valores especificados na
+                    máscara.
+                </li>
             </ul>
         </td>
-        <td>Usados para capturar respostas abertas, como nomes, endereços, comentários, e-mails, textos formatados  (CPF, RG etc.).</td>
+        <td>
+            <p>
+                Usados para capturar respostas abertas, como nomes, endereços, comentários, e-mails, textos formatados
+                (CPF, RG etc.).
+            </p>
+            <p>
+                Nesse tipo de entrada de dados são gerados os seguintes relatórios: extrato de coletas
+                e tabela de respostas (que podem ser exportadas em PDF e XLS).
+            </p>
+            <p>
+                Nenhuma das questões do tipo texto dependem de configuração adicional, isto é, basta inserir a pergunta
+                que será exibida no formulário.
+            </p>
+            <p>
+                No caso das questões do tipo **Máscara**, é necessário configurar a máscara desejada. Por exemplo,
+                para configurar um entrada de placa de veículo, pode-se utilizar uma máscara no formato AAA9999, que
+                permite
+                3 letras maiúsculas, seguidas de 4 números.
+            </p>
+        </td>
     </tr>
     <tr>
         <td>Número</td>
         <td>
             <ul>
-                <li>Inteiro</li>
-                <li>Decimal</li>
-                <li>Quantidade (Emojis)</li>
+                <li>**Inteiro**: entrada de números inteiros (sem vírgula);</li>
+                <li>**Decimal**: entrada de números racionais (com vírgula);</li>
+                <li>**Quantidade (Emojis**: entrada de dados com emojis, que representam quantidade selecionada.</li>
             </ul>
         </td>
-        <td>Usados para salvar valores inteiros ou decimais.</td>
+        <td>
+            <p>
+                Utilizados para entrada de dados numéricos ou que podem ser convertido em uma quantidade.
+            </p>
+            <p>
+                Nesse tipo de entrada de dados é possível realizar cálculos automáticos e também são gerados os
+                seguintes relatórios: análises gráficas, extrato de coletas e tabela de respostas (que podem ser
+                exportadas em PDF e XLS).
+            </p>
+        </td>
     </tr>
     <tr>
         <td>Seleção única<br/>(várias opções, uma resposta)</td>
         <td>
             <ul>
-                <li>Seleção única (Menu)</li>
-                <li>Seleção única (Check)</li>
-                <li>Seleção única (Botões)</li>
+                <li>**Seleção única (Menu)**: as opções são mostradas com formato de um menu suspenso;</li>
+                <li>**Seleção única (Check)**: as opções são mostradas com formato de caixas de seleção;</li>
+                <li>**Seleção única (Botões)**: as opções são mostradas com formato de botões clicáveis.</li>
             </ul>
         </td>
-        <td>Permitem a escolha de uma opção detre uma lista de opções.</td>
+        <td>
+            <p>
+                Utilizados em entrada de dados permite selecionar uma dentre várias opções (questão de múltipla escolha
+                com apenas uma resposta).
+            </p>
+
+            <p>
+                Nesse tipo de entrada de dados é possível realizar cálculos automáticos e também são gerados os
+                seguintes relatórios: análises gráficas, extrato de coletas e tabela de respostas (que podem ser
+                exportadas em PDF e XLS).
+            </p>
+        </td>
     </tr>
     <tr>
         <td>Múltipla seleção<br/>(várias opções, várias respostas)</td>
         <td>
-
             <ul>
-                <li>Seleção única (Menu)</li>
-                <li>Seleção única (Check)</li>
-                <li>Seleção única (Botões)</li>
+                <li>**Multi-seleção (Check)**: as opções são mostradas com formato de caixas de seleção;</li>
+                <li>**Multi-seleção (Botões)**: as opções são mostradas com formato de botões clicáveis.</li>
             </ul>
         </td>
-        <td></td>
+        <td>
+            <p>
+                Utilizados em entrada de dados permite selecionar uma ou mais opções dentre várias (questão de múltipla
+                escolha com mais de uma resposta).
+            </p>
+            <p>
+                Nesse tipo de entrada de dados é possível realizar cálculos automáticos e também são gerados os
+                seguintes relatórios: análises gráficas, extrato de coletas e tabela de respostas (que podem ser
+                exportadas em PDF e XLS).
+            </p>
+        </td>
     </tr>
     <tr>
         <td>Data e hora</td>
-        <td></td>
-        <td></td>
+        <td>
+            <ul>
+                <li>Data e hora</li>
+                <li>Data</li>
+                <li>Hora</li>
+            </ul>
+        </td>
+        <td>Facilitam a entrada de datas ou horas por meio de um calendário.</td>
     </tr>
     <tr>
         <td>Avaliação</td>
-        <td></td>
-        <td></td>
+        <td>
+            <ul>
+                <li>Expressões faciais</li>
+                <li>Emojis</li>
+            </ul>
+        </td>
+        <td>
+            <p>
+                Utilizados em entrada de dados permite selecionar uma dentre várias opções (questão de múltipla escolha
+                com apenas uma resposta), no entanto com recurso gráfico (emojis)..
+            </p>
+            <p>
+                Nesse tipo de entrada de dados é possível realizar cálculos automáticos e também são gerados os
+                seguintes relatórios: análises gráficas, extrato de coletas e tabela de respostas (que podem ser
+                exportadas em PDF e XLS).
+            </p>
+        </td>
     </tr>
     <tr>
         <td>Outros</td>
-        <td></td>
-        <td></td>
+        <td>
+            <ul>
+                <li>**Enviar arquivos**</li>
+                <li>**GPS**</li>
+                <li>**Campo calculado (script)**: [saiba mais...](./scripts.md)</li>
+                <li>**Campo calculado (fórmula)**</li>
+                <li>**Ordenar / priorizar**</li>
+                <li>**Fotos / imagens**</li>
+                <li>**Assinatura**</li>
+            </ul>
+        </td>
+        <td>
+            <p>
+                São elementos especiais, que possibilitam a criação de campos automatizados, com *scripts* e fórmulas, ou
+                para carregar arquivos, fotografias e coordenadas de geolocalização.
+            </p>
+        </td>
     </tr>
     </tbody>
 </table>
 
+#### Exibição
 
+<table>
+    <thead>
+    <tr>
+        <th style={{textAlign: 'start'}}>Tipo</th>
+        <th style={{textAlign: 'start', width: '30%'}}>Elemento</th>
+        <th style={{textAlign: 'start'}}>Descrição</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Imagem</td>
+        <td>
+            <ul>
+                <li>Exibição de imagem</li>
+            </ul>
+        </td>
+        <td>Elemento utilizado para exibir uma imagem no formulário.</td>
+    </tr>
+    <tr>
+        <td>Texto</td>
+        <td>
+            <ul>
+                <li>Exibição de texto</li>
+            </ul>
+        </td>
+        <td>Elemento utilizado para exibir um texto no formulário.</td>
+    </tr>
+    </tbody>
+</table>
 
 ### 2. Para configurar os elementos {#to-setup-elements}
 Os elementos adicionados ao formulário serão mostrados na porção central da tela e, ao redor desses elementos, serão
@@ -186,17 +298,19 @@ apresentadas as seguintes opções de configuração:
     <tr>
         <td>Texto principal do elemento</td>
         <td>
-            O texto principal do elemento pode ser uma pergunta ou simplesmente um título. Por exemplo, para coletar o nome completo, pode-se usar:
+            O texto principal do elemento pode ser uma pergunta ou simplesmente um título. Por exemplo, para coletar o
+            nome completo, pode-se usar:
             <ul>
                 <li><strong>Nome Completo:</strong>, ou;</li>
-                <li><strong>Qual o seu nome completo?</strong>.</li>
+                <li><strong>Qual o seu nome completo?</strong></li>
             </ul>
         </td>
     </tr>
     <tr>
         <td>Descrição</td>
         <td>
-            Embora seja opcional, a descrição do elemento pode ser utilizada para instruir a resposta. Por exemplo, em um campo para coleta do nome completo, pode-se usar a seguinte descrição:
+            Embora seja opcional, a descrição do elemento pode ser utilizada para instruir a resposta. Por exemplo, em
+            um campo para coleta do nome completo, pode-se usar a seguinte descrição:
             <ul>
                 <li><strong>Informe seu nome completo, sem abreviações</strong>.</li>
             </ul>
@@ -205,32 +319,38 @@ apresentadas as seguintes opções de configuração:
     <tr>
         <td>Alterar o tipo da pergunta (elemento)</td>
         <td>
-            Permite a alteração de um tipo do elemento para outros tipos relacionados, após ter sido incluído no formulário.<br />
-            Por exemplo, altere um elemento do tipo <strong>Linha única</strong> para número <strong>Inteiro</strong>, ou um elemento <strong>Multi-seleção (Check)</strong> para <strong>Multi-seleção (Botões)</strong>.
+            Permite a alteração de um tipo do elemento para outros tipos relacionados, após ter sido incluído no
+            formulário.<br/>
+            Por exemplo, altere um elemento do tipo <strong>Linha única</strong> para número <strong>Inteiro</strong>,
+            ou um elemento <strong>Multi-seleção (Check)</strong> para <strong>Multi-seleção (Botões)</strong>.
         </td>
     </tr>
     <tr>
         <td>Ações condicionais</td>
         <td>
-            São blocos do tipo "SE/ENTÃO": SE (condição acontecer) ENTÃO (faça a ação). <a href="#conditional-actions-learn-more">Saiba mais...</a>
+            São blocos do tipo "SE/ENTÃO": SE (condição acontecer) ENTÃO (faça a ação). <a
+            href="#conditional-actions-learn-more">Saiba mais...</a>
         </td>
     </tr>
     <tr>
         <td>Conteúdo condicional (multiconteúdo)</td>
         <td>
-            Criar vários conteúdos para a mesma pergunta, incluindo opções de respostas diversas. <a href="#conditional-content-learn-more">Saiba mais...</a>
+            Criar vários conteúdos para a mesma pergunta, incluindo opções de respostas diversas. <a
+            href="#conditional-content-learn-more">Saiba mais...</a>
         </td>
     </tr>
     <tr>
         <td>Opções de resposta</td>
         <td>
-            Opção específica para alguns elementos que requerem configurações adicionais, como aqueles que permitem <strong>Seleção Única</strong> ou <strong>Múltipla Seleção</strong>.
+            Opção específica para alguns elementos que requerem configurações adicionais, como aqueles que
+            permitem <strong>Seleção única</strong> ou <strong>Múltipla seleção</strong>.
         </td>
     </tr>
     <tr>
         <td>Clonar</td>
         <td>
-            Gera cópias do elemento (pergunta). É possível escolher a quantidade de clones e a posição que devem ser inseridos no formulário.
+            Gera cópias do elemento (pergunta). É possível escolher a quantidade de clones e a posição que devem ser
+            inseridos no formulário.
         </td>
     </tr>
     <tr>
@@ -244,8 +364,16 @@ apresentadas as seguintes opções de configuração:
     </tbody>
 </table>
 
+#### Atributos do elemento
 
 
+### 3. Para gerenciar elementos {#to-manage-elements}
+Ao clicar em um elemento na barra lateral esquerda **Elementos formulário**, serão mostradas as seguintes opções:
+- Selecionar todos;
+- Mover selecionados;
+- Agrupar selecionados;
+- Clonar selecionados;
+- Excluir selecionados;
 
 <details id={"conditional-actions-lear-more"}>
     <summary>Saiba mais sobre **Ações Condicionais**</summary>
@@ -285,7 +413,7 @@ apresentadas as seguintes opções de configuração:
 
     A mesma lógica se aplica a vários outros cenários, por exemplo:
 
-    - Setores, Áreas &larr &rarr ↔️ Departamentos
+    - Setores, Áreas ↔️ Departamentos
     - Departamentos ↔️ Pessoas, Gerentes
     - Categorias ↔️ Produtos, Itens etc.
 
