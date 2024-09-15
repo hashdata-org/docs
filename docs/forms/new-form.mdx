@@ -81,10 +81,10 @@ As configurações realizadas nessa etapa definirão como o formulário será ap
 ### 1. Para adicionar elementos {#to-add-elements}
 1. Na barra lateral esquerda **Elementos do formulário**, clique em <img style={{width: '13%'}}  src={useBaseUrl('/img/forms/new-form/add-element.webp')} alt="Adicionar elemento"
 className="no-zoom image-between-texts" />, disponível na porção inferior da barra lateral;
-2. Escolha o elemento desejado, observe que eles estão organizados em abas: **"Entrada de dados"** e **"Exibição"**;
+2. Escolha o elemento desejado, os quais estão organizados em abas: **Entrada de dados** e **Exibição**;
 3. Clique no elemento desejado e ele será incluído no formulário.
 
-#### Entrada de dados
+<h3>Elementos de Entrada de Dados</h3>
 
 <table>
     <thead>
@@ -109,7 +109,7 @@ className="no-zoom image-between-texts" />, disponível na porção inferior da 
                     **Email**: pré-formatado para endereços de correio eletrônico;
                 </li>
                 <li>
-                    **Máscara**: entrada de texto personalizada, onde somente serão aceitos valores especificados na
+                    **Máscara**: entrada de texto personalizada, onde somente são aceitos valores especificados na
                     máscara.
                 </li>
             </ul>
@@ -166,8 +166,8 @@ className="no-zoom image-between-texts" />, disponível na porção inferior da 
         </td>
         <td>
             <p>
-                Utilizados em entrada de dados permite selecionar uma dentre várias opções (questão de múltipla escolha
-                com apenas uma resposta).
+                Entrada de dados que permite selecionar uma dentre várias opções (questão de múltipla
+                escolha com apenas uma resposta).
             </p>
 
             <p>
@@ -187,8 +187,8 @@ className="no-zoom image-between-texts" />, disponível na porção inferior da 
         </td>
         <td>
             <p>
-                Utilizados em entrada de dados permite selecionar uma ou mais opções dentre várias (questão de múltipla
-                escolha com mais de uma resposta).
+                Entrada de dados que permite selecionar uma ou mais opções dentre várias (questão de
+                múltipla escolha com mais de uma resposta).
             </p>
             <p>
                 Nesse tipo de entrada de dados é possível realizar cálculos automáticos e também são gerados os
@@ -201,25 +201,28 @@ className="no-zoom image-between-texts" />, disponível na porção inferior da 
         <td>Data e hora</td>
         <td>
             <ul>
-                <li>Data e hora</li>
-                <li>Data</li>
-                <li>Hora</li>
+                <li>**Data e hora**: elemento que permite salvar data e horário;</li>
+                <li>**Data**: elemento que permite salvar somente data.</li>
+                <li>**Hora**: elemento que permite salvar somente o horário.</li>
             </ul>
         </td>
-        <td>Facilitam a entrada de datas ou horas por meio de um calendário.</td>
+        <td>Utilizado como entrada de dados para salvar data, horário ou ambos por meio de um calendário.</td>
     </tr>
     <tr>
         <td>Avaliação</td>
         <td>
             <ul>
-                <li>Expressões faciais</li>
-                <li>Emojis</li>
+                <li>
+                    **Expressões faciais**: elemento de múltipla seleção com emojis de expressões faciais
+                    configuráveis.
+                </li>
+                <li>**Emojis**: elemento de múltipla seleção com emojis e quantidade questões configuráveis.</li>
             </ul>
         </td>
         <td>
             <p>
-                Utilizados em entrada de dados permite selecionar uma dentre várias opções (questão de múltipla escolha
-                com apenas uma resposta), no entanto com recurso gráfico (emojis)..
+                Entrada de dados que permite selecionar uma dentre várias opções (questão de múltipla escolha
+                com apenas uma resposta), no entanto com recurso gráfico (emojis).
             </p>
             <p>
                 Nesse tipo de entrada de dados é possível realizar cálculos automáticos e também são gerados os
@@ -243,21 +246,21 @@ className="no-zoom image-between-texts" />, disponível na porção inferior da 
         </td>
         <td>
             <p>
-                São elementos especiais, que possibilitam a criação de campos automatizados, com *scripts* e fórmulas, ou
-                para carregar arquivos, fotografias e coordenadas de geolocalização.
+                São elementos especiais, que possibilitam a criação de campos automatizados, com *scripts* e fórmulas,
+                ou para carregar arquivos, fotografias e coordenadas de geolocalização.
             </p>
         </td>
     </tr>
     </tbody>
 </table>
 
-#### Exibição
+<h3>Elementos de Exibição</h3>
 
 <table>
     <thead>
     <tr>
-        <th style={{textAlign: 'start'}}>Tipo</th>
-        <th style={{textAlign: 'start', width: '30%'}}>Elemento</th>
+        <th style={{textAlign: 'start', width: '20%'}}>Tipo</th>
+        <th style={{textAlign: 'start', width: '40%'}}>Elemento</th>
         <th style={{textAlign: 'start'}}>Descrição</th>
     </tr>
     </thead>
@@ -266,31 +269,51 @@ className="no-zoom image-between-texts" />, disponível na porção inferior da 
         <td>Imagem</td>
         <td>
             <ul>
-                <li>Exibição de imagem</li>
+                <li>**Exibição de imagem**</li>
             </ul>
         </td>
-        <td>Elemento utilizado para exibir uma imagem no formulário.</td>
+        <td>
+            <p>
+                Elemento utilizado para exibir uma imagem no formulário.
+            </p>
+            <p>
+                Para incluir uma imagem, você pode **arrastar e soltar**
+                um arquivo ou **clicar**, para abrir uma caixa de diálogo para escolha do arquivo de imagem.
+            </p>
+
+        </td>
     </tr>
     <tr>
         <td>Texto</td>
         <td>
             <ul>
-                <li>Exibição de texto</li>
+                <li>**Exibição de texto**</li>
             </ul>
         </td>
-        <td>Elemento utilizado para exibir um texto no formulário.</td>
+        <td>
+            <p>
+                Elemento utilizado para exibir um texto no formulário.
+            </p>
+            <p>
+                Ao clicar em <img style={{width: '25%'}} src={useBaseUrl('img/forms/new-form/to-write.webp')}
+                                  alt="Escrever" className="no-zoom image-between-texts"/>, será aberta um
+                caixa de diálogo com um **editor de texto** para digitação e formatação do texto desejado.
+            </p>
+
+        </td>
     </tr>
     </tbody>
 </table>
 
-### 2. Para configurar os elementos {#to-setup-elements}
-Os elementos adicionados ao formulário serão mostrados na porção central da tela e, ao redor desses elementos, serão
+### 2. Configurações gerais dos elementos {#general-element-settings}
+
+Os elementos adicionados ao formulário são mostrados na porção central da tela e, ao redor desses elementos, são
 apresentadas as seguintes opções de configuração:
 
 <table>
     <thead>
     <tr>
-        <th style={{textAlign: 'start'}}>Opção</th>
+        <th style={{textAlign: 'start', width: '20%'}}>Opção</th>
         <th style={{textAlign: 'start'}}>Descrição</th>
     </tr>
     </thead>
@@ -328,7 +351,7 @@ apresentadas as seguintes opções de configuração:
     <tr>
         <td>Ações condicionais</td>
         <td>
-            São blocos do tipo "SE/ENTÃO": SE (condição acontecer) ENTÃO (faça a ação). <a
+            São blocos do tipo **SE/ENTÃO**: *SE* (condição acontecer) *ENTÃO* (faça a ação). <a
             href="#conditional-actions-learn-more">Saiba mais...</a>
         </td>
     </tr>
@@ -364,18 +387,221 @@ apresentadas as seguintes opções de configuração:
     </tbody>
 </table>
 
-#### Atributos do elemento
+### 3. Atributos do elemento e Atributos do conteúdo {#element-attributes-content-attributes}
+Ao configurar um elemento inserido no formulário, é mostrada na barra lateral direita a configuração dos **atributos
+do elemento** e **atributos do conteúdo**. Veja a seguir cada uma dessas configurações:
+
+<h3> Atributos do elemento</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th style={{textAlign: 'start', width: '20%'}}>Atributo</th>
+        <th style={{textAlign: 'start'}}>Descrição</th>
+        <th style={{textAlign: 'start', width: '30%'}}> Elementos disponíveis</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Nome do campo</td>
+        <td></td>
+        <td>
+            <p>
+                Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
+                hora**, **Avaliação** e **Outros**.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>Tags</td>
+        <td></td>
+        <td>
+            <p>
+                Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
+                hora**, **Avaliação** e **Outros**.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>Permitir copiar resposta de coleta anterior</td>
+        <td>
+            Com esta opção habilitada, é possível copiar (carregar) a resposta informada na coleta anterior. Essa
+            funcionalidade é muito útil quando existem respostas que se repetem para um conjunto de coletas, por
+            exemplo: Data, Cidade, Estado etc.
+        </td>
+        <td>
+            <p>
+                Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
+                hora**, **Avaliação** e nos elementos **GPS** e **Ordenar / priorizar** do tipo **Outros**.
+            </p>
+        </td>
+    </tr>
+    </tbody>
+</table>
 
 
-### 3. Para gerenciar elementos {#to-manage-elements}
-Ao clicar em um elemento na barra lateral esquerda **Elementos formulário**, serão mostradas as seguintes opções:
+<h3>Atributos do conteúdo</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th style={{textAlign: 'start', width: '20%'}}>Atributo</th>
+        <th style={{textAlign: 'start'}}>Descrição</th>
+        <th style={{textAlign: 'start', width: '30%'}}> Elementos disponíveis</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Preenchimento obrigatório</td>
+        <td></td>
+        <td>
+            <p>
+                Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
+                hora**, **Avaliação** e elementos **Enviar arquivos**, **GPS**, **Campo calculado (script)**, **Campo
+                calculado (fórmula)**, **Ordenar / priorizar**, **Fotos / imagens**, **Assinatura** do tipo **Outros**.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>Permitir inserir comentário</td>
+        <td></td>
+        <td>
+            <p>
+                Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
+                hora**, **Avaliação** e elementos **Enviar arquivos**, **GPS**, **Campo calculado (script)**, **Campo
+                calculado (fórmula)**, **Ordenar / priorizar**, **Fotos / imagens**, **Assinatura** do tipo **Outros**.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>Permitir inserir fotos</td>
+        <td></td>
+        <td>
+            <p>
+                Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
+                hora**, **Avaliação** e elementos **GPS**, **Campo calculado (script)**, **Campo calculado (fórmula)**,
+                **Ordenar / priorizar** do tipo **Outros**.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>Mínimo de caracteres requerido</td>
+        <td></td>
+        <td>
+            <p>
+                Elementos **Linha única** e **Várias linhas** do tipo **Texto**.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>Máximo de caracteres permitido</td>
+        <td></td>
+        <td>
+            <p>
+                Elementos **Linha única** e **Várias linhas** do tipo **Texto**.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>Contagem de linhas iniciais</td>
+        <td></td>
+        <td>
+            <p>
+                Elemento **Várias linhas** do tipo **Texto**.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>Máscara</td>
+        <td>
+            <p>
+                Permite validar a entrada de dados a partir de uma máscara formada por caracteres especiais.
+            </p>
+            <p>
+                Estão pré-configuradas máscaras para CFP, RG, CEP, Telefone e Placa Veicular e número de
+                3 dígitos com sinal e duas casas decimais opcionais (aceita virgula e ponto como separador decimal).
+            </p>
+            [Saiba mais](#mask-learn-more) sobre como configurar máscaras personalizadas.
+        </td>
+        <td>Elemento **Máscara** do tipo **Texto**.</td>
+    </tr>
+    <tr>
+        <td>Mostrar separador de milhar</td>
+        <td>
+        </td>
+        <td>Elemento **Inteiro** do tipo **Números**.</td>
+    </tr>
+    <tr>
+        <td>Número mínimo</td>
+        <td>
+        </td>
+        <td>Elementos **Inteiro** e **Decimal** do tipo **Números**.</td>
+    </tr>
+    <tr>
+        <td>Número máximo</td>
+        <td>
+        </td>
+        <td>Elementos **Inteiro** e **Decimal** do tipo **Números**.</td>
+    </tr>
+    <tr>
+        <td>Prefixo</td>
+        <td>
+        </td>
+        <td>
+            Elementos **Inteiro** e **Decimal** do tipo **Números** e elementos **Campo calculado (script)** e **Campo
+            calculado (fórmula)** do tipo **Outros**.
+        </td>
+    </tr>
+    <tr>
+        <td>Sufixo</td>
+        <td>
+        </td>
+        <td>
+            Elementos **Inteiro** e **Decimal** do tipo **Números** e elementos **Campo calculado (script)** e **Campo
+            calculado (fórmula)** do tipo **Outros**.
+        </td>
+    </tr>
+    <tr>
+        <td>Casas Decimais</td>
+        <td>
+        </td>
+        <td>
+            Elemento **Decimal** do tipo **Números** e elementos **Campo calculado (script)** e **Campo
+            calculado (fórmula)** do tipo **Outros**.
+        </td>
+    </tr>
+    <tr>
+        <td>Mostrar números</td>
+        <td>
+        </td>
+        <td>Elemento **Quantidade (Emojis)** do tipo **Números** e elemento **Emojis** do tipo **Avaliação**.</td>
+    </tr>
+    <tr>
+        <td>Atributos do campo seleção única</td>
+        <td>
+        </td>
+        <td>Todos os elementos do tipo **Seleção única**.</td>
+    </tr>
+    <tr>
+        <td>Número de Colunas</td>
+        <td>
+        </td>
+        <td>Todos os elementos do tipo **Seleção única**.</td>
+    </tr>
+    </tbody>
+</table>
+
+### 4. Para gerenciar os elementos do formulário {#to - manage - form - elements}
+Todos os elementos incluídos no formulário ficam disponíveis na barra lateral esquerda **Elementos do
+formulário**. Ao clicar em um elemento desses elementos, são mostradas um conjunto de opções para gerenciá-los. A partir
+dessas opções, você poderá:
 - Selecionar todos;
 - Mover selecionados;
 - Agrupar selecionados;
 - Clonar selecionados;
 - Excluir selecionados;
 
-<details id={"conditional-actions-lear-more"}>
+<details id={"conditional-actions-learn-more"}>
     <summary>Saiba mais sobre **Ações Condicionais**</summary>
 
     Ações condicionais são aplicadas automaticamente nos elementos do formulário quando determinadas condições
@@ -418,4 +644,25 @@ Ao clicar em um elemento na barra lateral esquerda **Elementos formulário**, se
     - Categorias ↔️ Produtos, Itens etc.
 
     [**Clique aqui**](#to-setup-elements) para retornar onde você estava.
+</details>
+
+<details id={"mask-learn-more"}>
+    <summary>Saiba mais sobre o atributo de conteúdo **Máscara**</summary>
+
+    Para configurar máscaras personalizadas, podem ser usados os
+    seguintes caracteres especiais:
+    - **9**: número
+    - **a**: letra minúscula (a...z)
+    - **A**: letra maiúscula (A...Z)
+    - **x**: letra (minúscula ou maiúscula)
+    - **\***: letra ou número
+    - **~**: sinal de positivo ou negativo (+ ou -)
+    - **()**: bloco de grupo
+    - **\{}**: bloco de repetição
+    - **[]**: bloco opcional
+    - **\\**: cancela o efeito coringa do próximo caractere especial (9aAx*~)
+
+    É possível mesclar os caracteres especiais com outros caracteres, exemplo:
+    - Número de série: PWR-999-aa9aa
+
 </details>
