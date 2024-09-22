@@ -1,5 +1,5 @@
 ---
-slug: how-to-create-and-edit-forms
+slug: create-and-edit-forms
 sidebar_position: 1
 sidebar_label: Criar ou Editar Formulários
 ---
@@ -128,10 +128,10 @@ className="no-zoom image-between-texts" />, disponível na porção inferior da 
                 que será exibida no formulário.
             </p>
             <p>
-                No caso das questões do tipo **Máscara**, é necessário configurar a máscara desejada. Por exemplo,
-                para configurar um entrada de placa de veículo, pode-se utilizar uma máscara no formato AAA9999, que
-                permite
-                3 letras maiúsculas, seguidas de 4 números.
+                No caso das questões do tipo **Máscara**, é necessário configurar a máscara desejada.
+
+                Por exemplo, para configurar um entrada de placa de veículo, pode-se utilizar uma máscara no formato
+                AAA9999, que permite 3 letras maiúsculas, seguidas de 4 números. [Saiba mais...](#mask-element)
             </p>
         </td>
     </tr>
@@ -305,8 +305,17 @@ className="no-zoom image-between-texts" />, disponível na porção inferior da 
     </tbody>
 </table>
 
-### 2. Configurações gerais dos elementos {#general-element-settings}
+### 2. Para gerenciar os elementos do formulário {#to-manage-form-elements}
+Todos os elementos incluídos no formulário ficam disponíveis na barra lateral esquerda **Elementos do
+formulário**. Ao clicar em um elemento desses elementos, são mostradas um conjunto de opções para gerenciá-los. A partir
+dessas opções, você poderá:
+- Selecionar todos;
+- Mover selecionados;
+- Agrupar selecionados;
+- Clonar selecionados;
+- Excluir selecionados;
 
+## Configure os elementos {#element-settings}
 Os elementos adicionados ao formulário são mostrados na porção central da tela e, ao redor desses elementos, são
 apresentadas as seguintes opções de configuração:
 
@@ -349,21 +358,48 @@ apresentadas as seguintes opções de configuração:
         </td>
     </tr>
     <tr>
-        <td>Ações condicionais</td>
+        <td>[Ações condicionais](./conditional-actions)</td>
         <td>
-            São blocos do tipo **SE/ENTÃO**: *SE* (condição acontecer) *ENTÃO* (faça a ação). <a
-            href="#conditional-actions-learn-more">Saiba mais...</a>
+            Ações condicionais são aplicadas automaticamente nos elementos do formulário quando determinadas condições
+            acontecem. São blocos do tipo **"SE/ENTÃO"**:
+            * **SE** (condição acontecer) **ENTÃO** (faça a ação).
+
+            Por exemplo, pode-se utilizar as **ações condicionais** para ocultar ou exibir elementos do formulário
+            quando determinada condição acontecer, tal como:
+            * **SE** a opção X da questão Y for selecionada, **ENTÃO** oculte as questões A, B, C e exiba as questões D,
+            E, F.
+
+            :::warning[Atenção]
+            As **ações condicionais** são processadas **SEMPRE** que uma resposta do
+            formulário é alterada.
+            :::
         </td>
     </tr>
     <tr>
-        <td>Conteúdo condicional (multiconteúdo)</td>
+        <td>[Conteúdo condicional (multiconteúdo)](./condicional-content)</td>
         <td>
-            Criar vários conteúdos para a mesma pergunta, incluindo opções de respostas diversas. <a
-            href="#conditional-content-learn-more">Saiba mais...</a>
+            Permite criar vários conteúdos para a mesma pergunta, incluindo opções de respostas diversas, escolhendo
+            qual conteúdo deve ser exibido de acordo com condições configuráveis. Por exemplo, imagine duas perguntas:
+
+            * Qual o Estado?
+            * Qual a Cidade?
+
+            Para facilitar a dinâmica ao responder o formulário, podemos exibir na listagem de cidades apenas as Cidades
+            contidas no Estado selecionado. Para isso, basta habilitar o multiconteúdo (conteúdo condicional) na
+            pergunta "Qual a Cidade?".
+
+            Assim, é possível criar uma lista de cidades para cada Estado e vincular a exibição de cada lista com a
+            seleção do Estado.
+
+            A mesma lógica se aplica a vários outros cenários, por exemplo:
+
+            - Setores, Áreas ↔️ Departamentos
+            - Departamentos ↔️ Pessoas, Gerentes
+            - Categorias ↔️ Produtos, Itens etc.
         </td>
     </tr>
     <tr>
-        <td>Opções de resposta</td>
+        <td>Opções de respostas</td>
         <td>
             Opção específica para alguns elementos que requerem configurações adicionais, como aqueles que
             permitem <strong>Seleção única</strong> ou <strong>Múltipla seleção</strong>.
@@ -387,9 +423,9 @@ apresentadas as seguintes opções de configuração:
     </tbody>
 </table>
 
-### 3. Atributos do elemento e Atributos do conteúdo {#element-attributes-content-attributes}
-Ao configurar um elemento inserido no formulário, é mostrada na barra lateral direita a configuração dos **atributos
-do elemento** e **atributos do conteúdo**. Veja a seguir cada uma dessas configurações:
+### Atributos do elemento e Atributos do conteúdo {#element-attributes-content-attributes}
+Ao configurar um elemento inserido no formulário, é mostrada, na barra lateral direita, as configurações dos **atributos
+do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas configurações:
 
 <h3> Atributos do elemento</h3>
 
@@ -425,9 +461,9 @@ do elemento** e **atributos do conteúdo**. Veja a seguir cada uma dessas config
     <tr>
         <td>Permitir copiar resposta de coleta anterior</td>
         <td>
-            Com esta opção habilitada, é possível copiar (carregar) a resposta informada na coleta anterior. Essa
-            funcionalidade é muito útil quando existem respostas que se repetem para um conjunto de coletas, por
-            exemplo: Data, Cidade, Estado etc.
+            <p>Com esta opção habilitada, é possível copiar (carregar) a resposta informada na coleta anterior.</p>
+            <p>Essa funcionalidade é muito útil quando existem respostas que se repetem para um conjunto de coletas, por
+                exemplo: Data, Cidade, Estado etc.</p>
         </td>
         <td>
             <p>
@@ -453,93 +489,163 @@ do elemento** e **atributos do conteúdo**. Veja a seguir cada uma dessas config
     <tbody>
     <tr>
         <td>Preenchimento obrigatório</td>
-        <td></td>
         <td>
-            <p>
-                Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
-                hora**, **Avaliação** e elementos **Enviar arquivos**, **GPS**, **Campo calculado (script)**, **Campo
-                calculado (fórmula)**, **Ordenar / priorizar**, **Fotos / imagens**, **Assinatura** do tipo **Outros**.
-            </p>
+            Indica se o elemento deve de ser ou não obrigatoriamente preenchido antes que o formulário possa ser enviado
+            ou processado.
+
+            Quando essa opção está ativada, o usuário não poderá prosseguir ou concluir a submissão do
+            formulário sem inserir uma resposta válida no campo especificado.
+        </td>
+        <td>
+            Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
+            hora**, **Avaliação** e elementos **Enviar arquivos**, **GPS**, **Campo calculado (script)**, **Campo
+            calculado (fórmula)**, **Ordenar / priorizar**, **Fotos / imagens**, **Assinatura** do tipo **Outros**.
         </td>
     </tr>
     <tr>
         <td>Permitir inserir comentário</td>
-        <td></td>
         <td>
-            <p>
-                Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
-                hora**, **Avaliação** e elementos **Enviar arquivos**, **GPS**, **Campo calculado (script)**, **Campo
-                calculado (fórmula)**, **Ordenar / priorizar**, **Fotos / imagens**, **Assinatura** do tipo **Outros**.
-            </p>
+            Habilita um campo adicional ao elemento, onde é permitido escrever livremente um comentário ou
+            observação sobre a questão.
+
+            O comentário pode ser útil em perguntas que requerem ou necessitam de explicações
+            adicionais, *feedback* ou detalhes que não se encaixam nas respostas fechadas.
+
+            Ao habilitar essa opção, é mostrado o atributo *Comentário obrigatório*, para indicar a obrigatoriedade
+            do preenchimento do comentário.
+        </td>
+        <td>
+            Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
+            hora**, **Avaliação** e elementos **Enviar arquivos**, **GPS**, **Campo calculado (script)**, **Campo
+            calculado (fórmula)**, **Ordenar / priorizar**, **Fotos / imagens**, **Assinatura** do tipo **Outros**.
         </td>
     </tr>
     <tr>
         <td>Permitir inserir fotos</td>
-        <td></td>
         <td>
-            <p>
-                Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
-                hora**, **Avaliação** e elementos **GPS**, **Campo calculado (script)**, **Campo calculado (fórmula)**,
-                **Ordenar / priorizar** do tipo **Outros**.
-            </p>
+            Este atributo indica se é ou não permitido carregar fotos ao elemento.
+            Ao habilitar essa opção, são mostrados os seguintes atributos. [Saiba mais...](#allow-gallery-photos)
+            <ul>
+                <li>*Permitir fotos da galeria*;</li>
+                <li>*Mínimo de fotos requeridas*;</li>
+                <li>*Máximo de fotos permitidas*;</li>
+                <li>*Tamanho máximo das fotos*.</li>
+            </ul>
+        </td>
+        <td>
+            Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
+            hora**, **Avaliação** e elementos **GPS**, **Campo calculado (script)**, **Campo calculado (fórmula)**,
+            **Ordenar / priorizar** do tipo **Outros**.
         </td>
     </tr>
     <tr>
         <td>Mínimo de caracteres requerido</td>
-        <td></td>
         <td>
-            <p>
-                Elementos **Linha única** e **Várias linhas** do tipo **Texto**.
-            </p>
+            Define a quantidade mínima de caracteres que o usuário deve inserir no elemento para que a resposta seja
+            válida.
+
+            Ao configurar essa opção, o formulário garante que as respostas fornecidas pelos usuários tenham um tamanho
+            mínimo, evitando respostas curtas demais ou incompletas.
+
+            Para configurar, escolha valores entre 0 e 4.999.
+        </td>
+        <td>
+            Elementos **Linha única** e **Várias linhas** do tipo **Texto**.
         </td>
     </tr>
     <tr>
         <td>Máximo de caracteres permitido</td>
-        <td></td>
         <td>
-            <p>
-                Elementos **Linha única** e **Várias linhas** do tipo **Texto**.
-            </p>
+            Restringe o número máximo de caracteres que pode ser inserido em um elemento de entrada de dados para que a
+            resposta seja considerada válida.
+
+            Esse recurso é fundamental para garantir que os dados sejam formatados corretamente e para evitar sobrecarga
+            de informações.
+
+            Para configurar, escolha valores entre 1 e 5.000.
+        </td>
+        <td>
+            Elementos **Linha única** e **Várias linhas** do tipo **Texto**.
         </td>
     </tr>
     <tr>
         <td>Contagem de linhas iniciais</td>
-        <td></td>
         <td>
-            <p>
-                Elemento **Várias linhas** do tipo **Texto**.
-            </p>
+        </td>
+        <td>
+            Elemento **Várias linhas** do tipo **Texto**.
         </td>
     </tr>
-    <tr>
+    <tr id={'mask-element'}>
         <td>Máscara</td>
         <td>
-            <p>
-                Permite validar a entrada de dados a partir de uma máscara formada por caracteres especiais.
-            </p>
-            <p>
-                Estão pré-configuradas máscaras para CFP, RG, CEP, Telefone e Placa Veicular e número de
-                3 dígitos com sinal e duas casas decimais opcionais (aceita virgula e ponto como separador decimal).
-            </p>
-            [Saiba mais](#mask-learn-more) sobre como configurar máscaras personalizadas.
+            Define um formato específico para o elemento de entrada de dados. A máscara é utilizada para guiar o
+            usuário sobre como deve ser o formato das informações que estão sendo inseridas, garantindo que os dados
+            sejam coletados de forma consistente e correta.
+
+            Estão pré-configuradas as seguintes máscaras:
+            <ul>
+                <li>CPF - 999.999.999-99</li>
+                <li>CNPJ - 99.999.999/9999-99</li>
+                <li>CEP - 99.999-999</li>
+                <li>Telefone - (99) 99999-9999</li>
+                <li>Placa veicular - AAA-9999/AA</li>
+                <li>
+                    Número de 3 dígitos com sinal e duas casas decimais opcionais.
+                    Aceita virgula e ponto c+omo separador decimal. - [~]999[(,|.)99]
+                </li>
+            </ul>
+
+            O campo é editável e permite a inclusão de máscaras personalizadas.
+            <details>
+                <summary>Saiba mais...</summary>
+
+                Para configurar máscaras personalizadas, podem ser usados os
+                seguintes caracteres especiais:
+                - **9**: número
+                - **a**: letra minúscula (a...z)
+                - **A**: letra maiúscula (A...Z)
+                - **x**: letra (minúscula ou maiúscula)
+                - **\***: letra ou número
+                - **~**: sinal de positivo ou negativo (+ ou -)
+                - **()**: bloco de grupo
+                - **\{}**: bloco de repetição
+                - **[]**: bloco opcional
+                - **\\**: cancela o efeito coringa do próximo caractere especial (9aAx*~)
+
+                É possível mesclar os caracteres especiais com outros caracteres, exemplo:
+                - Número de série: PWR-999-aa9aa
+            </details>
         </td>
         <td>Elemento **Máscara** do tipo **Texto**.</td>
     </tr>
     <tr>
         <td>Mostrar separador de milhar</td>
         <td>
+            Define se o separador de milhar do elemento deve ser adicionado automaticamente ao elemento. Este recurso
+            facilita a leitura e a compreensão de números grandes, organizando-os em grupos de três dígitos.
+
+            À medida que o usuário digita um número, o separador de milhar é inserido automaticamente no local
+            apropriado. Por exemplo, ao digitar "1000000", o número é formatado como "1.000.000" ou "1,000,000",
+            dependendo do formato regional.
         </td>
         <td>Elemento **Inteiro** do tipo **Números**.</td>
     </tr>
     <tr>
         <td>Número mínimo</td>
         <td>
+            Determina o valor mais baixo que pode ser inserido no elemento.
+            Ao limitar a faixa de valores que um usuário pode inserir em um formulário, garante que os dados respeitem
+            um limite inferior previamente estabelecido.
         </td>
         <td>Elementos **Inteiro** e **Decimal** do tipo **Números**.</td>
     </tr>
     <tr>
         <td>Número máximo</td>
         <td>
+            Determina o valor mais alto que pode ser inserido no elemento.
+            Ao limitar a faixa de valores que um usuário pode inserir em um formulário, garante que os dados respeitem
+            um limite superior previamente estabelecido.
         </td>
         <td>Elementos **Inteiro** e **Decimal** do tipo **Números**.</td>
     </tr>
@@ -564,6 +670,10 @@ do elemento** e **atributos do conteúdo**. Veja a seguir cada uma dessas config
     <tr>
         <td>Casas Decimais</td>
         <td>
+            Define a quantidade de dígitos permitidos após o ponto decimal no elemento numérico.
+
+            Esse recurso é útil para controlar a precisão dos valores inseridos, como em cálculos financeiros, medidas
+            ou outras entradas que exijam decimais. Escolha entre 0 e 8 casas decimais.
         </td>
         <td>
             Elemento **Decimal** do tipo **Números** e elementos **Campo calculado (script)** e **Campo
@@ -573,96 +683,286 @@ do elemento** e **atributos do conteúdo**. Veja a seguir cada uma dessas config
     <tr>
         <td>Mostrar números</td>
         <td>
+            Define se os caracteres numéricos referentes às quantidades devem ou não mostradas juntamente com os emojis.
         </td>
         <td>Elemento **Quantidade (Emojis)** do tipo **Números** e elemento **Emojis** do tipo **Avaliação**.</td>
     </tr>
     <tr>
-        <td>Atributos do campo seleção única</td>
+        <td>Tipo</td>
         <td>
+            Permite a alteração do elemento dentre outros do mesmo tipo.
+
+            Por exemplo: possibilita trocar o elemento **Seleção única (Menu)** por **Seleção única (Botões)** ou
+            **Seleção única (Check)**, todos do tipo Seleção única (várias opções, uma resposta).
         </td>
-        <td>Todos os elementos do tipo **Seleção única**.</td>
+        <td>Todos os elementos dos tipos **Seleção única** e **Múltiplas seleções**.</td>
     </tr>
     <tr>
-        <td>Número de Colunas</td>
+        <td>Número de colunas</td>
         <td>
         </td>
-        <td>Todos os elementos do tipo **Seleção única**.</td>
+        <td>Todos os elementos dos tipos **Seleção única** e **Múltiplas seleções**.</td>
+    </tr>
+    <tr>
+        <td>Seleção mínima</td>
+        <td>
+            Define a quantidade mínima de itens que um usuário deve selecionar no elemento de múltipla seleção para que
+            a resposta seja considerada válida.
+
+            Antes de indicar o valor deste atributo, é necessário configurar em <img
+            src={useBaseUrl('img/forms/new-form/config.webp')} alt="Opções de respostas"
+            className="no-zoom image-between-texts"/> **Opções de respostas**, a quantidade de itens que o elemento deve
+            ter.
+
+            Saiba mais em *Opções de respostas* em [Configure os elementos](#element-settings).
+
+        </td>
+        <td>Todos os elementos do tipo **Múltiplas seleções**.</td>
+    </tr>
+    <tr>
+        <td>Seleção máxima</td>
+        <td>
+            Define a quantidade máxima de itens que um usuário deve selecionar no elemento de múltipla seleção para que
+            a resposta seja considerada válida.
+
+            Antes de indicar o valor deste atributo, é necessário configurar em <img
+            src={useBaseUrl('img/forms/new-form/config.webp')} alt="Opções de respostas"
+            className="no-zoom image-between-texts"/> **Opções de respostas**, a quantidade de itens que o elemento deve
+            ter.
+
+            Saiba mais em *Opções de respostas* em [Configure os elementos](#element-settings).
+        </td>
+        <td>Todos os elementos do tipo **Múltiplas seleções**.</td>
+    </tr>
+    <tr>
+        <td>Data mínima</td>
+        <td>
+            Definir o primeiro dia disponível para seleção da data no elemento. Ao configurar essa opção, o sistema
+            estabelece um limite inferior, impedindo a seleção de datas anteriores à data mínima configurada.
+        </td>
+        <td>Elementos **Data e hora** e **Data** do tipo **Data e hora**.</td>
+    </tr>
+    <tr>
+        <td>Data máxima</td>
+        <td>
+            Define um limite máximo de data que pose ser escolhida para o elemento. Ao configurar uma data máxima, o
+            sistema restringe a seleção de datas a um período que não ultrapasse essa data limite.
+        </td>
+        <td>Elementos **Data e hora** e **Data** do tipo **Data e hora**.</td>
+    </tr>
+    <tr>
+        <td>Mostrar calendário</td>
+        <td>
+            <p>
+                Define se o calendário dever ser ou não mostrado durante a escolha de uma data no preenchimento do
+                formulário.
+            </p>
+            <p>
+                Ao habilitar essa opção, será exibido um calendário, geralmente mensal, para que o usuário possa
+                consultar datas, programar eventos ou selecionar uma data específica.
+            </p>
+
+        </td>
+        <td>Elementos **Data e hora** e **Data** do tipo **Data e hora**.</td>
+    </tr>
+    <tr>
+        <td>Formato</td>
+        <td>
+            <p>
+                Define o sistema de exibição da hora. Escolha entre 12 e 24.
+            </p>
+            <p>
+                O formato de 12 horas divide o dia em dois períodos de 12 horas: a parte da manhã (AM - ante meridiem) e
+                a parte da tarde/noite (PM - *post meridiem*). Por exemplo, 2:00 PM indica 14 horas, ou seja, duas horas
+                da tarde.
+            </p>
+            <p>
+                No formato de 24 horas, as horas são contadas continuamente de 00:00 a 23:59, sem a necessidade
+                de usar AM ou PM.
+            </p>
+        </td>
+        <td>Elementos **Data e hora** e **Hora** do tipo **Data e hora**.</td>
+    </tr>
+    <tr>
+        <td>Mostrar Segundos</td>
+        <td>
+            Define os segundos dever ser ou não mostrado durante a escolha de um horário no preenchimento do
+            formulário.
+        </td>
+        <td>Elementos **Data e hora** e **Hora** do tipo **Data e hora**.</td>
+    </tr>
+    <tr>
+        <td>Quantidade mínima de arquivos</td>
+        <td>
+            Define a quantidade mínima de arquivos que um usuário deve carregar no elemento para que a resposta seja
+            considerada válida.
+        </td>
+        <td>Elemento **Enviar arquivos** do tipo **Outros**.</td>
+    </tr>
+    <tr>
+        <td>Quantidade máxima de arquivos</td>
+        <td>
+            Define a quantidade máxima de arquivos que um usuário deve carregar no elemento para que a resposta seja
+            considerada válida.
+        </td>
+        <td>Elemento **Enviar arquivos** do tipo **Outros**.</td>
+    </tr>
+    <tr>
+        <td>Permitir qualquer tipo de arquivo</td>
+        <td>
+            <p>Ao habilitar esta opção, qualquer tipo de arquivo pode ser carregada no formulário.</p>
+            <p>Ao desabilitar, são mostradas opções para que se defina quais tipos de arquivos podem ser carregados:</p>
+            <ul>
+                <li>*Permitir áudios*</li>
+                <li>*Permitir videos*</li>
+                <li>*Permitir imagens*</li>
+                <li>*Permitir documentos*</li>
+            </ul>
+        </td>
+        <td>Elemento **Enviar arquivos** do tipo **Outros**.</td>
+    </tr>
+    <tr>
+        <td>Permitir digitar as coordenadas manualmente</td>
+        <td>
+            Define se as coordenadas geográficas devem ser obtidas somente pelo sensor de GPS ou podem ser digitadas
+            durante a coleta de dados.
+        </td>
+        <td>Elemento **GPS** do tipo **Outros**.</td>
+    </tr>
+    <tr>
+        <td>Precisão mínima requerida (m)</td>
+        <td>
+            Escolha valores entre 100 m e A DEFINIR m, com intervalos de 50 m.
+        </td>
+        <td>Elemento **GPS** do tipo **Outros**.</td>
+    </tr>
+    <tr>
+        <td>Ocultar resultado do usuário</td>
+        <td>
+            Define ou não se os resultados cálculos realizados no elemento serão mostrados durante a coleta de dados.
+        </td>
+        <td>Elementos **Campo calculado (script)** e **Campo calculado (fórmula)** do tipo **Outros**.</td>
+    </tr>
+    <tr id={'allow-gallery-photos'}>
+        <td>Permitir fotos da galeria</td>
+        <td>
+            indica se permite ou não fotos carregadas a partir da galeria do dispositivo.
+        </td>
+        <td>
+            Elemento **Fotos / imagens** do tipo **Outros** e todos os elementos onde há o atributo **Permitir inserir
+            fotos**.
+        </td>
+    </tr>
+    <tr>
+        <td>Mínimo de fotos requeridas</td>
+        <td>
+            Quantidade mínima de fotos que podem ser carregadas. Escolha valores entre 0 e 100.
+        </td>
+        <td>
+            Elemento **Fotos / imagens** do tipo **Outros** e todos os elementos onde há o atributo **Permitir inserir
+            fotos**.
+        </td>
+    </tr>
+    <tr>
+        <td>Máximo de fotos permitidas</td>
+        <td>
+            Quantidade máxima de fotos que podem ser carregadas. Escolha valores entre 1 e 100.
+        </td>
+        <td>
+            Elemento **Fotos / imagens** do tipo **Outros** e todos os elementos onde há o atributo **Permitir inserir
+            fotos**.
+        </td>
+    </tr>
+    <tr>
+        <td>Tamanho máximo das fotos</td>
+        <td>
+            Define a dimensão máxima, em pixels, de cada fotografia carregada. Escolha uma dimensão máxima dentre as
+            seguintes opções:
+            <ul>
+                <li>512 x 512</li>
+                <li>768 x 768</li>
+                <li>1024 x 1024</li>
+                <li>1536 x 1536</li>
+                <li>2048 x 2048</li>
+            </ul>
+        </td>
+        <td>
+            Elemento **Fotos / imagens** do tipo **Outros** e todos os elementos onde há o atributo **Permitir inserir
+            fotos**.
+        </td>
+    </tr>
+    <tr>
+        <td>Máxima largura da linha</td>
+        <td>
+            Define a espessura da linha da assinatura. Escolha valores entre 1 e 10.
+        </td>
+        <td>
+            Elemento **Assinatura** do tipo **Outros**.
+        </td>
+    </tr>
+    <tr>
+        <td>Raio de um único ponto</td>
+        <td>
+            Escolha valores entre 1 a 5.
+        </td>
+        <td>
+            Elemento **Assinatura** do tipo **Outros**.
+        </td>
+    </tr>
+    <tr>
+        <td>Cor da linha</td>
+        <td>
+            Define a cor da linha da assinatura. Ao clicar no menu suspenso, é mostrada uma paleta de colores
+            disponíveis.
+        </td>
+        <td>
+            Elemento **Assinatura** do tipo **Outros**.
+        </td>
+    </tr>
+    <tr>
+        <td>Alinhamento</td>
+        <td>
+            Define a posição da imagem no formulário. Escolha entre: esquerda, direita e centro.
+        </td>
+        <td>
+            Elemento **Exibição de imagem** do tipo **Imagem**, pertencente aos Elementos de Exibição.
+        </td>
+    </tr>
+    <tr>
+        <td>Arredondamento da imagem</td>
+        <td>
+            Define o arredondamento dos cantos da imagem exibida no formulário. Escolha valores entre 0 e 300.
+        </td>
+        <td>
+            Elemento **Exibição de imagem** do tipo **Imagem**, pertencente aos Elementos de Exibição.
+        </td>
+    </tr>
+    <tr>
+        <td>Largura máxima</td>
+        <td>
+            Define a largura máxima, em pixels, da imagem exibida no formulário. Escolha valores entre 50 e 1024.
+        </td>
+        <td>
+            Elemento **Exibição de imagem** do tipo **Imagem**, pertencente aos Elementos de Exibição.
+        </td>
+    </tr>
+    <tr>
+        <td>Sombra</td>
+        <td>
+            Define se exibe ou não sombreamento na imagem exibida no formulário.
+        </td>
+        <td>
+            Elemento **Exibição de imagem** do tipo **Imagem**, pertencente aos Elementos de Exibição.
+        </td>
+    </tr>
+    <tr>
+        <td>Exibir título ao usuário</td>
+        <td>
+            Define se o título do elemento deve ser exibido ou não no formulário nomomento da coleta de dados.
+        </td>
+        <td>
+            Elemento **Exibição de texto** do tipo **Texto**, pertencente aos Elementos de Exibição.
+        </td>
     </tr>
     </tbody>
 </table>
-
-### 4. Para gerenciar os elementos do formulário {#to - manage - form - elements}
-Todos os elementos incluídos no formulário ficam disponíveis na barra lateral esquerda **Elementos do
-formulário**. Ao clicar em um elemento desses elementos, são mostradas um conjunto de opções para gerenciá-los. A partir
-dessas opções, você poderá:
-- Selecionar todos;
-- Mover selecionados;
-- Agrupar selecionados;
-- Clonar selecionados;
-- Excluir selecionados;
-
-<details id={"conditional-actions-learn-more"}>
-    <summary>Saiba mais sobre **Ações Condicionais**</summary>
-
-    Ações condicionais são aplicadas automaticamente nos elementos do formulário quando determinadas condições
-    acontecem. São blocos do tipo **"SE/ENTÃO"**:
-    * **SE** (condição acontecer) **ENTÃO** (faça a ação).
-
-    Exemplo:
-
-    Utilize as **ações condicionais** para ocultar ou exibir elementos do formulário quando determinada condição
-    acontecer, tal como:
-    * **SE* a opção X da questão Y for selecionada, **ENTÃO** oculte as questões A, B, C e exiba as questões D, E, F.
-
-
-    > :warning: **Atenção**: As **ações condicionais** são processadas **SEMPRE** que uma resposta do formulário é
-    alterada.
-
-    [**Clique aqui**](#to-setup-elements) para retornar onde você estava.
-</details>
-
-<details id={"conditional-content-learn-more"}>
-    <summary>Saiba mais sobre **Configurar Conteúdo Condicional (multiconteúdo)**</summary>
-
-    É possível criar vários conteúdos para a mesma pergunta, incluindo opções de respostas diversas, escolhendo qual
-    conteúdo deve ser exibido de acordo com condições configuráveis. Por exemplo, imagine duas perguntas:
-
-    * Qual o Estado?
-    * Qual a Cidade?
-
-    Para facilitar a dinâmica ao responder o formulário, podemos exibir na listagem de cidades apenas as Cidades
-    contidas no
-    Estado selecionado. Para isso, basta habilitar o multiconteúdo (conteúdo condicional) na pergunta "Qual a Cidade?".
-
-    Assim, é possível criar uma lista de cidades para cada Estado e vincular a exibição de cada lista com a seleção do
-    Estado.
-
-    A mesma lógica se aplica a vários outros cenários, por exemplo:
-
-    - Setores, Áreas ↔️ Departamentos
-    - Departamentos ↔️ Pessoas, Gerentes
-    - Categorias ↔️ Produtos, Itens etc.
-
-    [**Clique aqui**](#to-setup-elements) para retornar onde você estava.
-</details>
-
-<details id={"mask-learn-more"}>
-    <summary>Saiba mais sobre o atributo de conteúdo **Máscara**</summary>
-
-    Para configurar máscaras personalizadas, podem ser usados os
-    seguintes caracteres especiais:
-    - **9**: número
-    - **a**: letra minúscula (a...z)
-    - **A**: letra maiúscula (A...Z)
-    - **x**: letra (minúscula ou maiúscula)
-    - **\***: letra ou número
-    - **~**: sinal de positivo ou negativo (+ ou -)
-    - **()**: bloco de grupo
-    - **\{}**: bloco de repetição
-    - **[]**: bloco opcional
-    - **\\**: cancela o efeito coringa do próximo caractere especial (9aAx*~)
-
-    É possível mesclar os caracteres especiais com outros caracteres, exemplo:
-    - Número de série: PWR-999-aa9aa
-
-</details>
