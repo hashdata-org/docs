@@ -4,4 +4,38 @@ sidebar_position: 6
 sidebar_label: Conteúdo condicional (multiconteúdo)
 ---
 
+export const standardCaption = '. Clique na imagem para ampliá-la.'
+export const conditionalContentCaption = 'Funcionalidades da configuração do Conteúdo Condicional' + standardCaption;
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # Conteúdo condicional (multiconteúdo)
+
+A funcionalidade Conteúdo Condicional insere dinamismo ao formulário, pois permite que o fluxo de informações se adapte
+em tempo real à medida que o usuário interage com as perguntas, garantindo que ele forneça informações relevantes
+ao contexto de suas respostas.
+
+Em outros termos, o conteúdo condicional permite personalizar a experiência do usuário, exibindo diferentes conteúdos ou
+opções de respostas com base em condições configuráveis previamente no elemento de entrada de dados, ou seja, é possível
+definir múltiplos conteúdos que serão mostrados de acordo as respostas fornecidas.
+
+Por exemplo, se uma resposta a uma pergunta anterior for "Sim", o sistema pode apresentar um conjunto de novas opções
+ou informações específicas. Se a resposta for "Não", o conteúdo exibido será outro, totalmente adaptado à escolha anterior.
+
+## Para incluir conteúdo condicional
+1. Clique em ;
+2. Informe o identificador do conteúdo;
+3. Escolha a pergunta que determinará a condição de exibição.
+4. Escolha o operador lógico da condição: *igual a*, *estiver preenchida* ou *estiver vazia;
+5. Defina a resposta da pergunta para completar a condição de exibição. É apresentada as opções de resposta da pergunta
+escolhida como condição de exibição;
+6. Para incluir mais um critério na lógica de apresentação, clique em ;
+7. Defina os atributos em *Exibir quando*. Veja tabela abaixo para mais informações;
+8. Clique em <img style={{width: '8%'}} src={useBaseUrl('img/forms/save.webp')}
+alt="Salvar" className="no-zoom image-between-texts"/>, para guardar as configurações.
+
+<img
+    src={useBaseUrl('img/forms/conditional-content/conditional_content.gif')}
+    alt={conditionalContentCaption}
+    title={conditionalContentCaption}
+/>
+<p className="image-caption">{conditionalContentCaption}</p>
