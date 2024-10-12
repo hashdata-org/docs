@@ -22,18 +22,20 @@ Por exemplo, se uma resposta a uma pergunta anterior for "Sim", o sistema pode a
 ou informações específicas. Se a resposta for "Não", o conteúdo exibido será outro, totalmente adaptado à escolha anterior.
 
 ## Para incluir conteúdo condicional {#to-add-conditional-content}
-1. Clique em <img style={{width: '12%'}} src={useBaseUrl('img/forms/conditional-content/add_button.webp')}
+1. Clique em <img style={{width: '12%'}} src={useBaseUrl('img/forms/add_button.webp')}
 alt="Adicionar" className="no-zoom image-between-texts"/>;
 2. Informe o identificador do conteúdo;
-3. Escolha a pergunta que determinará a condição de exibição.
+3. Escolha a pergunta que determinará a condição de exibição;
 4. Escolha o operador lógico da condição;
-5. Defina a resposta da pergunta para completar a condição de exibição. São apresentadas as opções de resposta da pergunta
-escolhida como condição de exibição;
+5. Defina a resposta da pergunta para completar a condição de exibição. Digite a resposta esperada ou escolha dentre
+opções de resposta da pergunta escolhida como condição de exibição;
 6. Para incluir mais um critério na lógica de apresentação, clique em <img style={{width: '12%'}}
-src={useBaseUrl('img/forms/conditional-content/condition_button.webp')} alt="Condição" className="no-zoom image-between-texts"/>;
-7. Defina os atributos em *Exibir quando*. Veja tabela abaixo para mais informações;
+src={useBaseUrl('img/forms/condition_button.webp')} alt="Condição" className="no-zoom image-between-texts"/>;
+7. Defina os atributos em *Exibir quando*;
 8. Clique em <img style={{width: '8%'}} src={useBaseUrl('img/forms/save.webp')}
 alt="Salvar" className="no-zoom image-between-texts"/>, para guardar as configurações.
+
+Clique aqui para [saber mais...](#conditional-content-parameters)
 
 <img
     src={useBaseUrl('img/forms/conditional-content/conditional_content.gif')}
@@ -66,7 +68,7 @@ alt="Salvar" className="no-zoom image-between-texts"/>, para guardar as configur
             Título, pergunta, etc
         </td>
         <td>
-            É o texto principal do elemento, pode ser uma pergunta ou simplesmente um título. Este parâmetro já vira
+            É o texto principal do elemento, pode ser uma pergunta ou simplesmente um título. Este parâmetro já virá
             preenchido com o valor definido na tela de inclusão de elementos.
         </td>
     </tr>
@@ -77,7 +79,7 @@ alt="Salvar" className="no-zoom image-between-texts"/>, para guardar as configur
         <td>
             Define as condições lógicas que devem ser satisfeitas para que o conteúdo condicional seja ou não exibido.
 
-            1. Escolha a pergunta condicional. É mostrada todas as perguntas presentes no formulário na ordem que estão
+            1. Escolha a pergunta condicional. É mostrada todas as perguntas presentes no formulário na ordem que foram
             inseridas.
 
             2. Após escolher a pergunta condicional, o sistema apresentará o operador lógico da condição de
@@ -88,18 +90,19 @@ alt="Salvar" className="no-zoom image-between-texts"/>, para guardar as configur
 
             3. Defina o valor da pergunta condicional que deve ser satisfeita para completar a condição lógica.
             Para elementos dos tipos **Seleção única** e **Múltiplas seleções**, por exemplo, são apresentadas as opções
-            de resposta disponíveis. Para elementos do tipo **Texto*, é necessário informar o texto esperado.
+            de resposta disponíveis. Para elementos do tipo **Texto**, é necessário informar o texto esperado.
 
             4. Inclua, por meio do botão <img style={{width: '12%'}}
-                                              src={useBaseUrl('img/forms/conditional-content/condition_button.webp')}
+                                              src={useBaseUrl('img/forms/condition_button.webp')}
                                               alt="Condição" className="no-zoom image-between-texts"/> quantas condições
             de exibição forem necessárias.
 
-            5. O botão <img style={{width: '2.5%'}}
-                            src={useBaseUrl('img/forms/conditional-content/order_button.webp')}
-                            alt="Ordena" className="no-zoom image-between-texts"/> ordena as condições lógicas de acordo
-            com a ordem que os elementos aparecem no formulário. Por exemplo, se uma pergunta da uma condição precede a
-            ordem da pergunta da condição anterior, a primeira condição será colocada antes da segunda.
+            5. O botão <img style={{width: '2%'}}
+                            src={useBaseUrl('img/forms/order_button.webp')}
+                            alt="Ordena" className="no-zoom image-between-texts"/> ordena as condições lógicas
+            automaticamente, de acordo com a ordem que os elementos foram inseridos no formulário. Por exemplo, se uma
+            pergunta da uma condição precede a ordem da pergunta da condição anterior, aquela condição será colocada
+            antes desta.
         </td>
     </tr>
     <tr>
@@ -212,23 +215,18 @@ alt="Salvar" className="no-zoom image-between-texts"/>, para guardar as configur
             Considerando essa expressão lógica, o conteúdo condicional só será apresentado somente se: **A** for
             VERDADEIRO e **B** for FALSO, ou **C** for VERDADEIRO, sendo que **A**, **B** e **C** são as três condições
             de exibição.
-
-            <img style={{width: '100%'}}
-                 src={useBaseUrl('img/forms/conditional-content/use_expression.webp')}
-                 alt="Usar expressão" className="no-zoom image-between-texts"/>
-
         </td>
     </tr>
     </tbody>
 </table>
 
 ## Conteúdo padrão  {#default-content}
-O conteúdo padrão é considerado quando nenhuma das condições de exibição do conteúdo condicional for considerada.
+O conteúdo padrão é mostrado quando nenhuma das condições de exibição do conteúdo condicional for considerada válida.
 
 ### Regras de exibição  {#exibition-rules}
 
 As condições para exibição do conteúdo são avaliadas de cima pra baixo, ou seja, conforme a ordem de condições
-configurada, respeitando-se as seguintes regras:
+cadastradas, respeitando-se as seguintes regras:
 
 - O primeiro conteúdo que tenha suas condições atendidas será exibido.
 - Caso nenhuma condição seja atendida, o conteúdo padrão será exibido.
