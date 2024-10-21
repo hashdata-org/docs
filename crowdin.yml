@@ -11,12 +11,13 @@ files:
   - source: /docs/**/*.json
     translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%
     languages_mapping: *languages_mapping
-  - source: /docs/**/*.md
+  - source: /docs/**/*.mdx
     translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%
     languages_mapping: *languages_mapping
-  - source: /docs/**/*.png
-    translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%
-    languages_mapping: *languages_mapping
+#  - source: /static/**/*.webp
+#    translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%
+#    languages_mapping: *languages_mapping
+
 #  - source: /community/**/*
 #    translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs-community/current/**/%original_file_name%
 #    languages_mapping: *languages_mapping
