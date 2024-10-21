@@ -20,6 +20,7 @@ const config = {
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     staticDirectories: ['static'],
+    onBrokenAnchors: 'warn', // Temporarily disabled until we finish the documentation
 
     themeConfig: {
         docs: {
