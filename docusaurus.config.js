@@ -17,9 +17,10 @@ const config = {
     favicon: 'img/favicon.ico',
     organizationName: 'hashdata-org', // Usually your GitHub org/user name.
     projectName: 'docs', // Usually your repo name.
-    onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     staticDirectories: ['static'],
+    onBrokenAnchors: 'warn', // Temporarily disabled until we finish the documentation
+    onBrokenLinks: 'warn', // Temporarily disabled until we finish the documentation
 
     themeConfig: {
         docs: {
