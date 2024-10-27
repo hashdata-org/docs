@@ -51,6 +51,7 @@ Clique aqui para [saber mais...](#conditional-content-parameters)
 
 ## Parâmetros do conteúdo condicional  {#conditional-content-parameters}
 
+````mdx-code-block
 <table>
     <thead>
     <tr>
@@ -232,6 +233,7 @@ Clique aqui para [saber mais...](#conditional-content-parameters)
     </tr>
     </tbody>
 </table>
+````
 
 ## Conteúdo padrão  {#default-content}
 O conteúdo padrão é mostrado quando nenhuma das condições de exibição do conteúdo condicional for considerada válida.
@@ -249,7 +251,6 @@ cadastradas, respeitando-se as seguintes regras:
 - O primeiro conteúdo que tenha suas condições atendidas será exibido.
 - Caso nenhuma condição seja atendida, o conteúdo padrão será exibido.
 - O conteúdo padrão é sempre o último da lista.
-
 
 ## Exemplo prático  {#practical_example}
 Vamos criar um cenário para por em prática o exemplo dado acima, ou seja, ao escolher um Estado, o sistema apresentará
@@ -269,4 +270,3 @@ exibir quando todas as condições forem satisfeitas;
 7. No canto superior esquerdo do elemento, escolha o identificador de conteúdo, por exemplo, `cidades_acre`, e cadastre
 as opções de resposta para esse identificador, incluindo ou importando todas as cidades do Estado do Acre;
 8. Repita o passo 7 para cada identificador de conteúdo do elemento `Cidade:`.
-
