@@ -6,7 +6,6 @@ sidebar_label: Elementos
 
 export const standardCaption = '. Clique na imagem para ampliá-la.'
 export const insertElementsCaption = 'Apresentação das principais funcionalidades para inclusão e gerenciamento de elementos no formulário' + standardCaption;
-import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Elementos
 Os **elementos** são os componentes que constituem a **estrutura** do formulário, permitindo a coleta dos dados.
@@ -17,7 +16,7 @@ As configurações realizadas nessa etapa definirão como o formulário será ap
 :::
 
 <img
-    src={useBaseUrl('img/forms/new-form/adding_elements.gif')}
+    src={require('./images/how-to-create-a-form/adding_elements.gif').default}
     alt={insertElementsCaption}
     title={insertElementsCaption}
 />
@@ -25,7 +24,7 @@ As configurações realizadas nessa etapa definirão como o formulário será ap
 
 ## 1. Adicionando elementos ao formulário {#to-add-elements}
 
-1. Na barra lateral esquerda **Elementos do formulário**, clique em <img style={{width: '13%'}}  src={useBaseUrl('/img/forms/new-form/add_element.webp')} alt="Adicionar elemento"
+1. Na barra lateral esquerda **Elementos do formulário**, clique em <img style={{width: '13%'}}  src={require('./images/how-to-create-a-form/add_element.webp').default} alt="Adicionar elemento"
 className="no-zoom image-between-texts" />, disponível na porção inferior da barra lateral;
 2. Escolha o elemento desejado, os quais estão organizados em abas: **Entrada de dados** e **Exibição**;
 3. Clique no elemento desejado e ele será incluído no formulário.
@@ -244,7 +243,7 @@ className="no-zoom image-between-texts" />, disponível na porção inferior da 
                 Elemento utilizado para exibir um texto no formulário.
             </p>
             <p>
-                Ao clicar em <img style={{width: '25%'}} src={useBaseUrl('img/forms/new-form/to_write.webp')}
+                Ao clicar em <img style={{width: '25%'}} src={require('./images/how-to-create-a-form/to_write.webp').default}
                                   alt="Escrever" className="no-zoom image-between-texts"/>, será aberta um
                 caixa de diálogo com um **editor de texto** para digitação e formatação do texto desejado.
             </p>
@@ -659,7 +658,7 @@ do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas co
             a resposta seja considerada válida.
 
             Antes de indicar o valor deste atributo, é necessário configurar em <img
-            src={useBaseUrl('img/forms/new-form/config.webp')} alt="Opções de respostas"
+            src={require('./images/how-to-create-a-form/config.webp').default} alt="Opções de respostas"
             className="no-zoom image-between-texts"/> [Opções de respostas](answer-options), a quantidade de itens
             que compõe o elemento.
         </td>
@@ -672,7 +671,7 @@ do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas co
             a resposta seja considerada válida.
 
             Antes de indicar o valor deste atributo, é necessário configurar em <img
-            src={useBaseUrl('img/forms/new-form/config.webp')} alt="Opções de respostas"
+            src={require('./images/how-to-create-a-form/config.webp').default} alt="Opções de respostas"
             className="no-zoom image-between-texts"/> [Opções de respostas](answer-options), a quantidade de itens
             que compõe o elemento.
         </td>

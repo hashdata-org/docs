@@ -3,7 +3,6 @@ slug: conditional-actions
 sidebar_position: 5
 sidebar_label: Ações Condicionais
 ---
-import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Ações Condicionais
 
@@ -23,20 +22,20 @@ modificações realizadas em um formulário serão aplicadas a todas as resposta
 
 ## Para incluir ação condicional {#to-add-conditional-action}
 1. Vá até o elemento desejado e clique em  <img style={{width: '1.5%'}}
-src={useBaseUrl('img/forms/conditional-action/conditional_action_button.webp')}
+src={require('./images/conditional-action/conditional_action_button.webp').default}
 alt="Ações condicionais"
 className="no-zoom image-between-texts"/> ou selecione a aba **"Ações condicionais"**, na porção superior da tela de
 edição de formulários;
-2. Clique em <img style={{width: '12%'}} src={useBaseUrl('img/forms/add_button.webp')}
+2. Clique em <img style={{width: '12%'}} src={require('./images/add_button.webp').default}
 alt="Adicionar" className="no-zoom image-between-texts"/>;
 3. Escolha a pergunta que determinará a condição de exibição;
 4. Escolha o operador lógico da condição;
 5. Defina a resposta da pergunta para completar a condição de exibição. Digite a resposta esperada ou escolha dentre
 opções de resposta da pergunta escolhida como condição de exibição;
 6. Para incluir mais um critério na lógica de apresentação, clique em <img style={{width: '12%'}}
-src={useBaseUrl('img/forms/condition_button.webp')} alt="Condição" className="no-zoom image-between-texts"/>;
+src={require('./images/condition_button.webp').default} alt="Condição" className="no-zoom image-between-texts"/>;
 7. Defina os atributos em *Executar quando*. Veja tabela abaixo para mais informações;
-8. Clique em <img style={{width: '8%'}} src={useBaseUrl('img/forms/save.webp')}
+8. Clique em <img style={{width: '8%'}} src={require('./images/save.webp').default}
 alt="Salvar" className="no-zoom image-between-texts"/>, para guardar as configurações.
 
 Clique aqui para [saber mais...](#conditional-action-parameters)
@@ -73,12 +72,12 @@ Clique aqui para [saber mais...](#conditional-action-parameters)
                 de resposta disponíveis. Para elementos do tipo **Texto**, é necessário informar o texto esperado.
 
                 4. Inclua, por meio do botão <img style={{width: '12%'}}
-                                                  src={useBaseUrl('img/forms/condition_button.webp')}
+                                                  src={require('./images/condition_button.webp').default}
                                                   alt="Condição" className="no-zoom image-between-texts"/> quantas condições
                 de exibição forem necessárias.
 
                 5. O botão <img style={{width: '2%'}}
-                                src={useBaseUrl('img/forms/order_button.webp')}
+                                src={require('./images/order_button.webp').default}
                                 alt="Ordena" className="no-zoom image-between-texts"/> ordena as condições lógicas
                 automaticamente, de acordo com a ordem que os elementos foram inseridos no formulário. Por exemplo, se uma
                 pergunta da uma condição precede a ordem da pergunta da condição anterior, aquela condição será colocada
@@ -223,12 +222,12 @@ Clique aqui para [saber mais...](#conditional-action-parameters)
                 Este campo é mostrado quando a opção "Exibir elementos do formulário" é escolhida no campo **Ações**.
 
                 Inclua os elementos que devem ser exibidos por meio do botão <img style={{width: '15%'}}
-                                                                                  src={useBaseUrl('img/forms/conditional-action/add_element_button.webp')}
+                                                                                  src={require('./images/conditional-action/add_element_button.webp').default}
                                                                                   alt="Elemento"
                                                                                   className="no-zoom image-between-texts"/>.
 
                 O botão <img style={{width: '2%'}}
-                             src={useBaseUrl('img/forms/order_button.webp')}
+                             src={require('./images/order_button.webp').default}
                              alt="Ordena" className="no-zoom image-between-texts"/> ordena os elementos automaticamente, de
                 acordo com a ordem em que foram inseridos no formulário. Por exemplo, se um elemento precede a ordem de um
                 elemento anteriormente definido, aquele será colocado antes deste.
@@ -240,12 +239,12 @@ Clique aqui para [saber mais...](#conditional-action-parameters)
                 Este campo é mostrado quando a opção "Ocultar elementos do formulário" é escolhida no campo **Ações**.
 
                 Inclua os elementos que devem ser ocultados por meio do botão <img style={{width: '15%'}}
-                                                                                   src={useBaseUrl('img/forms/conditional-action/add_element_button.webp')}
+                                                                                   src={require('./images/conditional-action/add_element_button.webp').default}
                                                                                    alt="Elemento"
                                                                                    className="no-zoom image-between-texts"/>.
 
                 O botão <img style={{width: '2%'}}
-                             src={useBaseUrl('img/forms/order_button.webp')}
+                             src={require('./images/order_button.webp').default}
                              alt="Ordena" className="no-zoom image-between-texts"/> ordena os elementos automaticamente, de
                 acordo com a ordem em que foram inseridos no formulário. Por exemplo, se um elemento precede a ordem de um
                 elemento anteriormente definido, aquele será colocado antes deste.

@@ -11,7 +11,6 @@ export const initialScreamCaption = 'Apresentação da Tela Inicial do Hashdata'
 export const headerCaption = 'Cabeçalho do Hashdata' + standardCaption;
 export const headerOptionsCaption = 'Opções disponíveis no cabeçalho do Hashdata' + standardCaption;
 export const desktopOptionsCaption = 'Opções disponíveis no desktop do Hashdata' + standardCaption;
-import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Tela Inicial
 
@@ -103,6 +102,7 @@ Ele fornece acesso às funcionalidades principais do sistema:
 9. **Acessar este Guia de Usuário**, e;
 10. **Utilizar o Hashdata Advanced Reports** (para mais informações,  [entre em contato conosco](./first-steps.mdx#user-support)).
 
+````mdx-code-block
 <table style={{
     display: 'flex',
     justifyContent: "space-around",
@@ -151,7 +151,7 @@ Ele fornece acesso às funcionalidades principais do sistema:
         </td>
 
         <td style={{border: 'none', padding: '0.5rem'}}>
-            <Link to=''>
+            <Link to='/docs/collaborators/managing-collaborators'>
                 <button style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -170,7 +170,7 @@ Ele fornece acesso às funcionalidades principais do sistema:
         </td>
 
         <td style={{border: 'none', padding: '0.5rem'}}>
-            <Link to=''>
+            <Link to='/docs/invitations/managing-invitations'>
                 <button style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -189,7 +189,7 @@ Ele fornece acesso às funcionalidades principais do sistema:
         </td>
 
         <td style={{border: 'none', padding: '0.5rem'}}>
-            <Link to=''>
+            <Link to='/docs/shared-with-me/managing-shared-to-me'>
                 <button style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -208,7 +208,7 @@ Ele fornece acesso às funcionalidades principais do sistema:
         </td>
 
         <td style={{border: 'none', padding: '0.5rem'}}>
-            <Link to=''>
+            <Link to='/docs/pending-awswers/managing-pending-answer'>
                 <button style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -227,7 +227,7 @@ Ele fornece acesso às funcionalidades principais do sistema:
         </td>
 
         <td style={{border: 'none', padding: '0.5rem'}}>
-            <Link to=''>
+            <Link to='/docs/import-data/managing-import-data'>
                 <button style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -246,7 +246,7 @@ Ele fornece acesso às funcionalidades principais do sistema:
         </td>
 
         <td style={{border: 'none', padding: '0.5rem'}}>
-            <Link to=''>
+            <Link to='/docs/integrations/managing-integrations'>
                 <button style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -265,7 +265,7 @@ Ele fornece acesso às funcionalidades principais do sistema:
         </td>
 
         <td style={{border: 'none', padding: '0.5rem'}}>
-            <Link to=''>
+            <Link to='/docs/'>
                 <button style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -284,7 +284,7 @@ Ele fornece acesso às funcionalidades principais do sistema:
         </td>
 
         <td style={{border: 'none', padding: '0.5rem'}}>
-            <Link to=''>
+            <Link to='/docs/advanced-reports/'>
                 <button style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -304,7 +304,7 @@ Ele fornece acesso às funcionalidades principais do sistema:
     </tr>
     </tbody>
 </table>
-
+````
 
 :::tip[Saiba mais]
 Clique nos ícones acima para conhecer as funcionalidades do menu principal do Hashdata.
@@ -317,59 +317,8 @@ de respostas de formulários publicados, o qual pode ser filtrado pelas resposta
 anterior, e uma lista com todos os formulários respondidos recentemente.
 
 <img
-    src={useBaseUrl('img/start-here/main-menu/desktop.gif')}
+    src={require('./images/main-menu/desktop.gif').default}
     alt={desktopOptionsCaption}
     title={desktopOptionsCaption}
 />
 <p className="image-caption">{desktopOptionsCaption}</p>
-
-Ao clicar em <img src={useBaseUrl('img/start-here/main-menu/ellipsis.webp')} alt="Icon" className="no-zoom image-between-texts" />,
-disponível à direita de cada formulário da lista de **formulários respondidos recentemente**, será exibido um **menu suspenso**
-com as seguintes opções:
-
-<ol style={{display: 'flex', flexDirection: 'column', paddingBottom: '1em', gap: '1em'}}>
-    <li>
-        <Link to={'/docs/forms'}>
-            <img style={{cursor: "pointer", width: '20%', verticalAlign: 'middle'}}
-                 src={useBaseUrl('img/start-here/main-menu/edit_form.webp')}
-                 alt={'Editar Formulário'}
-                 title={'Editar Formulário'}
-                 className="no-zoom"
-            />
-        </Link>
-    </li>
-    <li>
-        <Link to={'/docs/forms'}>
-            <img style={{cursor: "pointer", width: '20%', verticalAlign: 'middle'}}
-                 src={useBaseUrl('img/start-here/main-menu/publish_info.webp')}
-                 alt={'Info. Publicação'}
-                 title={'Info. Publicação'}
-                 className="no-zoom"
-            />
-        </Link>
-    </li>
-    <li>
-        <Link to={'/docs/forms'}>
-            <img style={{cursor: "pointer", width: '20%', verticalAlign: 'middle'}}
-                 src={useBaseUrl('img/start-here/main-menu/see_answers.webp')}
-                 alt={'Ver Respostas'}
-                 title={'Ver Respostas'}
-                 className="no-zoom"
-            />
-        </Link>
-    </li>
-    <li>
-        <Link to={'/docs/forms'}>
-            <img style={{cursor: "pointer", width: '20%', verticalAlign: 'middle'}}
-                 src={useBaseUrl('img/start-here/main-menu/graph_analysis.webp')}
-                 alt={'Análise Gráfica'}
-                 title={'Análise Gráfica'}
-                 className="no-zoom"
-            />
-        </Link>
-    </li>
-</ol>
-
-:::tip[Saiba mais]
-Clique nas imagens acima para saber mais de cada uma das funcionalidades do menu suspenso.
-:::

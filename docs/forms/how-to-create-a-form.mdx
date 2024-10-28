@@ -8,7 +8,6 @@ export const standardCaption = '. Clique na imagem para ampliá-la.'
 export const createFormCaption = 'Apresentação das principais funcionalidades da tela Formulários, como gerenciamento ' +
     'de pastas e criação de formulários' + standardCaption;
 export const insertElementsCaption = 'Apresentação das principais funcionalidades para inclusão e gerenciamento de elementos no formulário' + standardCaption;
-import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Como criar um formulário
 Os formulários são a principal ferramenta para a realização da coleta de dados.
@@ -18,11 +17,11 @@ informações relevantes sejam capturadas de maneira organizada.
 A definição adequada das perguntas e dos tipos de resposta, como campos de números, de texto, data e hora ou múltipla escolha,
 é fundamental para que os dados possam ser facilmente analisados e convertidos em conhecimentos para as tomadas de decisão.
 
-Para criar ou editar um formulário, gerenciando suas funcionalidades, clique em <img src={useBaseUrl('img/start-here/main-menu/forms.webp')} alt="Formulário"
+Para criar ou editar um formulário, gerenciando suas funcionalidades, clique em <img src={require('../start-here/images/main-menu/forms.webp').default} alt="Formulário"
 className="no-zoom image-between-texts" />, disponível no [Menu Principal](/start-here/main-page#main-menu).
 
 <img
-    src={useBaseUrl('img/forms/new-form/new_form.gif')}
+    src={require('./images/how-to-create-a-form/new_form.gif').default}
     alt={createFormCaption}
     title={createFormCaption}
 />
@@ -57,7 +56,7 @@ No gerenciamento de pastas, você pode:
 
 ## 3. Crie um Formulário {#creating-a-form}
 
-1. Clique em <img style={{width: '13%'}}  src={useBaseUrl('/img/forms/new-form/click_to_new_form.webp')} alt="Novo formulário"
+1. Clique em <img style={{width: '13%'}}  src={require('./images/how-to-create-a-form/click_to_new_form.webp').default} alt="Novo formulário"
 className="no-zoom image-between-texts" />;
 2. Defina o nome do formulário;
 3. Selecione a pasta ou subpasta de destino;
