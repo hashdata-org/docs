@@ -21,7 +21,7 @@ esquerda, onde fica o **Menu Principal**, sempre serão exibidas. A maior parte 
 Trabalho**.
 
 <img
-    src={useBaseUrl('img/start-here/main-menu/initial_scream.gif')}
+    src={require('./images/main-menu/initial_scream.gif').default}
     alt={initialScreamCaption}
     title={initialScreamCaption}
 />
@@ -30,7 +30,7 @@ Trabalho**.
 ## Cabeçalho {#header}
 
 <img
-    src={useBaseUrl('img/start-here/main-menu/header.webp')}
+    src={require('./images/main-menu/header.webp').default}
     alt={headerCaption}
     title={headerCaption}
 />
@@ -45,7 +45,7 @@ Dá esquerda para a direita, estão disponíveis as seguintes seções no cabeç
 - Usuário;
 
 <img
-    src={useBaseUrl('img/start-here/main-menu/header.gif')}
+    src={require('./images/main-menu/header.gif').default}
     alt={headerOptionsCaption}
     title={headerOptionsCaption}
 />
@@ -103,19 +103,6 @@ Ele fornece acesso às funcionalidades principais do sistema:
 9. **Acessar este Guia de Usuário**, e;
 10. **Utilizar o Hashdata Advanced Reports** (para mais informações,  [entre em contato conosco](./first-steps.mdx#user-support)).
 
-export const mainMenuData = [
-    {imgSrc: "/img/start-here/main-menu/start.webp", label: "1. Início", link: "/docs/start-here/main-page"},
-    {imgSrc: "/img/start-here/main-menu/forms.webp", label: "2. Formulários", link: "/docs/forms/create-and-edit-forms"},
-    {imgSrc: "/img/start-here/main-menu/collaborators.webp", label: "3. Colaboradores", link: ""},
-    {imgSrc: "/img/start-here/main-menu/invitations.webp", label: "4. Convites", link: ""},
-    {imgSrc: "/img/start-here/main-menu/shared_with_me.webp", label: "5. Compartilhados comigo", link: ""},
-    {imgSrc: "/img/start-here/main-menu/pending_answers.webp", label: "6. Respostas pendentes", link: ""},
-    {imgSrc: "/img/start-here/main-menu/import_data.webp", label: "7. Importar dados", link: ""},
-    {imgSrc: "/img/start-here/main-menu/integrations.webp", label: "8. Integrações", link: ""},
-    {imgSrc: "/img/start-here/main-menu/user_guide.webp", label: "9. Guia do usuário", link: ""},
-    {imgSrc: "/img/start-here/main-menu/advanced_reports.webp", label: "10. Hashdata Advanced Reports", link: ""},
-];
-
 <table style={{
     display: 'flex',
     justifyContent: "space-around",
@@ -125,29 +112,199 @@ export const mainMenuData = [
 }}>
     <tbody>
     <tr style={{border: 'none'}}>
-        {mainMenuData.map((item) => (
-            <td style={{border: 'none', padding: '0.5rem'}}>
-                <Link to={item.link}>
-                    <button style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        border: "none",
-                        padding: '.5em',
-                        cursor: "pointer"
-                    }}>
-                        <img className="no-zoom"
-                             src={useBaseUrl(item.imgSrc)}
-                             alt={item.label}
-                             title={item.label}
-                             style={{cursor: "pointer", width: '100%'}}
-                        />
-                    </button>
-                </Link>
-            </td>
-        ))}
+        <td style={{border: 'none', padding: '0.5rem'}}>
+            <Link to='/docs/start-here/main-page'>
+                <button style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    border: 'none',
+                    padding: '.5em',
+                    cursor: "pointer"
+                }}>
+                    <img className="no-zoom"
+                         src={require('./images/main-menu/start.webp').default}
+                         alt='1. Início'
+                         title='1. Início'
+                         style={{cursor: "pointer", width: '100%'}}
+                    />
+                </button>
+            </Link>
+        </td>
+
+        <td style={{border: 'none', padding: '0.5rem'}}>
+            <Link to='/docs/forms/how-to-create-a-form'>
+                <button style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    border: 'none',
+                    padding: '.5em',
+                    cursor: "pointer"
+                }}>
+                    <img className="no-zoom"
+                         src={require('./images/main-menu/forms.webp').default}
+                         alt='2. Formulários'
+                         title='2. Formulários'
+                         style={{cursor: "pointer", width: '100%'}}
+                    />
+                </button>
+            </Link>
+        </td>
+
+        <td style={{border: 'none', padding: '0.5rem'}}>
+            <Link to=''>
+                <button style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    border: 'none',
+                    padding: '.5em',
+                    cursor: "pointer"
+                }}>
+                    <img className="no-zoom"
+                         src={require('./images/main-menu/collaborators.webp').default}
+                         alt='3. Colaboradores'
+                         title='3. Colaboradores'
+                         style={{cursor: "pointer", width: '100%'}}
+                    />
+                </button>
+            </Link>
+        </td>
+
+        <td style={{border: 'none', padding: '0.5rem'}}>
+            <Link to=''>
+                <button style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    border: 'none',
+                    padding: '.5em',
+                    cursor: "pointer"
+                }}>
+                    <img className="no-zoom"
+                         src={require('./images/main-menu/invitations.webp').default}
+                         alt='4. Convites'
+                         title='4. Convites'
+                         style={{cursor: "pointer", width: '100%'}}
+                    />
+                </button>
+            </Link>
+        </td>
+
+        <td style={{border: 'none', padding: '0.5rem'}}>
+            <Link to=''>
+                <button style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    border: 'none',
+                    padding: '.5em',
+                    cursor: "pointer"
+                }}>
+                    <img className="no-zoom"
+                         src={require('./images/main-menu/shared_with_me.webp').default}
+                         alt='5. Compartilhados comigo'
+                         title='5. Compartilhados comigo'
+                         style={{cursor: "pointer", width: '100%'}}
+                    />
+                </button>
+            </Link>
+        </td>
+
+        <td style={{border: 'none', padding: '0.5rem'}}>
+            <Link to=''>
+                <button style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    border: 'none',
+                    padding: '.5em',
+                    cursor: "pointer"
+                }}>
+                    <img className="no-zoom"
+                         src={require('./images/main-menu/pending_answers.webp').default}
+                         alt='6. Respostas pendentes'
+                         title='6. Respostas pendentes'
+                         style={{cursor: "pointer", width: '100%'}}
+                    />
+                </button>
+            </Link>
+        </td>
+
+        <td style={{border: 'none', padding: '0.5rem'}}>
+            <Link to=''>
+                <button style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    border: 'none',
+                    padding: '.5em',
+                    cursor: "pointer"
+                }}>
+                    <img className="no-zoom"
+                         src={require('./images/main-menu/import_data.webp').default}
+                         alt='7. Importar dados'
+                         title='7. Importar dados'
+                         style={{cursor: "pointer", width: '100%'}}
+                    />
+                </button>
+            </Link>
+        </td>
+
+        <td style={{border: 'none', padding: '0.5rem'}}>
+            <Link to=''>
+                <button style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    border: 'none',
+                    padding: '.5em',
+                    cursor: "pointer"
+                }}>
+                    <img className="no-zoom"
+                         src={require('./images/main-menu/integrations.webp').default}
+                         alt='8. Integrações'
+                         title='8. Integrações'
+                         style={{cursor: "pointer", width: '100%'}}
+                    />
+                </button>
+            </Link>
+        </td>
+
+        <td style={{border: 'none', padding: '0.5rem'}}>
+            <Link to=''>
+                <button style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    border: 'none',
+                    padding: '.5em',
+                    cursor: "pointer"
+                }}>
+                    <img className="no-zoom"
+                         src={require('./images/main-menu/user_guide.webp').default}
+                         alt='9. Guia do usuário'
+                         title='9. Guia do usuário'
+                         style={{cursor: "pointer", width: '100%'}}
+                    />
+                </button>
+            </Link>
+        </td>
+
+        <td style={{border: 'none', padding: '0.5rem'}}>
+            <Link to=''>
+                <button style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    border: 'none',
+                    padding: '.5em',
+                    cursor: "pointer"
+                }}>
+                    <img className="no-zoom"
+                         src={require('./images/main-menu/advanced_reports.webp').default}
+                         alt='10. Hashdata Advanced Reports'
+                         title='10. Hashdata Advanced Reports'
+                         style={{cursor: "pointer", width: '100%'}}
+                    />
+                </button>
+            </Link>
+        </td>
     </tr>
     </tbody>
 </table>
+
 
 :::tip[Saiba mais]
 Clique nos ícones acima para conhecer as funcionalidades do menu principal do Hashdata.

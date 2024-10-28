@@ -8,7 +8,6 @@ import React from 'react';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Mermaid from '@theme/Mermaid';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 export const standardCaption = ' Clique na imagem para ampliá-la.'
 export const createAccountUsingValidEmail = 'Passo a passo para criar uma conta no Hashdata utilizando um e-mail válido.' + standardCaption;
 export const createAccountUsingGoogleMicrosoftApple = 'Passo a passo para criar uma conta no Hashdata validando seu acesso por meio de uma ' +
@@ -162,7 +161,7 @@ Para mais informações sobre Áreas de Trabalho, acesse [**Áreas de Trabalho, 
 ### Utilizando um E-mail Válido {#use-valid-email}
 
 <img
-    src={useBaseUrl('img/start-here/first-steps/sign_up.gif')}
+    src={require('./images/first-steps/sign_up.gif').default}
     alt={createAccountUsingValidEmail}
     title={createAccountUsingValidEmail}
 />
@@ -272,7 +271,7 @@ suas preferências iniciais, como idioma e tema do sistema (claro ou escuro).
 ### Validando seu Acesso por meio de uma Conta Google, Microsoft ou Apple {#validating-your-access-with-a-google-microsoft-or-apple-account}
 
 <img
-    src={useBaseUrl('img/start-here/first-steps/google_account.gif')}
+    src={require('./images/first-steps/google_account.gif').default}
     alt={createAccountUsingGoogleMicrosoftApple}
     title={createAccountUsingGoogleMicrosoftApple}
 />
