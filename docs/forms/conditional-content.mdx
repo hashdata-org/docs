@@ -6,6 +6,8 @@ sidebar_label: Conteúdo condicional (multiconteúdo)
 
 export const standardCaption = '. Clique na imagem para ampliá-la.'
 export const conditionalContentCaption = 'Funcionalidades da configuração do Conteúdo Condicional' + standardCaption;
+export const conditionalContentExampleCaption = 'Exemplo de como cadastrar conteúdo condicional da pergunta "Cidade:" ' +
+    'considerando a resposta da pergunta "Estado de nascimento:"' + standardCaption;
 
 # Conteúdo condicional (multiconteúdo)
 
@@ -39,14 +41,13 @@ alt="Salvar" className="no-zoom image-between-texts"/>, para guardar as configur
 9. Para cada identificador de conteúdo cadastrado, é necessário incluir as opções de resposta, de modo que o sistema
 possa mostrar o conteúdo específico de acordo com a resposta da pergunta da condição de exibição.
 
-Clique aqui para [saber mais...](#conditional-content-parameters)
-
 <img
     src={require('./images/conditional-content/conditional_content.gif').default}
     alt={conditionalContentCaption}
     title={conditionalContentCaption}
 />
 <p className="image-caption">{conditionalContentCaption}</p>
+
 
 ## Parâmetros do conteúdo condicional  {#conditional-content-parameters}
 
@@ -259,13 +260,20 @@ automaticamente uma lista filtrada das cidades desse Estado.
 2. Insira um elemento do tipo **Seleção única (Menu)** e coloque um título, por exemplo, `Estado de nascimento:`.
 [Saiba mais...](./elements)
 3. Nas [opções de resposta](./answer-options) do elemento `Estado de nascimento:`, cadastre ou importe todos os Estados
-da Federação. Você pode usar, por exemplo, o formato UF-Estado: AC-Acre, AL-Alagoas, etc;
+da Federação;
 4. Insira outro elemento do tipo **Seleção única (Menu)** e coloque um título `Cidade:`;
 5. [Cadastre os conteúdos condicionais](#to-add-conditional-content) para o elemento `Cidade:`, incluindo uma condição para
 cada um dos Estados da Federação. Por exemplo, para o Estado do Acre, coloque o identificador de conteúdo como `cidades_acre`,
 o título como `Cidades do Acre:`, como condição de exibição inclua o `Estado de nascimento:` igual à `AC-Acre` e marque para
-exibir quando todas as condições forem satisfeitas;
+exibir quando `todas as condições forem satisfeitas`;
 6. Repita o passo 5 para todos os Estados;
-7. No canto superior esquerdo do elemento, escolha o identificador de conteúdo, por exemplo, `cidades_acre`, e cadastre
+7. No canto superior direito do elemento, escolha o identificador de conteúdo, por exemplo, `cidades_acre`, e cadastre
 as opções de resposta para esse identificador, incluindo ou importando todas as cidades do Estado do Acre;
 8. Repita o passo 7 para cada identificador de conteúdo do elemento `Cidade:`.
+
+<img
+    src={require('./images/conditional-content/conditional_content_example.gif').default}
+    alt={conditionalContentExampleCaption}
+    title={conditionalContentExampleCaption}
+/>
+<p className="image-caption">{conditionalContentExampleCaption}</p>

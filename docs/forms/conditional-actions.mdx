@@ -38,8 +38,6 @@ src={require('./images/condition_button.webp').default} alt="Condição" classNa
 8. Clique em <img style={{width: '8%'}} src={require('./images/save.webp').default}
 alt="Salvar" className="no-zoom image-between-texts"/>, para guardar as configurações.
 
-Clique aqui para [saber mais...](#conditional-action-parameters)
-
 ## Parâmetros da ação condicional {#conditional-action-parameters}
 
 ````mdx-code-block
@@ -253,3 +251,19 @@ Clique aqui para [saber mais...](#conditional-action-parameters)
     </tbody>
 </table>
 ````
+:::danger Atenção
+Quando for necessária uma lógica complexa, que envolva mais de uma pergunta, uma mesma pergunta não deve aparecer em mais
+de uma condição lógica, pois isso pode gerar um comportamento inesperado no formulário. Nesse caso, recomenda-se que se utilize
+a expressão para que, na mesma condição, sejam incluídas todas as condições lógicas de apresentação da pergunta.
+
+Repare na figura a seguir que as perguntas `Você está atualmente empregado?`, `Nome da empresa: ` e `Data da contração`
+aparecem em mais de uma condição lógica. Isso deve ser evitado.
+
+<img
+    className="no-zoom"
+    style={{width: '70%', display: 'block', margin: 'auto'}}
+    src={require('./images/conditional-action/conditional_action_example.webp').default}
+    alt='Exemplo de como não deve ser configurada a ação condicional'
+/>
+
+:::
