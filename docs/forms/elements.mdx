@@ -3,7 +3,7 @@ slug: elements
 sidebar_position: 3
 sidebar_label: Elementos
 ---
-
+import './forms.css'
 export const standardCaption = '. Clique na imagem para ampliá-la.'
 export const insertElementsCaption = 'Apresentação das principais funcionalidades para inclusão e gerenciamento de elementos no formulário' + standardCaption;
 
@@ -24,20 +24,21 @@ As configurações realizadas nessa etapa definirão como o formulário será ap
 
 ## 1. Adicionando elementos ao formulário {#to-add-elements}
 
-1. Na barra lateral esquerda **Elementos do formulário**, clique em <img style={{width: '13%'}}  src={require('./images/how-to-create-a-form/add_element.webp').default} alt="Adicionar elemento"
+1. Na barra lateral esquerda **Elementos do formulário**, clique em <img style={{width: '7rem'}}
+src={require('./images/how-to-create-a-form/add_element.webp').default} alt="Adicionar elemento"
 className="no-zoom image-between-texts" />, disponível na porção inferior da barra lateral;
 2. Escolha o elemento desejado, os quais estão organizados em abas: **Entrada de dados** e **Exibição**;
 3. Clique no elemento desejado e ele será incluído no formulário.
 
-<h3>Elementos de Entrada de Dados</h3>
+### 1.1. Elementos de Entrada de Dados {#data-input-elements}
 
 ````mdx-code-block
-<table>
+<table className="responsive-table">
     <thead>
     <tr>
-        <th style={{textAlign: 'start', width: '20%'}}>Tipo</th>
-        <th style={{textAlign: 'start', width: '40%'}}>Elementos</th>
-        <th style={{textAlign: 'start'}}>Descrição</th>
+        <th className="text-start table-header-20">Tipo</th>
+        <th className="text-start table-header-40">Elementos</th>
+        <th className="text-start">Descrição</th>
     </tr>
     </thead>
     <tbody>
@@ -201,15 +202,15 @@ className="no-zoom image-between-texts" />, disponível na porção inferior da 
 </table>
 ````
 
-<h3>Elementos de Exibição</h3>
+### 1.2. Elementos de Exibição {#display-elements}
 
 ````mdx-code-block
-<table>
+<table className="responsive-table">
     <thead>
     <tr>
-        <th style={{textAlign: 'start', width: '20%'}}>Tipo</th>
-        <th style={{textAlign: 'start', width: '40%'}}>Elemento</th>
-        <th style={{textAlign: 'start'}}>Descrição</th>
+        <th className="text-start table-header-20">Tipo</th>
+        <th className="text-start table-header-40">Elemento</th>
+        <th className="text-start">Descrição</th>
     </tr>
     </thead>
     <tbody>
@@ -243,7 +244,7 @@ className="no-zoom image-between-texts" />, disponível na porção inferior da 
                 Elemento utilizado para exibir um texto no formulário.
             </p>
             <p>
-                Ao clicar em <img style={{width: '25%'}} src={require('./images/how-to-create-a-form/to_write.webp').default}
+                Ao clicar em <img style={{width: '5rem'}} src={require("./images/how-to-create-a-form/to_write.webp").default}
                                   alt="Escrever" className="no-zoom image-between-texts"/>, será aberta um
                 caixa de diálogo com um **editor de texto** para digitação e formatação do texto desejado.
             </p>
@@ -269,11 +270,11 @@ Os elementos adicionados ao formulário são mostrados na porção central da te
 apresentadas as seguintes opções de configuração:
 
 ````mdx-code-block
-<table>
+<table className="responsive-table">
     <thead>
     <tr>
-        <th style={{textAlign: 'start', width: '20%'}}>Opção</th>
-        <th style={{textAlign: 'start'}}>Descrição</th>
+        <th className="text-start table-header-20">Opção</th>
+        <th className="text-start">Descrição</th>
     </tr>
     </thead>
     <tbody>
@@ -370,19 +371,19 @@ apresentadas as seguintes opções de configuração:
 </table>
 ````
 
-### Atributos do elemento e Atributos do conteúdo {#element-attributes-content-attributes}
+### 3.1. Atributos do elemento e Atributos do conteúdo {#element-attributes-content-attributes}
 Ao configurar um elemento inserido no formulário, é mostrada, na barra lateral direita, as configurações dos **atributos
 do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas configurações:
 
-<h3> Atributos do elemento</h3>
+### 3.1.1. Atributos do elemento {#element-attributes}
 
 ````mdx-code-block
-<table>
+<table className="responsive-table">
     <thead>
     <tr>
-        <th style={{textAlign: 'start', width: '20%'}}>Atributo</th>
-        <th style={{textAlign: 'start'}}>Descrição</th>
-        <th style={{textAlign: 'start', width: '30%'}}> Elementos disponíveis</th>
+        <th className="text-start table-header-20">Atributo</th>
+        <th className="text-start">Descrição</th>
+        <th className="text-start table-header-30"> Elementos disponíveis</th>
     </tr>
     </thead>
     <tbody>
@@ -424,15 +425,15 @@ do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas co
 </table>
 ````
 
-<h3>Atributos do conteúdo</h3>
+### 3.1.2. Atributos do conteúdo {#content-attributes}
 
 ````mdx-code-block
-<table>
+<table className="responsive-table">
     <thead>
     <tr>
-        <th style={{textAlign: 'start', width: '20%'}}>Atributo</th>
-        <th style={{textAlign: 'start'}}>Descrição</th>
-        <th style={{textAlign: 'start', width: '30%'}}> Elementos disponíveis</th>
+        <th className="text-start table-header-20">Atributo</th>
+        <th className="text-start">Descrição</th>
+        <th className="text-start table-header-30"> Elementos disponíveis</th>
     </tr>
     </thead>
     <tbody>
@@ -525,7 +526,7 @@ do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas co
             Elemento **Várias linhas** do tipo **Texto**.
         </td>
     </tr>
-    <tr id={'mask-element'}>
+    <tr id={"mask-element"}>
         <td>Máscara</td>
         <td>
             Define um formato específico para o elemento de entrada de dados. A máscara é utilizada para guiar o
@@ -657,8 +658,8 @@ do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas co
             Define a quantidade mínima de itens que um usuário deve selecionar no elemento de múltipla seleção para que
             a resposta seja considerada válida.
 
-            Antes de indicar o valor deste atributo, é necessário configurar em <img
-            src={require('./images/how-to-create-a-form/config.webp').default} alt="Opções de respostas"
+            Antes de indicar o valor deste atributo, é necessário configurar em <img style={{width: "1rem"}}
+            src={require("./images/how-to-create-a-form/config.webp").default} alt="Opções de respostas"
             className="no-zoom image-between-texts"/> [Opções de respostas](answer-options), a quantidade de itens
             que compõe o elemento.
         </td>
@@ -670,8 +671,8 @@ do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas co
             Define a quantidade máxima de itens que um usuário deve selecionar no elemento de múltipla seleção para que
             a resposta seja considerada válida.
 
-            Antes de indicar o valor deste atributo, é necessário configurar em <img
-            src={require('./images/how-to-create-a-form/config.webp').default} alt="Opções de respostas"
+            Antes de indicar o valor deste atributo, é necessário configurar em <img style={{width: "1rem"}}
+            src={require("./images/how-to-create-a-form/config.webp").default} alt="Opções de respostas"
             className="no-zoom image-between-texts"/> [Opções de respostas](answer-options), a quantidade de itens
             que compõe o elemento.
         </td>
@@ -790,7 +791,7 @@ do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas co
         </td>
         <td>Elementos **Campo calculado (script)** e **Campo calculado (fórmula)** do tipo **Outros**.</td>
     </tr>
-    <tr id={'allow-gallery-photos'}>
+    <tr id={"allow-gallery-photos"}>
         <td>Permitir fotos da galeria</td>
         <td>
             Indica se permite ou não carregar fotos ao formulário a partir da galeria do dispositivo.

@@ -49,3 +49,49 @@ blockquote {
     width: 4%;
     vertical-align: middle;
 }
+
+math {
+    padding-bottom: 2rem
+}
+
+@media (max-width:576px) {
+    table.responsive-table thead {
+        display: none;
+    }
+
+    table.responsive-table tbody tr {
+        display: flex;
+        flex-direction: column;
+        background-color: transparent !important;
+    }
+
+    table.responsive-table tbody tr td {
+        border: none;
+    }
+
+    table.responsive-table tbody tr td:first-child {
+        font-size: var(--ifm-h3-font-size);
+        color: var(--ifm-heading-color);
+        font-family: var(--ifm-heading-font-family);
+        font-weight: var(--ifm-heading-font-weight);
+        line-height: var(--ifm-heading-line-height);
+    }
+
+    table.responsive-table tbody tr td:nth-child(n+2) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    table.responsive-table tbody tr td:last-child {
+        padding-bottom: var(--ifm-table-cell-padding);
+    }
+
+    /* Tabs */
+    .responsive-tabs {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px ridge var(--ifm-color-primary);
+        border-bottom: 1px ridge var(--ifm-color-primary);
+    }
+
+}

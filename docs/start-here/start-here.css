@@ -1,0 +1,27 @@
+.no-border {
+    border: none;
+}
+
+.main-menu-table {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: none
+}
+
+.main-menu-button {
+    border: none;
+    padding: .5em;
+    cursor: pointer
+}
+
+.main-menu-img {
+    cursor: pointer;
+    width: 4rem;
+}
+
+.text-align-center {
+    text-align: center;
+}

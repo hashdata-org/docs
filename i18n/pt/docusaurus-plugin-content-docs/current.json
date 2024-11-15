@@ -3,8 +3,36 @@
     "message": "Next",
     "description": "The label for version current"
   },
+  "sidebar.tutorialSidebar.category.Começe aqui": {
+    "message": "Começe aqui",
+    "description": "The label for category Começe aqui in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.Formulários": {
     "message": "Formulários",
     "description": "The label for category Formulários in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Colaboradores": {
+    "message": "Colaboradores",
+    "description": "The label for category Colaboradores in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Convites": {
+    "message": "Convites",
+    "description": "The label for category Convites in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Compartilhados Comigo": {
+    "message": "Compartilhados Comigo",
+    "description": "The label for category Compartilhados Comigo in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Respostas Pendentes": {
+    "message": "Respostas Pendentes",
+    "description": "The label for category Respostas Pendentes in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Importar dados": {
+    "message": "Importar dados",
+    "description": "The label for category Importar dados in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integrações": {
+    "message": "Integrações",
+    "description": "The label for category Integrações in sidebar tutorialSidebar"
   }
 }

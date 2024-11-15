@@ -14,5 +14,17 @@
   "item.label.Blog": {
     "message": "Blog",
     "description": "Navbar item with label Blog"
+  },
+  "item.label.Guia do Usuário": {
+    "message": "Guia do Usuário",
+    "description": "Navbar item with label Guia do Usuário"
+  },
+  "item.label.Portal Web": {
+    "message": "Portal Web",
+    "description": "Navbar item with label Portal Web"
+  },
+  "item.label.Aplicativo Desktop": {
+    "message": "Aplicativo Desktop",
+    "description": "Navbar item with label Aplicativo Desktop"
   }
 }
