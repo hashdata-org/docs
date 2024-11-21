@@ -27,8 +27,8 @@ jobs:
           bash ./write-translations.sh
           crowdin upload || echo "continue with errors"
           crowdin download
-          rsync -avm --include='*.png' --include='*.webp' --include='*.gif' -f 'hide,! */' docs/ i18n/en/docusaurus-plugin-content-docs/current
-          rsync -avm --include='*.png' --include='*.webp' --include='*.gif' -f 'hide,! */' docs/ i18n/es/docusaurus-plugin-content-docs/current
+          rsync -avm --include='*.png' --include='*.webp' --include='*.gif' --include='*.css' -f 'hide,! */' docs/ i18n/en/docusaurus-plugin-content-docs/current
+          rsync -avm --include='*.png' --include='*.webp' --include='*.gif' --include='*.css' -f 'hide,! */' docs/ i18n/es/docusaurus-plugin-content-docs/current
 #       TODO: create static/images/{en,es} folders, then copy then to i18n/{en,es}
 
       - name: Build website
