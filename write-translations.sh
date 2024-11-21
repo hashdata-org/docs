@@ -1,5 +1,3 @@
-cd ~/IdeaProjects/docs || exit
-
 rm -rf i18n/en i18n/es
 echo "{}" > i18n/pt/docusaurus-plugin-content-docs/current.json
 ./node_modules/.bin/docusaurus write-translations
