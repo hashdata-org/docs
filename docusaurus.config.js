@@ -60,6 +60,10 @@ const config = {
                     position: 'right',
                     'aria-label': 'Abre o aplicativo Hashdata em uma nova janela.',
                 },
+                {
+                    type: 'localeDropdown',
+                    position: 'right',
+                },
             ],
         },
         footer: {

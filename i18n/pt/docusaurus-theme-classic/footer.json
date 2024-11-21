@@ -74,5 +74,29 @@
   "link.item.label.Página Inicial": {
     "message": "Página Inicial",
     "description": "The label of footer link with label=Página Inicial linking to https://www.hashdata.app"
+  },
+  "link.title.Portal Web": {
+    "message": "Portal Web",
+    "description": "The title of the footer links column with title=Portal Web in the footer"
+  },
+  "link.title.Aplicativos": {
+    "message": "Aplicativos",
+    "description": "The title of the footer links column with title=Aplicativos in the footer"
+  },
+  "link.title.Redes Sociais": {
+    "message": "Redes Sociais",
+    "description": "The title of the footer links column with title=Redes Sociais in the footer"
+  },
+  "link.item.label.Android": {
+    "message": "Android",
+    "description": "The label of footer link with label=Android linking to https://play.google.com/store/apps/details?id=br.com.hashdata.mobileapp"
+  },
+  "link.item.label.iOS (Apple)": {
+    "message": "iOS (Apple)",
+    "description": "The label of footer link with label=iOS (Apple) linking to https://itunes.apple.com/br/app/hashdata/id1379827155?ls=1&mt=8"
+  },
+  "link.item.label.Desktop": {
+    "message": "Desktop",
+    "description": "The label of footer link with label=Desktop linking to https://my.hashdata.app"
   }
 }

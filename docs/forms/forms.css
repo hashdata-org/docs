@@ -1,0 +1,26 @@
+.text-start {
+    text-align: start;
+}
+
+.table-header-20 {
+    width: 20%;
+}
+
+.table-header-30 {
+    width: 30%
+}
+
+.table-header-40 {
+    width: 40%
+}
+
+.ca-danger-example-images {
+    width: 50rem;
+    display: block;
+    margin: auto;
+    padding-bottom: 1rem;
+}
+
+span.katex-html {
+    display: none;
+}

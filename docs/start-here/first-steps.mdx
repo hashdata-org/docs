@@ -8,6 +8,7 @@ import React from 'react';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Mermaid from '@theme/Mermaid';
+import './start-here.css'
 export const standardCaption = ' Clique na imagem para ampliá-la.'
 export const createAccountUsingValidEmail = 'Passo a passo para criar uma conta no Hashdata utilizando um e-mail válido.' + standardCaption;
 export const createAccountUsingGoogleMicrosoftApple = 'Passo a passo para criar uma conta no Hashdata validando seu acesso por meio de uma ' +
@@ -27,35 +28,37 @@ buscam uma maneira prática e eficaz de coletar informações. Com o Hashdata, v
 compartilhá-los com seu público-alvo e analisar as respostas de forma integrada.
 
 ````mdx-code-block
-<Tabs>
+<Tabs className="responsive-tabs">
     <TabItem value="features" label="Características" default>
-        - **Fácil e Rápido**: o Hashdata é muito fácil de se utilizar, não exige pré-requisitos para
-        uso da ferramenta. Além disso, o sistema apresenta excelente desempenho e navegabilidade.
+        <div className='tab-content'>
+            - **Fácil e Rápido**: o Hashdata é muito fácil de se utilizar, não exige pré-requisitos para
+            uso da ferramenta. Além disso, o sistema apresenta excelente desempenho e navegabilidade.
 
-        - **Ilimitado**: sem limites de criação de formulários, de coletas/pesquisas, de
-        armazenamento e geração de análises.
+            - **Ilimitado**: sem limites de criação de formulários, de coletas/pesquisas, de
+            armazenamento e geração de análises.
 
-        - **Acessibilidade e integração**: seus formulários possam ser acessados e preenchidos de
-        qualquer dispositivo com conexão à Internet - smartphones, tablets, notebooks ou desktops - e
-        integram-se facilmente com outras ferramentas de análise e armazenamento de dados.
+            - **Acessibilidade e integração**: seus formulários possam ser acessados e preenchidos de
+            qualquer dispositivo com conexão à Internet - smartphones, tablets, notebooks ou desktops - e
+            integram-se facilmente com outras ferramentas de análise e armazenamento de dados.
 
-        - **Íntegro, restrito e sempre disponível**: todos os seus dados estarão protegidos com as
-        tecnologias de criptografia mais avançadas disponíveis no mercado e estarão sempre disponíveis somente
-        para você, graças aos recursos de alta disponibilidade e de controle de acesso.
+            - **Íntegro, restrito e sempre disponível**: todos os seus dados estarão protegidos com as
+            tecnologias de criptografia mais avançadas disponíveis no mercado e estarão sempre disponíveis somente
+            para você, graças aos recursos de alta disponibilidade e de controle de acesso.
 
-        - **Personalizável**: você escolhe as principais características de seus formulários, desde a
-        criação, até as análises resultantes.
+            - **Personalizável**: você escolhe as principais características de seus formulários, desde a
+            criação, até as análises resultantes.
 
-        - **Trabalha off-line**: mesmo sem internet é possível preencher formulários via o
-        aplicativo, disponível para [Android](https://play.google.com/store/apps/details?id=br.com.hashdata.mobileapp) e
-        [IOS](https://itunes.apple.com/br/app/hashdata/id1379827155?ls=1&mt=8).
+            - **Trabalha off-line**: mesmo sem internet é possível preencher formulários via o
+            aplicativo, disponível para [Android](https://play.google.com/store/apps/details?id=br.com.hashdata.mobileapp) e
+            [IOS](https://itunes.apple.com/br/app/hashdata/id1379827155?ls=1&mt=8).
 
-        - **Inteligente**: possui lógica de navegação sofisticada e de fácil utilização, tornando o
-        seu formulário bem mais eficiente.
+            - **Inteligente**: possui lógica de navegação sofisticada e de fácil utilização, tornando o
+            seu formulário bem mais eficiente.
 
-        - **Colaborativo**: é possível criar e gerenciar as suas equipes de trabalhos com inúmeros
-        usuários, estabelecendo o nível de acesso de cada um deles. Ademais, é possível compartilhar gráficos e
-        dados com os membros do seu grupo de trabalho ou com membros externos: clientes, parceiros etc.
+            - **Colaborativo**: é possível criar e gerenciar as suas equipes de trabalhos com inúmeros
+            usuários, estabelecendo o nível de acesso de cada um deles. Ademais, é possível compartilhar gráficos e
+            dados com os membros do seu grupo de trabalho ou com membros externos: clientes, parceiros etc.
+        </div>
     </TabItem>
     <TabItem value="key-features" label="Principais Funcionalidades">
         - **Tipos variados de perguntas**: suporte a diversos tipos de perguntas, como múltipla
@@ -385,23 +388,26 @@ pessoa tem permissão para realizar coletas de dados em formulários selecionado
 Além disso, essa conta não pode ser destinatária de notificações e e-mails.
 
 :::danger Lembre-se!
-**Contas de dispositivos são associadas à uma determinada área de trabalho. Caso o proprietário dessa área
-de trabalho a exclua, TODAS as contas de de dispositivos associadas serão excluídas.**
+**Contas de dispositivos são associadas a uma determinada área de trabalho. Caso o proprietário dessa área
+de trabalho a exclua, TODAS as contas de dispositivos associadas serão excluídas.**
 :::
 
 
 ## Cinco Passos Fundamentais do Hashdata {#five-fundamental-steps-of-hashdata}
-
-<Mermaid
-    value={`
-%%{init: {"flowchart": {"htmlLabels": false}} }%%
-flowchart LR
-    step1([Crie o Formulário]) --> step2([Cadastre as Contas de Dispositivo])
-    step2([Cadastre as Contas de Dispositivo]) --> step3([Publique o formulário])
-    step3([Publique o formulário])--> step4([Colete os dados])
-    step4([Colete os dados])-->step5([Realize as análises])
-    `}
-/>
+````mdx-code-block
+<div className="text-align-center">
+    <Mermaid
+        value={`
+    %%{init: {"flowchart": {"htmlLabels": false}} }%%
+    graph TD
+        step1([Crie o Formulário]) --> step2([Cadastre as Contas de Dispositivo])
+        step2([Cadastre as Contas de Dispositivo]) --> step3([Publique o formulário])
+        step3([Publique o formulário])--> step4([Colete os dados])
+        step4([Colete os dados])-->step5([Realize as análises])
+        `}
+    />
+</div>
+````
 
 ### 1. Crie o formulário {#create-the-form}
 Para a criação dos formulários, solução da Hashdata oferece campos do tipo: texto, número, escala de avaliação, fotografia,

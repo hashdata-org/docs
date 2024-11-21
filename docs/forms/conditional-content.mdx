@@ -25,7 +25,7 @@ Essa abordagem também minimiza erros de preenchimento e facilita a coleta de da
 mais dinâmico e intuitivo para o usuário.
 
 ## Para incluir conteúdo condicional {#to-add-conditional-content}
-1. Clique em <img style={{width: '12%'}} src={require('./images/add_button.webp').default}
+1. Clique em <img style={{width: "6rem"}} src={require('./images/add_button.webp').default}
 alt="Adicionar" className="no-zoom image-between-texts"/>;
 2. Informe o identificador do conteúdo;
 3. Escolha a pergunta que determinará a condição de exibição. Note que são mostradas apenas perguntas que antecedem a
@@ -33,10 +33,10 @@ pergunta a qual se está configurando o conteúdo condicional;
 4. Escolha o operador lógico da condição;
 5. Defina a resposta da pergunta para completar a condição de exibição. Digite a resposta esperada ou escolha dentre
 opções de resposta da pergunta escolhida como condição de exibição;
-6. Para incluir mais um critério na lógica de apresentação, clique em <img style={{width: '12%'}}
+6. Para incluir mais um critério na lógica de apresentação, clique em <img style={{width: "6rem"}}
 src={require('./images/condition_button.webp').default} alt="Condição" className="no-zoom image-between-texts"/>;
 7. Defina os atributos em *Exibir quando*;
-8. Clique em <img style={{width: '8%'}} src={require('./images/save.webp').default}
+8. Clique em <img style={{width: "4.5rem"}} src={require('./images/save.webp').default}
 alt="Salvar" className="no-zoom image-between-texts"/>, para guardar as configurações.
 9. Para cada identificador de conteúdo cadastrado, é necessário incluir as opções de resposta, de modo que o sistema
 possa mostrar o conteúdo específico de acordo com a resposta da pergunta da condição de exibição.
@@ -52,11 +52,11 @@ possa mostrar o conteúdo específico de acordo com a resposta da pergunta da co
 ## Parâmetros do conteúdo condicional  {#conditional-content-parameters}
 
 ````mdx-code-block
-<table>
+<table className="responsive-table">
     <thead>
     <tr>
-        <th style={{textAlign: 'start', width: '20%'}}>Parâmetro</th>
-        <th style={{textAlign: 'start'}}>Descrição</th>
+        <th className="text-start table-header-20">Parâmetro</th>
+        <th className="text-start">Descrição</th>
     </tr>
     </thead>
     <tbody>
@@ -106,12 +106,12 @@ possa mostrar o conteúdo específico de acordo com a resposta da pergunta da co
             Para elementos dos tipos **Seleção única** e **Múltiplas seleções**, por exemplo, são apresentadas as opções
             de resposta disponíveis. Para elementos do tipo **Texto**, é necessário informar o texto esperado.
 
-            4. Inclua, por meio do botão <img style={{width: '12%'}}
+            4. Inclua, por meio do botão <img style={{width: "6rem"}}
                                               src={require('./images/condition_button.webp').default}
                                               alt="Condição" className="no-zoom image-between-texts"/> quantas condições
             de exibição forem necessárias.
 
-            5. O botão <img style={{width: '2%'}}
+            5. O botão <img style={{width: "1rem"}}
                             src={require('./images/order_button.webp').default}
                             alt="Ordena" className="no-zoom image-between-texts"/> ordena as condições lógicas
             automaticamente, de acordo com a ordem que os elementos foram inseridos no formulário. Por exemplo, se uma
@@ -235,7 +235,7 @@ possa mostrar o conteúdo específico de acordo com a resposta da pergunta da co
 </table>
 ````
 
-## Conteúdo padrão  {#default-content}
+## Conteúdo padrão {#default-content}
 O conteúdo padrão é mostrado quando nenhuma das condições de exibição do conteúdo condicional for considerada válida.
 
 :::warning Atenção
