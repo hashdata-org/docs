@@ -1,0 +1,101 @@
+---
+slug: answer-options
+sidebar_position: 4
+sidebar_label: Opções de Respostas
+---
+import '../forms.css'
+export const standardCaption = '. Clique na imagem para ampliá-la.'
+export const answerOptionsCaption = 'Funcionalidades da configuração das Opções de Respostas' + standardCaption;
+export const importAnswerOptionsCaption = 'Importação de opções de resposta' + standardCaption;
+
+# Opções de Respostas
+
+Para os elementos do tipo **Seleção única** e **Múltipla seleção** é necessário configurar os itens de respostas que
+serão apresentados no formulário para a coleta de dados.
+
+A funcionalidade **Opções de Resposta** permite customizar as opções que serão apresentadas para o usuário, ajustar
+os atributos de cada opção, a ordem em que aparecem, incluir etiquetas e valores aos itens.
+
+## Para incluir opções de resposta {#to-add-answer-options}
+1. Clique em <img style={{width: "4.5rem"}} src={require('../images/answer-options/add_item.webp').default}
+alt="Incluir item" className="no-zoom image-between-texts"/>;
+2. Preencha o campo texto com a descrição da opção;
+3. Preencha os campos *Etiqueta (identificador)* e *Valor*, caso estejam habilitados.
+4. Para mudar a ordem dos itens, clique em <img style={{width: '2.5%'}} src={require('../images/bars.webp').default}
+alt="Mover item" className="no-zoom image-between-texts"/> (à esquerda da opção), segure e arraste para a posição desejada.
+5. Clique em <img style={{width: "4.5rem"}} src={require('../images/save.webp').default}
+alt="Salvar" className="no-zoom image-between-texts"/>, para guardar as configurações.
+
+<img
+    src={require('../images/answer-options/answer_options.gif').default}
+    alt={answerOptionsCaption}
+    title={answerOptionsCaption}
+/>
+<p className="image-caption">{answerOptionsCaption}</p>
+
+### Parâmetros das opções de resposta {#answer-options-parameters}
+
+````mdx-code-block
+<table className="responsive-table">
+    <thead>
+    <tr>
+        <th className="text-start table-header-20">Parâmetro</th>
+        <th className="text-start">Descrição</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            Usar etiquetas (identificadores)
+        </td>
+        <td>
+            Etiquetas são usadas em relatórios e em legendas de gráficos guando o item selecionado possui mais de 35
+            caracteres. São elementos administrativos e não são exibidos no formulário (apenas o campo 'Texto' é exibido
+            no formulário).
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Atribuir valor aos itens
+        </td>
+        <td>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Exibir opção 'Outros...'
+        </td>
+        <td>
+            Inclui uma alternativa adicional para que o usuário possa escolher, caso nenhuma das opções pré-definidas se
+            aplique à sua situação.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Randomizar ordem das opções
+        </td>
+        <td>
+            Reorganizar aleatoriamente a sequência de opções disponíveis com o objetivo de remover o viés introduzido
+            por uma ordem fixa e garantir resultados mais justos ou imprevisíveis.
+        </td>
+    </tr>
+    </tbody>
+</table>
+````
+
+## Para importar opções de resposta {#to-import-answer-options}
+1. Clique em <img style={{width: "6rem"}} src={require('../images/answer-options/import.webp').default}
+alt="Importar" className="no-zoom image-between-texts"/>. Será aberta uma caixa de diálogo com as opções de importação;
+2. Defina os campos que farão parte da importação das opções: *Texto* (obrigatório sempre), *Etiqueta*, *Valor*, *Permitir comentários* e *Permitir fotos*;
+3. Escolha o delimitador dos campos. Veja as opções no menu suspenso;
+4. Digite ou cole as opções que serão importadas;
+5. Confira os valores e clique em <img style={{width: "5rem"}} src={require('../images/answer-options/import2.webp').default}
+alt="Importar" className="no-zoom image-between-texts"/>, para concluir.
+
+<img
+    src={require('../images/answer-options/import_answer_options.gif').default}
+    alt={importAnswerOptionsCaption}
+    title={importAnswerOptionsCaption}
+/>
+<p className="image-caption">{importAnswerOptionsCaption}</p>

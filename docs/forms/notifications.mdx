@@ -1,0 +1,189 @@
+---
+slug: notifications
+sidebar_position: 4
+sidebar_label: Notificações
+---
+export const standardCaption = '. Clique na imagem para ampliá-la.'
+export const conditionalNotifications = 'Funcionalidades da configuração das Notificações' + standardCaption;
+
+# Notificações
+
+A funcionalidade de **Notificações** do Hashdata foi projetada para garantir que os usuários sejam informados de maneira
+eficaz sobre eventos, mudanças ou ações que requerem sua atenção dentro do sistema. Essas notificações desempenham um
+papel fundamental no gerenciamento de tarefas e na manutenção da comunicação entre os colaboradores, otimizando fluxos
+de trabalho e garantindo maior produtividade.
+
+As notificações podem ser disparadas nas inclusões, nas alterações e nas exclusões de respostas e as condições de disparo
+são personalizáveis.
+
+<img
+    src={require('./images/notifications/add_notifications.gif').default}
+    alt={conditionalNotifications}
+    title={conditionalNotifications}
+/>
+<p className="image-caption">{conditionalNotifications}</p>
+
+## Benefícios da funcionalidade {# benefits-of-functionality}
+
+- **Agilidade**: os usuários ficam cientes de ações importantes no menor tempo possível;
+- **Organização**: reduz o risco de esquecimentos ou atrasos em tarefas críticas;
+- **Engajamento**: promove maior interação com o sistema e as atividades colaborativas;
+- **Flexibilidade**: a personalização garante que cada usuário receba apenas notificações relevantes.
+
+## Para incluir notificações {# to-add-notifications}
+1. Clique em <img style={{width: "10rem"}} src={require('./images/notifications/add_notification.webp').default}
+alt="Adicionar" className="no-zoom image-between-texts"/>;
+2. Na aba **Eventos**, informe o título da notificação;
+3. Defina ao menos um critério de disparo da notificação: *incluir nova coleta*, *alterar coleta* e *excluir coleta*;
+4. Crie quantas condições de disparo forem necessárias. Se não houver nenhuma condição de disparo para a notificação,
+ela será enviada ao ocorrer o evento selecionado;
+
+<details>
+    <summary> Saiba mais sobre como criar **condições de disparo**</summary>
+    <h3>Condições </h3>
+    1. Escolha a pergunta condicional. São mostradas todas as perguntas presentes no formulário na ordem em que foram
+    inseridas.
+
+    2. Após escolher a pergunta condicional, o sistema apresentará o operador lógico da condição de
+    acordo com o tipo do elemento da pergunta condicional. Por exemplo, para os elementos do tipo
+    **Seleção única** e **Múltiplas seleções**, será mostrada as seguintes opções: *igual a*, *estiver
+    preenchida* ou *estiver vazia*; para elementos do tipo **Texto**, serão apresentadas: *igual a*, *inclui*,
+    *estiver preenchida* e *estiver vazia*.
+
+    3. Defina o valor da pergunta condicional que deve ser satisfeita para completar a condição lógica.
+    Para elementos dos tipos **Seleção única** e **Múltiplas seleções**, por exemplo, são apresentadas as opções
+    de resposta disponíveis. Para elementos do tipo **Texto**, é necessário informar o texto esperado.
+
+    4. Inclua, por meio do botão <img style={{width: '6rem'}}
+                                      src={require('./images/condition_button.webp').default}
+                                      alt="Condição" className="no-zoom image-between-texts"/> quantas condições
+    de exibição forem necessárias.
+
+    5. O botão <img style={{width: "2%"}}
+                    src={require("./images/order_button.webp").default}
+                    alt="Ordena" className="no-zoom image-between-texts"/> ordena as condições lógicas
+    automaticamente, de acordo com a ordem que os elementos foram inseridos no formulário. Por exemplo, se uma
+    pergunta da uma condição precede a ordem da pergunta da condição anterior, aquela condição será colocada
+    antes desta.
+
+
+    <h3>Notificar quando</h3>
+    Define qual operador lógico deverá ser considerado entre as condições de exibição definidas.
+
+    <h4> 1. Todas as condições forem satisfeitas </h4>
+
+    Considera um operador lógico **Conjunção (AND)**. Ele retorna verdadeiro somente se todas as condições envolvidas
+    forem verdadeiras.
+
+    Como exemplo de operador lógico **Conjunção (AND)**, considere a seguinte pergunta condicional:
+    "Você gostaria de agendar uma entrevista?"
+
+    Essa pergunta será exibida apenas se todas as condições a seguir forem verdadeiras:
+
+    - **Condição 1**: O usuário selecionou "Sim" para a pergunta "Você tem interesse em nossos serviços?"
+    - **Condição 2**: O usuário informou que reside no Brasil na pergunta "Em qual país você mora?"
+    - **Condição 3**: O usuário escolheu uma faixa de renda maior que "R$ 10.000" na pergunta "Qual a sua
+    faixa de renda mensal?"
+
+    Neste cenário, a pergunta sobre agendar uma reunião só será exibida se o usuário demonstrou interesse
+    nos serviços, mora no Brasil e tem uma faixa de renda específica. Ou seja, a lógica seria:
+
+    ```mathematica
+    Condição 1 AND Condição 2 AND Condição 3
+    ```
+
+    Somente quando todas as três condições forem satisfeitas, a pergunta condicional será exibida. Se
+    qualquer uma dessas condições não for atendida, a pergunta será omitida no formulário.
+
+    <h4>2. Qualquer uma das condições for satisfeita </h4>
+
+    Considera um operador lógico **Disjunção (OR)**. Ele retorna verdadeiro somente se ao menos um das as condições
+    envolvidas forem verdadeiras.
+
+    Como exemplo de operador lógico **Disjunção (OR)**, considere a seguinte pergunta condicional:
+    "Gostaria de receber materiais informativos?". Esta pergunta será exibida se pelo menos uma das seguintes condições
+    for verdadeira:
+
+    - **Condição 1**: O usuário marcou "Sim" na pergunta "Você tem interesse em aprender mais sobre nossos
+    produtos?"
+    - **Condição 2**: O usuário selecionou a opção "Newsletter" na pergunta "Você gostaria de se inscrever
+    em nossa lista de e-mails?"
+    - **Condição 3**: O usuário indicou "Sim" para a pergunta "Você gostaria de receber novidades de
+    promoções e ofertas?"
+
+    Neste cenário, a pergunta condicional será exibida se o usuário demonstrou interesse nos produtos, ou se
+    interessou por receber "newsletter" ou gostaria de receber promoções e ofertas:
+
+    ```mathematica
+    Condição 1 OR Condição 2 OR Condição 3
+    ```
+
+    Assim, se qualquer uma dessas condições for atendida, a pergunta sobre o recebimento de materiais
+    informativos será exibida.
+
+    <h4>3. Nenhuma condição for satisfeita</h4>
+    Significa que todas as condições falharam ou são falsas. Em termos lógicos, isso é equivalente à **Negação (NOT)**
+    de cada uma das condições individuais combinadas com o operador de **Disjunção (AND)**.
+
+    Exemplo de operador lógico **Negação (NOT)** no contexto da expressão "todas as condições são
+    falsas"
+
+    **Negação (NOT)**: a negação é sempre avaliada primeiro, ou seja, precede a Conjunção (AND) e a
+    Disjunção (OR). Ela inverte o valor lógico de uma expressão. Se for aplicado a uma condição verdadeira,
+    torna-a falsa, e vice-versa.
+
+    Suponha que você está criando um formulário que deve exibir uma pergunta adicional sobre "Opções de
+    envio" apenas se nenhuma das seguintes condições for satisfeita:
+
+    - **Condição 1**: O usuário selecionou "Envio expresso".
+    - **Condição 2**: O usuário selecionou "Retirada na loja".
+    - **Condição 3**: O usuário selecionou "Envio internacional".
+
+    Neste caso, a pergunta sobre "Opções de envio" só será exibida se o usuário não selecionar nenhuma
+    dessas opções. Ou seja, se o usuário escolher um método de envio que não seja "Envio expresso",
+    "Retirada na loja" ou "Envio internacional", a pergunta será mostrada.
+
+    Expressão lógica:
+
+    ```mathematica
+    NOT (Condição 1) AND NOT (Condição 2) AND NOT (Condição 3)
+    ```
+
+    Portanto, a pergunta sobre "Opções de envio" só será mostrada se todas as condições anteriores falharem
+    (ou seja, se nenhuma das condições definidas for satisfeita).
+
+    <h4>4. Usar expressão</h4>
+    Esta opção permite personalizar a expressão lógica entre as condições. Ao selecionar esta opção, cada condição
+    recebe um identificador, ex.: **A**.
+
+    Os identificadores representam cada uma das condições e servem para criar uma expressão que deverá ser
+    satisfeita para apresentar o conteúdo condicional. Exemplo:
+    ```mathematics
+    ($A and (not $B)) or $C
+    ```
+    Considerando essa expressão lógica, o conteúdo condicional só será apresentado somente se: **A** for
+    VERDADEIRO e **B** for FALSO, ou **C** for VERDADEIRO, sendo que **A**, **B** e **C** são as três condições
+    de exibição.
+</details>
+
+5. Na aba **Destinatários**, escolha os destinatários da notificação. Você pode escolher entre os colaboradores ou por
+pergunta/resposta;
+6. Na aba **Configurações do PDF**, escolha as configurações de exportação de PDF que será encaminhado como anexo ao e-mail
+de notificação:
+    - Exibir texto auxiliar
+    - Exibir elementos do tipo 'Exibição de Imagem'
+    - Exibir elementos do tipo 'Exibição de Texto'
+    - Exibir respostas em branco
+    - Exibir numeração das perguntas
+    - Tamanho de exibição das fotos: *pequeno*, *médio* ou *grande*
+    - Escolher questões
+
+5. Clique em <img style={{width: "4.5rem"}} src={require('./images/save.webp').default}
+alt="Salvar" className="no-zoom image-between-texts"/>, para guardar as configurações.
+
+## Para gerenciar notificações {# to-manage-notifications}
+As notificações cadastradas para o formulário ficam disponíveis aba **Notificações**, sendo possível:
+1. Habilitar/desabilitar a notificação;
+2. Editar os destinatários;
+3. Clonar a notificação;
+4. Excluir.
