@@ -389,22 +389,29 @@ do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas co
     <tbody>
     <tr>
         <td>Nome do campo</td>
-        <td></td>
         <td>
-            <p>
-                Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
-                hora**, **Avaliação** e **Outros**.
-            </p>
+            O nome do campo deve ser único (exclusivo) em todo o formulário e é utilizado na criação de fórmulas matemáticas
+            do elemento do tipo [**campo calulado *(script)***](/forms/elements/formatted-field).
+
+            Por exemplo: `peso_amostra_1`, `peso_amostra_2` e `peso_amostra_3`.
+        </td>
+        <td>
+            Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
+            hora**, **Avaliação** e **Outros**.
         </td>
     </tr>
     <tr>
         <td>Tags</td>
-        <td></td>
         <td>
-            <p>
-                Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
-                hora**, **Avaliação** e **Outros**.
-            </p>
+            As *tags* são usadas para agrupar questões e facilitar a criação de fórmulas matemáticas
+            do elemento do tipo [**campo calulado *(script)***](/forms/elements/formatted-field).
+
+            Por exemplo, para calcular a média dos pesos de várias amostras, basta colocar uma *tag* em cada questão
+            de peso - desta forma: `#peso` - e usar essa *tag* na fórmula:
+        </td>
+        <td>
+            Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
+            hora**, **Avaliação** e **Outros**.
         </td>
     </tr>
     <tr>
@@ -601,6 +608,10 @@ do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas co
     <tr>
         <td>Prefixo</td>
         <td>
+            Prefixo é um texto que precede o valor númerico a ser digitado pelo usuário, ajudando-o a entender que tipo
+            de informação ele precisa digitar.
+
+            Por exemplo, em campo de valor monetário, o prefixo poderia ser: "R$ " ou "USD".
         </td>
         <td>
             Elementos **Inteiro** e **Decimal** do tipo **Números** e elementos **Campo calculado (script)** e **Campo
@@ -610,6 +621,10 @@ do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas co
     <tr>
         <td>Sufixo</td>
         <td>
+            Sufixo é um texto que sucede o valor númerico a ser digitado pelo usuário, ajudando-o a entender que tipo
+            de informação ele precisa digitar.
+
+            Por exemplo, em campo de unidades de medidas ou distâncias, os sufixos poderiam ser: "kg" e "km ".
         </td>
         <td>
             Elementos **Inteiro** e **Decimal** do tipo **Números** e elementos **Campo calculado (script)** e **Campo
@@ -649,6 +664,11 @@ do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas co
     <tr>
         <td>Número de colunas</td>
         <td>
+        Esse atributo define a forma de exibição das opções, mais especificamente, quantas opções serão exibidas por linha:
+
+        - Se o número de colunas for 1, então todas as opções serão exibidas uma embaixo da outra (uma por linha);
+
+        - Se o número de coletas for 2, então serão exibidas duas opções de resposta por linha (2 colunas).
         </td>
         <td>Todos os elementos dos tipos **Seleção única** e **Múltiplas seleções**.</td>
     </tr>
