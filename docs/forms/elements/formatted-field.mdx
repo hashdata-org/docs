@@ -6,7 +6,7 @@ sidebar_label: Campo Formatado (script)
 
 # Campo Calculado (Script)
 
-## Introdução
+## Introdução {#introduction}
 
 Campos calculados permitem a criação de fórmulas matemáticas que usam valores associados às respostas para calcular
 valores diversos, tais como médias, valores máximos, mínimos, desvíos padrões, etc.
@@ -21,7 +21,7 @@ Veja abaixo a lista de questões que possuem ou, podem possuir, valores numéric
 * Questões de avaliação (Expressões faciais e Emojis)
 * Questões de envio de arquivos (número de arquivos enviados)
 
-## Criando uma fórmula simples
+## Criando uma fórmula simples {#creating-a-simple-form}
 
 Imagine que você queira criar uma fórmula que calcule o peso médio de uma série de amostras de determinado produto.
 Assim, imagine que o formulário tenha as seguintes questões:
@@ -65,17 +65,17 @@ O editor de código possui `autocomplete`, ou seja, ele irá sugerir os nomes de
 Você pode usar as teclas `Ctrl+Space` ou `Ctrl+Shift+Space` para ativar o autocomplete manualmente.
 :::
 
-## Atributos gerais das respostas
+## Atributos gerais das respostas {#general-attributes-of-responses}
 
 Todas as respostas possuem no mínimo três atributos: `name`, `tags` e um ou mais atributos específicos
 do tipo de resposta, por exemplo, `number` para questões numéricas, `text` para questões de texto, etc.
 
-### name
+### name {#name]
 `name: string`
 
 Nome da pergunta. Exemplo: `peso_amostra_1`
 
-### tags
+### tags [tags] {#tags}
 `tags: string[];`
 
 Lista de tags da questão, exemplo: `['peso', 'amostra']`
@@ -92,7 +92,7 @@ function calculateValue() {
 
 Onde `avgByTag` significa: "average by tag", ou seja, "média por tag".
 
-## Atributos específicos das respostas
+## Atributos específicos das respostas {#specific-attributes-of-responses}
 
 Veja abaixo a lista de atributos específicos disponíveis para cada tipo de resposta:
 
@@ -167,7 +167,7 @@ Cada item da lista de `items` possui os seguintes atributos:
 * `position?: number`: Número que representa a ordem escolhida pelo usuário para o item selecionado.
 Disponível apenas nas questões do tipo `Ordenação`
 
-## Funções disponíveis
+## Funções disponíveis {#avaiable-functions}
 
 As funções abaixo são ferramentas que auxiliam na criação de fórmulas, permitindo que você realize cálculos complexos
 em dezenas ou centenas de respostas com apenas uma linha de código.
@@ -268,9 +268,9 @@ Retorna `true` caso o valor informado seja diferente de `undefined`, `null`, `[]
 
 Retorna `true` caso o valor informado seja `undefined`, `null`, `[]` ou uma string vazia (`''`).
 
-## Exemplos
+## Exemplos {#examples}
 
-### Exemplo 1
+### Exemplo 1 {#example-1
 
 Neste exemplo iremos mostrar como calcular os valores da Fórmula de Bhaskara.
 O objetivo deste exemplo é mostrar como armazenar valores parciais em variáveis
@@ -302,7 +302,7 @@ Onde:
 `Math.pow(b, 2)` é equivalente a `b²` <br/>
 `Math.sqrt(delta)` é equivalente a `√delta`
 
-### Exemplo 2
+### Exemplo 2 {#example-2}
 
 Neste exemplo veremos como calcular a sequência de Fibonacci.
 O Objetivo deste exemplo é mostrar que é possível definir e usar funções diversas, inclusive funções recursivas,
@@ -322,7 +322,7 @@ function fibonacci(n: number): number {
 }
 ```
 
-## Funções matemáticas pré-definidas
+## Funções matemáticas pré-definidas {#predefined-mathematical-functions}
 
 | Name           | 	Description                                                                             |
 |----------------|------------------------------------------------------------------------------------------|
@@ -361,7 +361,7 @@ function fibonacci(n: number): number {
 | trunc(x)	      | Retorna a parte inteira de um número (x)                                                 |
 
 
-## Constantes matemáticas pré-definidas
+## Constantes matemáticas pré-definidas {#predefined-mathematical-constants}
 
 | Nome         | Descrição                                          |
 |--------------|----------------------------------------------------|

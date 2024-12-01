@@ -393,7 +393,10 @@ do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas co
             O nome do campo deve ser único (exclusivo) em todo o formulário e é utilizado na criação de fórmulas matemáticas
             do elemento do tipo [**campo calulado *(script)***](/forms/elements/formatted-field).
 
-            Por exemplo: `peso_amostra_1`, `peso_amostra_2` e `peso_amostra_3`.
+            O nome do campo é usado também na exportação de dados para outros sistema via API, via arquivos CSV e XLSX,
+            e na integração com o Hashdata Advanced Reports.
+
+Por exemplo: `peso_amostra_1`, `peso_amostra_2` e `peso_amostra_3`.
         </td>
         <td>
             Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
@@ -407,7 +410,9 @@ do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas co
             do elemento do tipo [**campo calulado *(script)***](/forms/elements/formatted-field).
 
             Por exemplo, para calcular a média dos pesos de várias amostras, basta colocar uma *tag* em cada questão
-            de peso - desta forma: `#peso` - e usar essa *tag* na fórmula:
+de peso - desta forma: `#peso` - e usar essa *tag* na fórmula: `avgByTag('#peso')`, onde `avgByTag` significa
+*average by tag* (média por marcador). [Saiba mais...](./formatted-field#avaiable-functions)
+
         </td>
         <td>
             Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
@@ -528,6 +533,8 @@ do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas co
     <tr>
         <td>Contagem de linhas iniciais</td>
         <td>
+
+            Escolha valores entre 1 e 20.
         </td>
         <td>
             Elemento **Várias linhas** do tipo **Texto**.
@@ -612,6 +619,11 @@ do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas co
             de informação ele precisa digitar.
 
             Por exemplo, em campo de valor monetário, o prefixo poderia ser: "R$ " ou "USD".
+
+            :::info Recomendação
+            Coloque um espaço depois do texto do prefixo, para que este não fique junto (colado) com valor informado.
+            :::
+
         </td>
         <td>
             Elementos **Inteiro** e **Decimal** do tipo **Números** e elementos **Campo calculado (script)** e **Campo
@@ -625,6 +637,9 @@ do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas co
             de informação ele precisa digitar.
 
             Por exemplo, em campo de unidades de medidas ou distâncias, os sufixos poderiam ser: "kg" e "km ".
+            :::info Recomendação
+            Coloque um espaço antes do texto do sufixo, para que este fique junto (colado) com valor informado.
+            :::
         </td>
         <td>
             Elementos **Inteiro** e **Decimal** do tipo **Números** e elementos **Campo calculado (script)** e **Campo

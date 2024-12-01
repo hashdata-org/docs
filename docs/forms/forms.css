@@ -24,3 +24,10 @@
 span.katex-html {
     display: none;
 }
+
+.mobile-pending-answer-gif {
+    width: 25rem;
+    display: block;
+    margin: auto;
+    padding-bottom: 1rem;
+}
