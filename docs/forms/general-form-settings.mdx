@@ -6,117 +6,81 @@ sidebar_label: Configurações Gerais
 import './forms.css';
 
 # Configurações Gerais do Formulário
-
 As **configurações gerais** são fundamentais para personalizar tanto a aparência quanto o funcionamento do formulário,
 garantindo que ele esteja adequado às necessidades do projeto e à experiência do usuário. Essas opções permitem definir
 aspectos como o leiaute, o acesso, a visibilidade e o comportamento do formulário.
 
-````mdx-code-block
-<table className="responsive-table">
-    <thead>
-    <tr>
-        <th className="text-start table-header-20">Parâmetro</th>
-        <th className="text-start table-header-40">Descrição</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>Apresentação</td>
-        <td>
-            O nome e a logomarca são os elementos iniciais que os usuários veem ao acessar o formulário. Eles ajudam a
-            identificar rapidamente o propósito do formulário e garantir a consistência da marca.
+## Apresentação {#presentation}
+O nome e a logomarca são os elementos iniciais que os usuários veem ao acessar o formulário. Eles ajudam a identificar
+rapidamente o propósito do formulário e garantir a consistência da marca.
 
-            Clique em <img style={{width: "6rem"}} src={require("./images/general-form-settings/find_logo.webp").default}
-                           alt="Procurar"
-                           className="no-zoom image-between-texts"/> para incluir a imagem da logomarca.
-        </td>
-    </tr>
-    <tr>
-        <td>Disponibilidade</td>
-        <td>
-            Essa configuração define onde e como o formulário estará disponível para respostas.
+Clique em <img style={{width: "6rem"}} src={require("./images/general-form-settings/find_logo.webp").default} alt="Procurar"
+className="no-zoom image-between-texts"/> para incluir a imagem da logomarca.
 
-            Estão disponíveis as opções: **Página WEB** ou **Aplicativo em dispositivos móveis (Android e iOS)**. Você
-            pode optar por um deles ou ambos.
+## Disponibilidade {#avaiability}
 
-            É possível também personalizar a exibição, para isso, clique em <img style={{width: "10rem"}}
-                                                                                 src={require("./images/general-form-settings/customize_display.webp").default}
-                                                                                 alt="Personalizar exibição"
-                                                                                 className="no-zoom image-between-texts"/>.
-            Nessa funcionalidade, é possível customizar algumas características de apresentação do formulário, tais
-            como:
-            - Transparência;
-            - Alinhamento (posição);
-            - Largura;
-            - Cor principal (texto, botões, etc)
-            - Imagem de fundo (imagens de no máximo 2048 x 2048 pixels);
-        </td>
-    </tr>
-    <tr>
-        <td>Acesso ao formulário</td>
-        <td>
-            Define se o formulário poderá ser respondido por qualquer pessoa que possua o link (público) ou se poderá
-            ser respondido apenas pelos colaboradores autorizados (privado).
+Essa configuração define onde e como o formulário estará disponível para respostas.
 
-            Clique em <img style={{width: "9rem"}}
-                           src={require("./images/general-form-settings/manage_access.webp").default}
-                           alt="Gerenciar acessos"
-                           className="no-zoom image-between-texts"/> para gerenciar os acessos ao formulário. [Saiba
-            mais...](./setting-up-forms-access)
+Estão disponíveis as opções: **Página WEB** ou **Aplicativo em dispositivos móveis (Android e iOS)**. Você pode optar
+por um deles ou ambos.
 
-        </td>
-    </tr>
-    <tr>
-        <td>Cabeçalho</td>
-        <td>
-            As configurações de cabeçalho aplicam-se tanto ao formulário WEB quanto aos relatórios gerado no formato em
-            PDF.
+É possível também personalizar a exibição, para isso, clique em <img style={{width: "10rem"}}
+src={require("./images/general-form-settings/customize_display.webp").default} alt="Personalizar exibição"
+className="no-zoom image-between-texts"/>.
+Nessa funcionalidade, é possível customizar algumas características de apresentação do formulário, tais como:
+- Transparência;
+- Alinhamento (posição);
+- Largura;
+- Cor principal (texto, botões, etc);
+- Imagem de fundo (imagens de no máximo 2048 x 2048 pixels).
 
-            Escolha entre **exibir** ou **não exibir** o cabeçalho e personalize-o por meio de um **texto**.
-            Caso o campo **texto** não seja informado, o nome do formulário será exibido como cabeçalho.
-        </td>
-    </tr>
-    <tr>
-        <td>Numeração das perguntas</td>
-        <td>
-            Essa opção permite configurar como as perguntas serão numeradas para o usuário. Estão disponíveis as opções:
-            - Ocultar (não numerar)
-            - Fixa
-            - Dinâmica
-        </td>
-    </tr>
-    <tr>
-        <td>Responder novamente</td>
-        <td>
-            Aqui, você pode escolher se um botão de **"Responder novamente"** será exibido ou não ao final do formulário.
+## Acesso ao formulário {#form-access}
+Define se o formulário poderá ser respondido por qualquer pessoa que possua o link (**público**) ou se poderá ser respondido
+apenas pelos colaboradores autorizados (**privado**).
 
-            Escolha entre **exibir** e **não exibir**.
-        </td>
-    </tr>
-    <tr>
-        <td>Perguntas de acompanhamento (*follow-up*)</td>
-        <td>
-            As perguntas de acompanhamento (*follow-up*) servem para documentar ações e acompanhamentos após o
-            formulário ter sido respondido. Elas são ferramentas gerenciais e não são exibidas no formulário para o
-            usuário comum, pois somente colaboradores com a permissão específica podem preenchê-las.
+:::warning Importante!
+Se o acesso ao formulário for definido como **privado**, é necessário que duas condições sejam satisfeitas para se responder
+o formulário:
+- Ser um colaborador com acesso autorizado ao formulário, e;
+- Ter a permissão **Coletar dados**;
+:::
 
-            Escolha entre **habilitar** ou **não habilitar** as perguntas de acompanhamento.
-        </td>
-    </tr>
-    <tr>
-        <td>Atributos exportados</td>
-        <td>
-            Atributos exportados são valores fixos que serão adicionados, durante a exportação para sistemas externos, a
-            cada coleta de dados do formulário, com a finalidade de identificar e agregar essas coletas.
+Clique em <img style={{width: "10rem"}} src={require("./images/general-form-settings/manage_access.webp").default}
+alt="Gerenciar acessos" className="no-zoom image-between-texts"/> para gerenciar os acessos ao formulário. [Saiba mais...](./setting-up-forms-access)
 
-            Essa funcionalidade é útil para aqueles usuários que querem identificar e agrupar as coletas de dados em
-            seus sistemas legados. Inclua quantos atributos (chave e valor) forem necessários clicando em <img
-            style={{width: "8rem"}}
-            src={require("./images/general-form-settings/add_item.webp").default}
-            alt="Adicionar item"
-            className="no-zoom image-between-texts"/>.
-        </td>
-    </tr>
-    </tbody>
-</table>
-````
+
+## Cabeçalho {#header}
+As configurações de cabeçalho aplicam-se tanto ao formulário WEB quanto aos relatórios gerados no formato em PDF.
+
+Escolha entre **exibir** ou **não exibir** o cabeçalho e personalize-o por meio de um **texto**.
+Caso o campo **texto** não seja informado, o nome do formulário será exibido como cabeçalho.
+
+
+## Numeração das perguntas {#questions-numbering}
+
+Essa opção permite configurar como as perguntas serão numeradas para o usuário. Estão disponíveis as opções:
+- Ocultar (não numerar);
+- Fixa;
+- Dinâmica.
+
+
+## Responder novamente {#reply-again}
+Aqui, você pode escolher se um botão de **"Responder novamente"** será exibido ou não ao final do formulário.
+
+Escolha entre **exibir** e **não exibir**.
+
+
+## Perguntas de acompanhamento (*follow-up*) {#follow-up-questions}
+As perguntas de acompanhamento (*follow-up*) servem para documentar ações e acompanhamentos após o formulário ter sido
+respondido. Elas são ferramentas gerenciais e não são exibidas no formulário para o usuário comum, pois somente
+colaboradores com a permissão específica podem preenchê-las.
+
+Escolha entre **habilitar** ou **não habilitar** as perguntas de acompanhamento.
+
+## Atributos exportados {#exported-atributes}
+Atributos exportados são valores fixos que serão adicionados, durante a exportação para sistemas externos, a cada coleta
+de dados do formulário, com a finalidade de identificar e agregar essas coletas.
+
+Essa funcionalidade é útil para aqueles usuários que querem identificar e agrupar as coletas de dados em seus sistemas legados.
+Inclua quantos atributos (chave e valor) forem necessários clicando em <img style={{width: "8rem"}}
+src={require("./images/general-form-settings/add_item.webp").default} alt="Adicionar item" className="no-zoom image-between-texts"/>.

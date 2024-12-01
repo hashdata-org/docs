@@ -1,0 +1,92 @@
+---
+slug: how-to-publish-a-form
+sidebar_position: 6
+sidebar_label: Como Publicar um Formulário?
+---
+export const standardCaption = '. Clique na imagem para ampliá-la.'
+export const pendingAnswers = 'Coletas pendentes no aplicativo mobile do Hashdata' + standardCaption;
+export const view = 'Funcionalidade "Visualizar" do versão Web do Hashdata' + standardCaption;
+
+# Como Publicar um Formulário
+
+Durante a edição, o formulário é apresentado como **Rascunho** e todas as coletas que forem realizadas neste modo serão
+tratadas como simulações, ou seja, serão descartadas quando da publicação do formulário.
+
+
+## Visualizar {#view}
+Os formulários em modo **Rascunho** podem ser respondidos, tanto na versão *mobile* quanto na versão *Web* do sistema,
+com o intuito de se realizar simulações de coleta. A funcionalidade permite avaliar o leiaute e testar suas funcionalidades
+do formulário antes da publicação.
+
+:::info Desabilitar a obrigatoriedade das respostas
+Tanto na versão *mobile* quanto na versão *Web* do sistema, é apresentada, na porção superior da tela opção de
+**Desabilitar a obrigatoriedade das respostas**, visando dar maior flexibilidade nos testes.
+:::
+
+
+### No aplicativo *mobile* {#view-on-mobile}
+
+Pelo aplicativo *mobile* do Hashdata (Android e iOS), clique na aba aba **Rascunhos**. Serão mostrados todos os formulários
+que estão nesse modo.
+
+Ao clicar em um formulário, este será aberto para uma coleta simulada, que será descartada após o formulário
+ser publicado. Caso desista da coleta antes que esta seja finalizada, o sistema apresentará opção de:
+
+<img
+    src={require('./images/how-to-publish-a-form/mobile_draft_pending_answers.gif').default}
+    alt={pendingAnswers}
+    title={pendingAnswers}
+    className={"mobile-pending-answer-gif no-zoom"}
+/>
+<p className="image-caption">{pendingAnswers}</p>
+
+### Na versão *Web* {#view-on-web}
+Pela versão *Web*, após abrir o formulário para edição, clique no menu suspenso **Rascunho**, localizado na porção
+superior direita da tela, em seguida, em **Visualizar**.
+
+<img
+    src={require('./images/how-to-publish-a-form/view.webp').default}
+    alt={view}
+    title={view}
+/>
+<p className="image-caption">{view}</p>
+
+## Para publicar o formulário {#to-publish-a-form}
+A funcionalidade  **Publicar** torna o formulário acessível para coleta de respostas pelos usuários.
+Esse é um passo fundamental após a criação e configuração do formulário, permitindo que ele entre em operação de maneira controlada e organizada.
+
+1. **Informe a data de Validade**
+- Durante a publicação, você pode informar a **data de validade**, que define até quando o formulário poderá ser respondido;
+- Após a data e hora especificadas, o formulário será automaticamente **arquivado**, ou seja, deixará de aceitar novas respostas;
+- Formulários arquivados permanecem acessíveis para consulta e edição. Se necessário, podem ser ajustados e **republicados**,
+reativando sua disponibilidade para coleta de respostas.
+
+2. **Defina os usuários autorizados para acessar o formulário**
+- É apresentada uma listagem com todos os usuários que possuem acesso ao formulário;
+- Nesse momento, é possível especificar quais usuários terão acesso à publicação formulário, lembrando que as permissões
+dependem do perfil de cada um;
+- Há opção de editar permissão de usuários e grupos, bem como de grupos que podem acessar a pasta onde está contido o
+formulário.
+
+:::warning Atenção
+Antes de publicar o formulário, verifique o [**Acesso ao formulário**](general-form-settings#form-access), ou seja, se
+está configurado como: **público** (acessível por qualquer pessoa com o *link*) ou **privado** (restrito a usuários específicos).
+:::
+
+## Após a publicação do formulário {#after-publish-a-form}
+
+### Acesse o formulário {#access-the-form}
+Dependo da forma de acesso, são disponibilizadas as seguintes opções de acesso ao formulário:
+1. **Página WEB**: acesse o formulário via ***link*** ou via **QR Code**;
+2. **Aplicativo em dispositivo móvel**: instale o app "Hashdata" em dispositivos móveis, disponível para [Android](https://play.google.com/store/apps/details?id=br.com.hashdata.mobileapp) e
+[IOS](https://itunes.apple.com/br/app/hashdata/id1379827155?ls=1&mt=8), e responda os formulários de forma rápida, eficiente e segura. O aplicativo também funciona sem conectividade (*offline*).
+
+### Gerencie a publicação {#manage-the-publish}
+São disponibilizadas as seguintes opções para gerenciar o formulário:
+1. Arquivar;
+2. Colocar em modo **Rascunho**;
+3. Alterar a publicação;
+4. Links publicação.
+
+## Arquivar {#archive}
+A opção **Arquivar** permite colocar o formulário em disponibilidade para uso futuro.
