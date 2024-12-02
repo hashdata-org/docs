@@ -1,0 +1,956 @@
+---
+slug: what-is-elements
+sidebar_position: 1
+sidebar_label: O que são Elementos?
+---
+import '../forms.css'
+export const standardCaption = '. Clique na imagem para ampliá-la.'
+export const insertElementsCaption = 'Apresentação das principais funcionalidades para inclusão e gerenciamento de elementos no formulário' + standardCaption;
+
+# Elementos
+Os **elementos** são os componentes que constituem a **estrutura** do formulário, permitindo a coleta dos dados.
+Em outros termos, os elementos são os tipos de perguntas disponíveis para serem inseridos em um formulário.
+
+:::danger Importante
+As configurações realizadas nessa etapa definirão como o formulário será apresentado para a coleta de dados.
+:::
+
+<img
+    src={require('../images/elements/adding_elements.gif').default}
+    alt={insertElementsCaption}
+    title={insertElementsCaption}
+/>
+<p className="image-caption">{insertElementsCaption}</p>
+
+## 1. Adicionando elementos ao formulário {#to-add-elements}
+
+1. Na barra lateral esquerda **Elementos do formulário**, clique em <img style={{width: '7rem'}}
+src={require('../images/elements/add_element.webp').default} alt="Adicionar elemento"
+className="no-zoom image-between-texts" />, disponível na porção inferior da barra lateral;
+2. Escolha o elemento desejado, os quais estão organizados em abas: **Entrada de dados** e **Exibição**;
+3. Clique no elemento desejado e ele será incluído no formulário.
+
+### 1.1. Elementos de Entrada de Dados {#data-input-elements}
+
+````mdx-code-block
+<table className="responsive-table">
+    <thead>
+    <tr>
+        <th className="text-start table-header-20">Tipo</th>
+        <th className="text-start table-header-40">Elementos</th>
+        <th className="text-start">Descrição</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Texto</td>
+        <td>
+            <ul>
+                <li>
+                    **Linha única**: entrada de texto com inserção de várias linhas e parágrafos;
+                </li>
+                <li>
+                    **Várias linhas**: entrada de texto com inserção de várias linhas e parágrafos;
+                </li>
+                <li>
+                    **Email**: pré-formatado para endereços de correio eletrônico;
+                </li>
+                <li>
+                    **Máscara**: entrada de texto personalizada, onde somente são aceitos valores especificados na
+                    máscara.
+                </li>
+            </ul>
+        </td>
+        <td>
+            <p>
+                Usados para capturar respostas abertas, como nomes, endereços, comentários, e-mails, textos formatados
+                (CPF, RG etc.).
+            </p>
+            <p>
+                Nesse tipo de entrada de dados são gerados os seguintes relatórios: extrato de coletas
+                e tabela de respostas (que podem ser exportadas em PDF e XLS).
+            </p>
+            <p>
+                Nenhuma das questões do tipo texto dependem de configuração adicional, isto é, basta inserir a pergunta
+                que será exibida no formulário.
+            </p>
+            <p>
+                No caso das questões do tipo **Máscara**, é necessário configurar a máscara desejada.
+
+                Por exemplo, para configurar um entrada de placa de veículo, pode-se utilizar uma máscara no formato
+                AAA9999, que permite 3 letras maiúsculas, seguidas de 4 números. [Saiba mais...](#mask-element)
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>Número</td>
+        <td>
+            <ul>
+                <li>**Inteiro**: entrada de números inteiros (sem vírgula);</li>
+                <li>**Decimal**: entrada de números racionais (com vírgula);</li>
+                <li>**Quantidade (Emojis**: entrada de dados com emojis, que representam quantidade selecionada.</li>
+            </ul>
+        </td>
+        <td>
+            <p>
+                Utilizados para entrada de dados numéricos ou que podem ser convertido em uma quantidade.
+            </p>
+            <p>
+                Nesse tipo de entrada de dados é possível realizar cálculos automáticos e também são gerados os
+                seguintes relatórios: análises gráficas, extrato de coletas e tabela de respostas (que podem ser
+                exportadas em PDF e XLS).
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>Seleção única<br/>(várias opções, uma resposta)</td>
+        <td>
+            <ul>
+                <li>**Seleção única (Menu)**: as opções são mostradas com formato de um menu suspenso;</li>
+                <li>**Seleção única (Check)**: as opções são mostradas com formato de caixas de seleção;</li>
+                <li>**Seleção única (Botões)**: as opções são mostradas com formato de botões clicáveis.</li>
+            </ul>
+        </td>
+        <td>
+            <p>
+                Entrada de dados que permite selecionar uma dentre várias opções (questão de múltipla
+                escolha com apenas uma resposta).
+            </p>
+
+            <p>
+                Nesse tipo de entrada de dados é possível realizar cálculos automáticos e também são gerados os
+                seguintes relatórios: análises gráficas, extrato de coletas e tabela de respostas (que podem ser
+                exportadas em PDF e XLS).
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>Múltipla seleção<br/>(várias opções, várias respostas)</td>
+        <td>
+            <ul>
+                <li>**Multi-seleção (Check)**: as opções são mostradas com formato de caixas de seleção;</li>
+                <li>**Multi-seleção (Botões)**: as opções são mostradas com formato de botões clicáveis.</li>
+            </ul>
+        </td>
+        <td>
+            <p>
+                Entrada de dados que permite selecionar uma ou mais opções dentre várias (questão de
+                múltipla escolha com mais de uma resposta).
+            </p>
+            <p>
+                Nesse tipo de entrada de dados é possível realizar cálculos automáticos e também são gerados os
+                seguintes relatórios: análises gráficas, extrato de coletas e tabela de respostas (que podem ser
+                exportadas em PDF e XLS).
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>Data e hora</td>
+        <td>
+            <ul>
+                <li>**Data e hora**: elemento que permite salvar data e horário;</li>
+                <li>**Data**: elemento que permite salvar somente data.</li>
+                <li>**Hora**: elemento que permite salvar somente o horário.</li>
+            </ul>
+        </td>
+        <td>Utilizado como entrada de dados para salvar data, horário ou ambos por meio de um calendário.</td>
+    </tr>
+    <tr>
+        <td>Avaliação</td>
+        <td>
+            <ul>
+                <li>
+                    **Expressões faciais**: elemento de múltipla seleção com emojis de expressões faciais
+                    configuráveis.
+                </li>
+                <li>**Emojis**: elemento de múltipla seleção com emojis e quantidade questões configuráveis.</li>
+            </ul>
+        </td>
+        <td>
+            <p>
+                Entrada de dados que permite selecionar uma dentre várias opções (questão de múltipla escolha
+                com apenas uma resposta), no entanto com recurso gráfico (emojis).
+            </p>
+            <p>
+                Nesse tipo de entrada de dados é possível realizar cálculos automáticos e também são gerados os
+                seguintes relatórios: análises gráficas, extrato de coletas e tabela de respostas (que podem ser
+                exportadas em PDF e XLS).
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>Outros</td>
+        <td>
+            <ul>
+                <li>**Enviar arquivos**</li>
+                <li>**GPS**</li>
+                <li>[**Campo calculado (script)**](./formatted-field)</li>
+                <li>**Campo calculado (fórmula)**</li>
+                <li>**Ordenar / priorizar**</li>
+                <li>**Fotos / imagens**</li>
+                <li>**Assinatura**</li>
+            </ul>
+        </td>
+        <td>
+            <p>
+                São elementos especiais, que possibilitam a criação de campos automatizados, com *scripts* e fórmulas,
+                ou para carregar arquivos, fotografias e coordenadas de geolocalização.
+            </p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+````
+
+### 1.2. Elementos de Exibição {#display-elements}
+
+````mdx-code-block
+<table className="responsive-table">
+    <thead>
+    <tr>
+        <th className="text-start table-header-20">Tipo</th>
+        <th className="text-start table-header-40">Elemento</th>
+        <th className="text-start">Descrição</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Imagem</td>
+        <td>
+            <ul>
+                <li>**Exibição de imagem**</li>
+            </ul>
+        </td>
+        <td>
+            <p>
+                Elemento utilizado para exibir uma imagem no formulário.
+            </p>
+            <p>
+                Para incluir uma imagem, você pode **arrastar e soltar**
+                um arquivo ou **clicar**, para abrir uma caixa de diálogo para escolha do arquivo de imagem.
+            </p>
+
+        </td>
+    </tr>
+    <tr>
+        <td>Texto</td>
+        <td>
+            <ul>
+                <li>**Exibição de texto**</li>
+            </ul>
+        </td>
+        <td>
+            <p>
+                Elemento utilizado para exibir um texto no formulário.
+            </p>
+            <p>
+                Ao clicar em <img style={{width: '5rem'}} src={require("../images/how-to-create-a-form/to_write.webp").default}
+                                  alt="Escrever" className="no-zoom image-between-texts"/>, será aberta um
+                caixa de diálogo com um **editor de texto** para digitação e formatação do texto desejado.
+            </p>
+
+        </td>
+    </tr>
+    </tbody>
+</table>
+````
+
+## 2. Gerenciando os elementos inseridos {#to-manage-form-elements}
+Todos os elementos incluídos no formulário ficam disponíveis na barra lateral esquerda **Elementos do
+formulário**. Ao clicar em um elemento desses elementos, são mostradas um conjunto de opções para gerenciá-los. A partir
+dessas opções, você poderá:
+- Selecionar todos;
+- Mover selecionados;
+- Agrupar selecionados;
+- Clonar selecionados;
+- Excluir selecionados;
+
+## 3. Configurando os elementos {#element-settings}
+Os elementos adicionados ao formulário são mostrados na porção central da tela e, ao redor desses elementos, são
+apresentadas as seguintes opções de configuração:
+
+````mdx-code-block
+<table className="responsive-table">
+    <thead>
+    <tr>
+        <th className="text-start table-header-20">Opção</th>
+        <th className="text-start">Descrição</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Título, pergunta etc.</td>
+        <td>
+            O texto principal do elemento pode ser uma pergunta ou simplesmente um título. Por exemplo, para coletar o
+            nome completo, pode-se usar:
+            <ul>
+                <li><strong>Nome completo:</strong></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Descrição</td>
+        <td>
+            Embora seja opcional, a descrição do elemento pode ser utilizada para instruir a resposta. Por exemplo, em
+            um campo para coleta do nome completo, pode-se usar a seguinte descrição:
+            <ul>
+                <li><strong>Informe seu nome completo, sem abreviações</strong>.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Alterar o tipo da pergunta (elemento)</td>
+        <td>
+            Permite a alteração de um elemento para outros elementos de tipos relacionados, após ter sido incluído no
+            formulário.<br/>
+
+            Por exemplo, altere um elemento <strong>Linha única</strong> para o elemento <strong>Inteiro</strong>, do
+            tipo **Número**.
+            Ou um elemento <strong>Multi-seleção (Check)</strong> para <strong>Multi-seleção (Botões)</strong>, ambos do
+            tipo **Múltipla seleção**.
+        </td>
+    </tr>
+    <tr>
+        <td>[Ações condicionais](conditional-actions)</td>
+        <td>
+            Ações condicionais são aplicadas automaticamente nos elementos do formulário quando determinadas condições
+            acontecem. São blocos do tipo **"SE/ENTÃO"**: **SE** (condição acontecer) **ENTÃO** (faça a ação).
+
+            :::warning[Atenção]
+            As **ações condicionais** são processadas **SEMPRE** que uma resposta do
+            formulário é alterada.
+            :::
+        </td>
+    </tr>
+    <tr>
+        <td>[Conteúdo condicional (multiconteúdo)](condicional-content)</td>
+        <td>
+            Permite criar vários conteúdos para a mesma pergunta, incluindo opções de respostas diversas, escolhendo
+            qual conteúdo deve ser exibido de acordo com condições configuráveis. Por exemplo, imagine duas perguntas:
+
+            * Qual o Estado?
+            * Qual a Cidade?
+
+            Para facilitar a dinâmica ao responder o formulário, podemos exibir na listagem de cidades apenas as Cidades
+            contidas no Estado selecionado. Para isso, basta habilitar o multiconteúdo (conteúdo condicional) na
+            pergunta "Qual a Cidade?".
+
+            Assim, é possível criar uma lista de cidades para cada Estado e vincular a exibição de cada lista com a
+            seleção do Estado.
+
+            A mesma lógica se aplica a vários outros cenários, por exemplo:
+
+            - Setores, Áreas ↔️ Departamentos
+            - Departamentos ↔️ Pessoas, Gerentes
+            - Categorias ↔️ Produtos, Itens etc.
+        </td>
+    </tr>
+    <tr>
+        <td>[Opções de respostas](answer-options)</td>
+        <td>
+            Opção específica para alguns elementos que requerem configurações adicionais, como aqueles que
+            permitem <strong>Seleção única</strong> e <strong>Múltipla seleção</strong>.
+        </td>
+    </tr>
+    <tr>
+        <td>Clonar</td>
+        <td>
+            Gera cópias do elemento (pergunta). É possível escolher a quantidade de clones e a posição que devem ser
+            inseridos no formulário.
+        </td>
+    </tr>
+    <tr>
+        <td>Mover</td>
+        <td>Move o elemento (pergunta) para uma determinada posição no formulário.</td>
+    </tr>
+    <tr>
+        <td>Excluir</td>
+        <td>Excluir o elemento (pergunta) do formulário.</td>
+    </tr>
+    </tbody>
+</table>
+````
+
+### 3.1. Atributos do elemento e Atributos do conteúdo {#element-attributes-content-attributes}
+Ao configurar um elemento inserido no formulário, são mostradas, na barra lateral direita, as configurações dos **atributos
+do elemento** dos **atributos do conteúdo**. Veja, a seguir, cada uma dessas configurações:
+
+### 3.1.1. Atributos do elemento {#element-attributes}
+
+````mdx-code-block
+<table className="responsive-table">
+    <thead>
+    <tr>
+        <th className="text-start table-header-20">Atributo</th>
+        <th className="text-start">Descrição</th>
+        <th className="text-start table-header-30"> Elementos disponíveis</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Nome do campo</td>
+        <td>
+            O nome do campo deve ser único (exclusivo) em todo o formulário e é utilizado na criação de fórmulas matemáticas
+            do elemento do tipo [**campo calulado *(script)***](/forms/elements/formatted-field).
+
+            O nome do campo é usado também na exportação de dados para outros sistema via API, via arquivos CSV e XLSX,
+            e na integração com o Hashdata Advanced Reports.
+
+Por exemplo: `peso_amostra_1`, `peso_amostra_2` e `peso_amostra_3`.
+        </td>
+        <td>
+            Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
+            hora**, **Avaliação** e **Outros**.
+        </td>
+    </tr>
+    <tr>
+        <td>Tags</td>
+        <td>
+            As *tags* são usadas para agrupar questões e facilitar a criação de fórmulas matemáticas
+            do elemento do tipo [**campo calulado *(script)***](/forms/elements/formatted-field).
+
+            Por exemplo, para calcular a média dos pesos de várias amostras, basta colocar uma *tag* em cada questão
+de peso - desta forma: `#peso` - e usar essa *tag* na fórmula: `avgByTag('#peso')`, onde `avgByTag` significa
+*average by tag* (média por marcador). [Saiba mais...](./formatted-field#avaiable-functions)
+
+        </td>
+        <td>
+            Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
+            hora**, **Avaliação** e **Outros**.
+        </td>
+    </tr>
+    <tr>
+        <td>Permitir copiar resposta de coleta anterior</td>
+        <td>
+            <p>Com esta opção habilitada, é possível copiar (carregar) a resposta informada na coleta anterior.</p>
+            <p>Essa funcionalidade é muito útil quando existem respostas que se repetem para um conjunto de coletas, por
+                exemplo: Data, Cidade, Estado etc.</p>
+        </td>
+        <td>
+            <p>
+                Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
+                hora**, **Avaliação** e nos elementos **GPS** e **Ordenar / priorizar** do tipo **Outros**.
+            </p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+````
+
+### 3.1.2. Atributos do conteúdo {#content-attributes}
+
+````mdx-code-block
+<table className="responsive-table">
+    <thead>
+    <tr>
+        <th className="text-start table-header-20">Atributo</th>
+        <th className="text-start">Descrição</th>
+        <th className="text-start table-header-30"> Elementos disponíveis</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Preenchimento obrigatório</td>
+        <td>
+            Indica se o elemento deve de ser ou não obrigatoriamente preenchido antes que o formulário possa ser enviado
+            ou processado.
+
+            Quando essa opção está ativada, o usuário não poderá prosseguir ou concluir a submissão do
+            formulário sem inserir uma resposta válida no campo especificado.
+        </td>
+        <td>
+            Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
+            hora**, **Avaliação** e elementos **Enviar arquivos**, **GPS**, **Campo calculado (script)**, **Campo
+            calculado (fórmula)**, **Ordenar / priorizar**, **Fotos / imagens**, **Assinatura** do tipo **Outros**.
+        </td>
+    </tr>
+    <tr>
+        <td>Permitir inserir comentário</td>
+        <td>
+            Habilita um campo adicional ao elemento, onde é permitido escrever livremente um comentário ou
+            observação sobre a questão.
+
+            O comentário pode ser útil em perguntas que requerem ou necessitam de explicações
+            adicionais, *feedback* ou detalhes que não se encaixam nas respostas fechadas.
+
+            Ao habilitar essa opção, é mostrado o atributo *Comentário obrigatório*, para indicar a obrigatoriedade
+            do preenchimento do comentário.
+        </td>
+        <td>
+            Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
+            hora**, **Avaliação** e elementos **Enviar arquivos**, **GPS**, **Campo calculado (script)**, **Campo
+            calculado (fórmula)**, **Ordenar / priorizar**, **Fotos / imagens**, **Assinatura** do tipo **Outros**.
+        </td>
+    </tr>
+    <tr>
+        <td>Permitir inserir fotos</td>
+        <td>
+            Este atributo indica se é ou não permitido carregar fotos ao elemento.
+            Ao habilitar essa opção, são mostrados os seguintes atributos. [Saiba mais...](#allow-gallery-photos)
+            <ul>
+                <li>*Permitir fotos da galeria*;</li>
+                <li>*Mínimo de fotos requeridas*;</li>
+                <li>*Máximo de fotos permitidas*;</li>
+                <li>*Tamanho máximo das fotos*.</li>
+            </ul>
+        </td>
+        <td>
+            Todos os elementos do tipo **Texto**, **Números**, **Seleção única**, **Múltiplas seleções**, **Data e
+            hora**, **Avaliação** e elementos **GPS**, **Campo calculado (script)**, **Campo calculado (fórmula)**,
+            **Ordenar / priorizar** do tipo **Outros**.
+        </td>
+    </tr>
+    <tr>
+        <td>Mínimo de caracteres requerido</td>
+        <td>
+            Define a quantidade mínima de caracteres que o usuário deve inserir no elemento para que a resposta seja
+            válida.
+
+            Ao configurar essa opção, o formulário garante que as respostas fornecidas pelos usuários tenham um tamanho
+            mínimo, evitando respostas curtas demais ou incompletas.
+
+            Para configurar, escolha valores entre 0 e 4.999.
+        </td>
+        <td>
+            Elementos **Linha única** e **Várias linhas** do tipo **Texto**.
+        </td>
+    </tr>
+    <tr>
+        <td>Máximo de caracteres permitido</td>
+        <td>
+            Restringe o número máximo de caracteres que pode ser inserido em um elemento de entrada de dados para que a
+            resposta seja considerada válida.
+
+            Esse recurso é fundamental para garantir que os dados sejam formatados corretamente e para evitar sobrecarga
+            de informações.
+
+            Para configurar, escolha valores entre 1 e 5.000.
+        </td>
+        <td>
+            Elementos **Linha única** e **Várias linhas** do tipo **Texto**.
+        </td>
+    </tr>
+    <tr>
+        <td>Contagem de linhas iniciais</td>
+        <td>
+
+            Escolha valores entre 1 e 20.
+        </td>
+        <td>
+            Elemento **Várias linhas** do tipo **Texto**.
+        </td>
+    </tr>
+    <tr id={"mask-element"}>
+        <td>Máscara</td>
+        <td>
+            Define um formato específico para o elemento de entrada de dados. A máscara é utilizada para guiar o
+            usuário sobre como deve ser o formato das informações que estão sendo inseridas, garantindo que os dados
+            sejam coletados de forma consistente e correta.
+
+            Estão pré-configuradas as seguintes máscaras:
+            <ul>
+                <li>CPF - 999.999.999-99</li>
+                <li>CNPJ - 99.999.999/9999-99</li>
+                <li>CEP - 99.999-999</li>
+                <li>Telefone - (99) 99999-9999</li>
+                <li>Placa veicular - AAA-9999/AA</li>
+                <li>
+                    Número de 3 dígitos com sinal e duas casas decimais opcionais.
+                    Aceita virgula e ponto c+omo separador decimal. - [~]999[(,|.)99]
+                </li>
+            </ul>
+
+            O campo é editável e permite a inclusão de máscaras personalizadas.
+            <details>
+                <summary>Máscaras personalizadas</summary>
+
+                Para configurar máscaras personalizadas, podem ser usados os
+                seguintes caracteres especiais:
+                - **9**: número
+                - **a**: letra minúscula (a...z)
+                - **A**: letra maiúscula (A...Z)
+                - **x**: letra (minúscula ou maiúscula)
+                - **\***: letra ou número
+                - **~**: sinal de positivo ou negativo (+ ou -)
+                - **()**: bloco de grupo
+                - **\{}**: bloco de repetição
+                - **[]**: bloco opcional
+                - **\\**: cancela o efeito coringa do próximo caractere especial (9aAx*~)
+
+                É possível mesclar os caracteres especiais com outros caracteres, exemplo:
+                - Número de série: PWR-999-aa9aa
+            </details>
+        </td>
+        <td>Elemento **Máscara** do tipo **Texto**.</td>
+    </tr>
+    <tr>
+        <td>Mostrar separador de milhar</td>
+        <td>
+            Define se o separador de milhar do elemento deve ser adicionado automaticamente ao elemento. Este recurso
+            facilita a leitura e a compreensão de números grandes, organizando-os em grupos de três dígitos.
+
+            À medida que o usuário digita um número, o separador de milhar é inserido automaticamente no local
+            apropriado. Por exemplo, ao digitar "1000000", o número é formatado como "1.000.000" ou "1,000,000",
+            dependendo do formato regional.
+        </td>
+        <td>Elemento **Inteiro** do tipo **Números**.</td>
+    </tr>
+    <tr>
+        <td>Número mínimo</td>
+        <td>
+            Determina o valor mais baixo que pode ser inserido no elemento. Ao limitar a faixa de valores que um usuário
+            pode inserir em um formulário, garante que os dados respeitem um limite inferior previamente estabelecido.
+        </td>
+        <td>Elementos **Inteiro** e **Decimal** do tipo **Números**.</td>
+    </tr>
+    <tr>
+        <td>Número máximo</td>
+        <td>
+            Determina o valor mais alto que pode ser inserido no elemento.
+            Ao limitar a faixa de valores que um usuário pode inserir em um formulário, garante que os dados respeitem
+            um limite superior previamente estabelecido.
+        </td>
+        <td>Elementos **Inteiro** e **Decimal** do tipo **Números**.</td>
+    </tr>
+    <tr>
+        <td>Prefixo</td>
+        <td>
+            Prefixo é um texto que precede o valor númerico a ser digitado pelo usuário, ajudando-o a entender que tipo
+            de informação ele precisa digitar.
+
+            Por exemplo, em campo de valor monetário, o prefixo poderia ser: "R$ " ou "USD".
+
+            :::info Recomendação
+            Coloque um espaço depois do texto do prefixo, para que este não fique junto (colado) com valor informado.
+            :::
+
+        </td>
+        <td>
+            Elementos **Inteiro** e **Decimal** do tipo **Números** e elementos **Campo calculado (script)** e **Campo
+            calculado (fórmula)** do tipo **Outros**.
+        </td>
+    </tr>
+    <tr>
+        <td>Sufixo</td>
+        <td>
+            Sufixo é um texto que sucede o valor númerico a ser digitado pelo usuário, ajudando-o a entender que tipo
+            de informação ele precisa digitar.
+
+            Por exemplo, em campo de unidades de medidas ou distâncias, os sufixos poderiam ser: "kg" e "km ".
+            :::info Recomendação
+            Coloque um espaço antes do texto do sufixo, para que este fique junto (colado) com valor informado.
+            :::
+        </td>
+        <td>
+            Elementos **Inteiro** e **Decimal** do tipo **Números** e elementos **Campo calculado (script)** e **Campo
+            calculado (fórmula)** do tipo **Outros**.
+        </td>
+    </tr>
+    <tr>
+        <td>Casas Decimais</td>
+        <td>
+            Define a quantidade de dígitos permitidos após o ponto decimal no elemento numérico.
+
+            Esse recurso é útil para controlar a precisão dos valores inseridos, como em cálculos financeiros, medidas
+            ou outras entradas que exijam decimais. Escolha entre 0 e 8 casas decimais.
+        </td>
+        <td>
+            Elemento **Decimal** do tipo **Números** e elementos **Campo calculado (script)** e **Campo
+            calculado (fórmula)** do tipo **Outros**.
+        </td>
+    </tr>
+    <tr>
+        <td>Mostrar números</td>
+        <td>
+            Define se os caracteres numéricos referentes às quantidades devem ou não mostradas juntamente com os emojis.
+        </td>
+        <td>Elemento **Quantidade (Emojis)** do tipo **Números** e elemento **Emojis** do tipo **Avaliação**.</td>
+    </tr>
+    <tr>
+        <td>Tipo</td>
+        <td>
+            Permite a alteração do elemento dentre outros do mesmo tipo.
+
+            Por exemplo: possibilita trocar o elemento **Seleção única (Menu)** por **Seleção única (Botões)** ou
+            **Seleção única (Check)**, todos do tipo Seleção única (várias opções, uma resposta).
+        </td>
+        <td>Todos os elementos dos tipos **Seleção única** e **Múltiplas seleções**.</td>
+    </tr>
+    <tr>
+        <td>Número de colunas</td>
+        <td>
+        Esse atributo define a forma de exibição das opções, mais especificamente, quantas opções serão exibidas por linha:
+
+        - Se o número de colunas for 1, então todas as opções serão exibidas uma embaixo da outra (uma por linha);
+
+        - Se o número de coletas for 2, então serão exibidas duas opções de resposta por linha (2 colunas).
+        </td>
+        <td>Todos os elementos dos tipos **Seleção única** e **Múltiplas seleções**.</td>
+    </tr>
+    <tr>
+        <td>Seleção mínima</td>
+        <td>
+            Define a quantidade mínima de itens que um usuário deve selecionar no elemento de múltipla seleção para que
+            a resposta seja considerada válida.
+
+            Antes de indicar o valor deste atributo, é necessário configurar em <img style={{width: "1rem"}}
+            src={require("../images/how-to-create-a-form/config.webp").default} alt="Opções de respostas"
+            className="no-zoom image-between-texts"/> [Opções de respostas](answer-options), a quantidade de itens
+            que compõe o elemento.
+        </td>
+        <td>Todos os elementos do tipo **Múltiplas seleções**.</td>
+    </tr>
+    <tr>
+        <td>Seleção máxima</td>
+        <td>
+            Define a quantidade máxima de itens que um usuário deve selecionar no elemento de múltipla seleção para que
+            a resposta seja considerada válida.
+
+            Antes de indicar o valor deste atributo, é necessário configurar em <img style={{width: "1rem"}}
+            src={require("../images/how-to-create-a-form/config.webp").default} alt="Opções de respostas"
+            className="no-zoom image-between-texts"/> [Opções de respostas](answer-options), a quantidade de itens
+            que compõe o elemento.
+        </td>
+        <td>Todos os elementos do tipo **Múltiplas seleções**.</td>
+    </tr>
+    <tr>
+        <td>Data mínima</td>
+        <td>
+            Definir o primeiro dia disponível para seleção da data no elemento. Ao configurar essa opção, o sistema
+            estabelece um limite inferior, impedindo a seleção de datas anteriores à data mínima configurada.
+        </td>
+        <td>Elementos **Data e hora** e **Data** do tipo **Data e hora**.</td>
+    </tr>
+    <tr>
+        <td>Data máxima</td>
+        <td>
+            Define um limite máximo de data que pose ser escolhida para o elemento. Ao configurar uma data máxima, o
+            sistema restringe a seleção de datas a um período que não ultrapasse essa data limite.
+        </td>
+        <td>Elementos **Data e hora** e **Data** do tipo **Data e hora**.</td>
+    </tr>
+    <tr>
+        <td>Mostrar calendário</td>
+        <td>
+            <p>
+                Define se o calendário dever ser ou não mostrado durante a escolha de uma data no preenchimento do
+                formulário.
+            </p>
+            <p>
+                Ao habilitar essa opção, será exibido um calendário, geralmente mensal, para que o usuário possa
+                consultar datas, programar eventos ou selecionar uma data específica.
+            </p>
+
+        </td>
+        <td>Elementos **Data e hora** e **Data** do tipo **Data e hora**.</td>
+    </tr>
+    <tr>
+        <td>Formato</td>
+        <td>
+            <p>
+                Define o sistema de exibição da hora. Escolha entre 12 e 24.
+            </p>
+            <p>
+                O formato de 12 horas divide o dia em dois períodos de 12 horas: a parte da manhã (AM - ante meridiem) e
+                a parte da tarde/noite (PM - *post meridiem*). Por exemplo, 2:00 PM indica 14 horas, ou seja, duas horas
+                da tarde.
+            </p>
+            <p>
+                No formato de 24 horas, as horas são contadas continuamente de 00:00 a 23:59, sem a necessidade
+                de usar AM ou PM.
+            </p>
+        </td>
+        <td>Elementos **Data e hora** e **Hora** do tipo **Data e hora**.</td>
+    </tr>
+    <tr>
+        <td>Mostrar Segundos</td>
+        <td>
+            Define os segundos dever ser ou não mostrado durante a escolha de um horário no preenchimento do
+            formulário.
+        </td>
+        <td>Elementos **Data e hora** e **Hora** do tipo **Data e hora**.</td>
+    </tr>
+    <tr>
+        <td>Quantidade mínima de arquivos</td>
+        <td>
+            Define a quantidade mínima de arquivos que um usuário deve carregar no elemento para que a resposta seja
+            considerada válida.
+        </td>
+        <td>Elemento **Enviar arquivos** do tipo **Outros**.</td>
+    </tr>
+    <tr>
+        <td>Quantidade máxima de arquivos</td>
+        <td>
+            Define a quantidade máxima de arquivos que um usuário deve carregar no elemento para que a resposta seja
+            considerada válida.
+        </td>
+        <td>Elemento **Enviar arquivos** do tipo **Outros**.</td>
+    </tr>
+    <tr>
+        <td>Permitir qualquer tipo de arquivo</td>
+        <td>
+            <p>Ao habilitar esta opção, qualquer tipo de arquivo pode ser carregada no formulário.</p>
+            <p>Ao desabilitar, são mostradas opções para que se defina quais tipos de arquivos podem ser carregados:</p>
+            <ul>
+                <li>*Permitir áudios*</li>
+                <li>*Permitir videos*</li>
+                <li>*Permitir imagens*</li>
+                <li>*Permitir documentos*</li>
+            </ul>
+        </td>
+        <td>Elemento **Enviar arquivos** do tipo **Outros**.</td>
+    </tr>
+    <tr>
+        <td>Permitir digitar as coordenadas manualmente</td>
+        <td>
+            Define se as coordenadas geográficas devem ser obtidas somente pelo sensor de GPS ou podem ser digitadas
+            durante a coleta de dados.
+        </td>
+        <td>Elemento **GPS** do tipo **Outros**.</td>
+    </tr>
+    <tr>
+        <td>Precisão mínima requerida (m)</td>
+        <td>
+            Define o nível de exatidão necessário para uma captura de localização GPS do elemento. Com isso, sistema
+            somente aceitará a coordenada GPS se ela atingir ou exceder o nível de precisão especificado.
+
+            A precisão é medida em metros e valores mais baixos indicam maior exatidão. Portanto, escolha valores entre
+            100 m e 10.000 m, em intervalos de 50 m.
+        </td>
+        <td>Elemento **GPS** do tipo **Outros**.</td>
+    </tr>
+    <tr>
+        <td>Ocultar resultado do usuário</td>
+        <td>
+            Define ou não se os resultados cálculos realizados no elemento serão mostrados durante a coleta de dados.
+        </td>
+        <td>Elementos **Campo calculado (script)** e **Campo calculado (fórmula)** do tipo **Outros**.</td>
+    </tr>
+    <tr id={"allow-gallery-photos"}>
+        <td>Permitir fotos da galeria</td>
+        <td>
+            Indica se permite ou não carregar fotos ao formulário a partir da galeria do dispositivo.
+
+            Caso não seja permitido, será possível carregar fotos apenas a partir da câmera durante a coleta de dados.
+        </td>
+        <td>
+            Elemento **Fotos / imagens** do tipo **Outros** e todos os elementos onde há o atributo **Permitir inserir
+            fotos**.
+        </td>
+    </tr>
+    <tr>
+        <td>Mínimo de fotos requeridas</td>
+        <td>
+            Indica a quantidade mínima de fotos que podem ser carregadas no formulário. Escolha valores entre 0 e 100.
+        </td>
+        <td>
+            Elemento **Fotos / imagens** do tipo **Outros** e todos os elementos onde há o atributo **Permitir inserir
+            fotos**.
+        </td>
+    </tr>
+    <tr>
+        <td>Máximo de fotos permitidas</td>
+        <td>
+            Indica a quantidade máxima de fotos que podem ser carregadas no formulário. Escolha valores entre 1 e 100.
+        </td>
+        <td>
+            Elemento **Fotos / imagens** do tipo **Outros** e todos os elementos onde há o atributo **Permitir inserir
+            fotos**.
+        </td>
+    </tr>
+    <tr>
+        <td>Tamanho máximo das fotos</td>
+        <td>
+            Define a dimensão máxima, em pixels, de cada fotografia carregada ao formulário. Escolha uma dimensão máxima
+            dentre as seguintes opções:
+            <ul>
+                <li>512 x 512</li>
+                <li>768 x 768</li>
+                <li>1024 x 1024</li>
+                <li>1536 x 1536</li>
+                <li>2048 x 2048</li>
+            </ul>
+        </td>
+        <td>
+            Elemento **Fotos / imagens** do tipo **Outros** e todos os elementos onde há o atributo **Permitir inserir
+            fotos**.
+        </td>
+    </tr>
+    <tr>
+        <td>Máxima largura da linha</td>
+        <td>
+            Define a espessura da linha da assinatura. Escolha valores entre 1 e 10.
+        </td>
+        <td>
+            Elemento **Assinatura** do tipo **Outros**.
+        </td>
+    </tr>
+    <tr>
+        <td>Raio de um único ponto</td>
+        <td>
+            Escolha valores entre 1 a 5.
+        </td>
+        <td>
+            Elemento **Assinatura** do tipo **Outros**.
+        </td>
+    </tr>
+    <tr>
+        <td>Cor da linha</td>
+        <td>
+            Define a cor da linha da assinatura. Ao clicar no menu suspenso, é mostrada uma paleta de cores
+            disponíveis.
+        </td>
+        <td>
+            Elemento **Assinatura** do tipo **Outros**.
+        </td>
+    </tr>
+    <tr>
+        <td>Alinhamento</td>
+        <td>
+            Define o alinhamento da imagem no formulário, se deve ser à esquerda, à direita ou ao centro.
+            Escolha entre: esquerda, direita e centro.
+        </td>
+        <td>
+            Elemento **Exibição de imagem** do tipo **Imagem**, pertencente aos Elementos de Exibição.
+        </td>
+    </tr>
+    <tr>
+        <td>Arredondamento da imagem</td>
+        <td>
+            Define o arredondamento dos cantos da imagem exibida no formulário. Escolha valores entre 0 e 300.
+        </td>
+        <td>
+            Elemento **Exibição de imagem** do tipo **Imagem**, pertencente aos Elementos de Exibição.
+        </td>
+    </tr>
+    <tr>
+        <td>Largura máxima</td>
+        <td>
+            Define a largura máxima, em pixels, da imagem exibida no formulário. Escolha valores entre 50 e 1024.
+        </td>
+        <td>
+            Elemento **Exibição de imagem** do tipo **Imagem**, pertencente aos Elementos de Exibição.
+        </td>
+    </tr>
+    <tr>
+        <td>Sombra</td>
+        <td>
+            Indica se exibe ou não sombreamento na imagem exibida no formulário.
+        </td>
+        <td>
+            Elemento **Exibição de imagem** do tipo **Imagem**, pertencente aos Elementos de Exibição.
+        </td>
+    </tr>
+    <tr>
+        <td>Exibir título ao usuário</td>
+        <td>
+            Indica se o título do elemento deve ser exibido ou não no formulário durante a coleta de dados.
+        </td>
+        <td>
+            Elemento **Exibição de texto** do tipo **Texto**, pertencente aos Elementos de Exibição.
+        </td>
+    </tr>
+    </tbody>
+</table>
+````
+

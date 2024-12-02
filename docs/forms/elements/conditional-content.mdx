@@ -1,0 +1,279 @@
+---
+slug: condicional-content
+sidebar_position: 3
+sidebar_label: Conteúdo condicional (multiconteúdo)
+---
+
+export const standardCaption = '. Clique na imagem para ampliá-la.'
+export const conditionalContentCaption = 'Funcionalidades da configuração do Conteúdo Condicional' + standardCaption;
+export const conditionalContentExampleCaption = 'Exemplo de como cadastrar conteúdo condicional da pergunta "Cidade:" ' +
+    'considerando a resposta da pergunta "Estado de nascimento:"' + standardCaption;
+
+# Conteúdo condicional (multiconteúdo)
+
+A funcionalidade **Conteúdo Condicional** pode ser usada para melhorar a experiência do usuário ao preencher um formulário.
+A ideia é que, com base nas respostas fornecidas em perguntas anteriores, o sistema filtre ou ajuste as opções exibidas
+em perguntas subsequentes. Ou seja, é possível definir múltiplos conteúdos que serão mostrados de acordo as respostas anteriormente
+fornecidas.
+
+Por exemplo, ao apresentar a pergunta "Cidade:", para se obter a cidade de nascimento de uma pessoas, o sistema pode usar a
+resposta na pergunta "Estado de nascimento:", que indica a Unidade Federativa de nascimento dessa pessoa, para exibir apenas as
+cidades relacionadas a esse Estado específico. Se a pessoa escolheu "São Paulo" como o Estado, o formulário exibiria apenas as
+cidades desse Estado, como "São Paulo", "Campinas", "Santos", etc.
+
+Essa abordagem também minimiza erros de preenchimento e facilita a coleta de dados relevantes, além de deixar o formulário
+mais dinâmico e intuitivo para o usuário.
+
+## Para incluir conteúdo condicional {#to-add-conditional-content}
+1. Clique em <img style={{width: "6rem"}} src={require('../images/add_button.webp').default}
+alt="Adicionar" className="no-zoom image-between-texts"/>;
+2. Informe o identificador do conteúdo;
+3. Escolha a pergunta que determinará a condição de exibição. Note que são mostradas apenas perguntas que antecedem a
+pergunta a qual se está configurando o conteúdo condicional;
+4. Escolha o operador lógico da condição;
+5. Defina a resposta da pergunta para completar a condição de exibição. Digite a resposta esperada ou escolha dentre
+opções de resposta da pergunta escolhida como condição de exibição;
+6. Para incluir mais um critério na lógica de apresentação, clique em <img style={{width: "6rem"}}
+src={require('../images/condition_button.webp').default} alt="Condição" className="no-zoom image-between-texts"/>;
+7. Defina os atributos em *Exibir quando*;
+8. Clique em <img style={{width: "4.5rem"}} src={require('../images/save.webp').default}
+alt="Salvar" className="no-zoom image-between-texts"/>, para guardar as configurações.
+9. Para cada identificador de conteúdo cadastrado, é necessário incluir as opções de resposta, de modo que o sistema
+possa mostrar o conteúdo específico de acordo com a resposta da pergunta da condição de exibição.
+
+<img
+    src={require('../images/conditional-content/conditional_content.gif').default}
+    alt={conditionalContentCaption}
+    title={conditionalContentCaption}
+/>
+<p className="image-caption">{conditionalContentCaption}</p>
+
+
+## Parâmetros do conteúdo condicional  {#conditional-content-parameters}
+
+````mdx-code-block
+<table className="responsive-table">
+    <thead>
+    <tr>
+        <th className="text-start table-header-20">Parâmetro</th>
+        <th className="text-start">Descrição</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            Identificador do conteúdo
+        </td>
+        <td>
+            Define um 'nome' para o conteúdo, com a finalidade de ajudar na organização. Essa informação não aparece
+            para o usuário do formulário, mas servirá de referência para se definir as opções de resposta para esse
+            identificador.
+
+            Por exemplo: cidades_acre ou cidades_alagoas
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Título, pergunta, etc
+        </td>
+        <td>
+            É o texto principal do elemento, pode ser uma pergunta ou simplesmente um título. Este parâmetro já virá
+            preenchido com o valor definido na tela de inclusão de elementos, mas pode ser alterado aqui para melhor
+            definir o tipo de conteúdo que será exibido
+
+            Por exemplo, suponha que o título do elemento tenha sido cadastrado como "Cidade:", ao se cadastrar um conteúdo
+            condicional para apresentar apenas a cidades do Acre, o título poderia ser "Cidades do Acre:".
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Condições para exibição
+        </td>
+        <td>
+            Define as condições lógicas que devem ser satisfeitas para que o conteúdo condicional seja ou não exibido.
+
+            1. Escolha a pergunta condicional. São apresentadas todas as perguntas que antecedem a pergunta a qual se
+            está definindo o conteúdo condicional, na ordem em que foram inseridas.
+
+            2. Após escolher a pergunta condicional, o sistema apresentará o operador lógico da condição de
+            acordo com o tipo do elemento da pergunta condicional. Por exemplo, para os elementos do tipo
+            **Seleção única** e **Múltiplas seleções**, será mostrada as seguintes opções: *igual a*, *estiver
+            preenchida* ou *estiver vazia*; para elementos do tipo **Texto**, serão apresentadas: *igual a*, *inclui*,
+            *estiver preenchida* e *estiver vazia*.
+
+            3. Defina o valor da pergunta condicional que deve ser satisfeita para completar a condição lógica.
+            Para elementos dos tipos **Seleção única** e **Múltiplas seleções**, por exemplo, são apresentadas as opções
+            de resposta disponíveis. Para elementos do tipo **Texto**, é necessário informar o texto esperado.
+
+            4. Inclua, por meio do botão <img style={{width: "6rem"}}
+                                              src={require('../images/condition_button.webp').default}
+                                              alt="Condição" className="no-zoom image-between-texts"/> quantas condições
+            de exibição forem necessárias.
+
+            5. O botão <img style={{width: "1rem"}}
+                            src={require('../images/order_button.webp').default}
+                            alt="Ordena" className="no-zoom image-between-texts"/> ordena as condições lógicas
+            automaticamente, de acordo com a ordem que os elementos foram inseridos no formulário. Por exemplo, se uma
+            pergunta da uma condição precede a ordem da pergunta da condição anterior, aquela condição será colocada
+            antes desta.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Exibir quando
+        </td>
+        <td>
+            Define qual operador lógico deverá ser considerado entre as condições de exibição definidas.
+
+            - **Todas as condições forem satisfeitas**: considera um operador lógico **Conjunção (AND)**. Ele retorna
+            verdadeiro somente se todas as condições envolvidas forem verdadeiras.
+
+            <details>
+                <summary> Exemplo de operador lógico **Conjunção (AND)**</summary>
+
+                Considere a seguinte pergunta condicional: "Você gostaria de agendar uma entrevista?"
+
+                Essa pergunta será exibida apenas se todas as condições a seguir forem verdadeiras:
+
+                - **Condição 1**: O usuário selecionou "Sim" para a pergunta "Você tem interesse em nossos serviços?"
+                - **Condição 2**: O usuário informou que reside no Brasil na pergunta "Em qual país você mora?"
+                - **Condição 3**: O usuário escolheu uma faixa de renda maior que "R$ 10.000" na pergunta "Qual a sua
+                faixa de renda mensal?"
+
+                Neste cenário, a pergunta sobre agendar uma reunião só será exibida se o usuário demonstrou interesse
+                nos serviços, mora no Brasil e tem uma faixa de renda específica. Ou seja, a lógica seria:
+
+                ```mathematica
+                Condição 1 AND Condição 2 AND Condição 3
+                ```
+
+                Somente quando todas as três condições forem satisfeitas, a pergunta condicional será exibida. Se
+                qualquer uma dessas condições não for atendida, a pergunta será omitida no formulário.
+            </details>
+
+            - **Qualquer uma das condições for satisfeita**: considera um operador lógico **Disjunção (OR)**. Ele
+            retorna verdadeiro somente se ao menos um das as condições envolvidas forem verdadeiras.
+
+            <details>
+                <summary> Exemplo de operador lógico **Disjunção (OR)**</summary>
+
+                Considere a seguinte pergunta condicional: "Gostaria de receber materiais informativos?"
+
+                Esta pergunta será exibida se pelo menos uma das seguintes condições for verdadeira:
+
+                - **Condição 1**: O usuário marcou "Sim" na pergunta "Você tem interesse em aprender mais sobre nossos
+                produtos?"
+                - **Condição 2**: O usuário selecionou a opção "Newsletter" na pergunta "Você gostaria de se inscrever
+                em nossa lista de e-mails?"
+                - **Condição 3**: O usuário indicou "Sim" para a pergunta "Você gostaria de receber novidades de
+                promoções e ofertas?"
+
+                Neste cenário, a pergunta condicional será exibida se o usuário demonstrou interesse nos produtos, ou se
+                interessou por receber "newsletter" ou gostaria de receber promoções e ofertas:
+
+                ```mathematica
+                Condição 1 OR Condição 2 OR Condição 3
+                ```
+
+                Assim, se qualquer uma dessas condições for atendida, a pergunta sobre o recebimento de materiais
+                informativos será exibida.
+            </details>
+
+
+            - **Nenhuma condição for satisfeita**: significa que todas as condições falharam ou são falsas. Em termos
+            lógicos, isso é equivalente à **Negação (NOT)** de cada uma das condições individuais combinadas com o
+            operador
+            de **Disjunção (AND)**.
+
+            <details>
+                <summary>
+                    Exemplo de operador lógico **Negação (NOT)** no contexto da expressão "todas as condições são
+                    falsas"
+                </summary>
+
+                **Negação (NOT)**: a negação é sempre avaliada primeiro, ou seja, precede a Conjunção (AND) e a
+                Disjunção (OR). Ela inverte o valor lógico de uma expressão. Se for aplicado a uma condição verdadeira,
+                torna-a falsa, e vice-versa.
+
+                Suponha que você está criando um formulário que deve exibir uma pergunta adicional sobre "Opções de
+                envio" apenas se nenhuma das seguintes condições for satisfeita:
+
+                - **Condição 1**: O usuário selecionou "Envio expresso".
+                - **Condição 2**: O usuário selecionou "Retirada na loja".
+                - **Condição 3**: O usuário selecionou "Envio internacional".
+
+                Neste caso, a pergunta sobre "Opções de envio" só será exibida se o usuário não selecionar nenhuma
+                dessas opções. Ou seja, se o usuário escolher um método de envio que não seja "Envio expresso",
+                "Retirada na loja" ou "Envio internacional", a pergunta será mostrada.
+
+                Expressão lógica:
+
+                ```mathematica
+                NOT (Condição 1) AND NOT (Condição 2) AND NOT (Condição 3)
+                ```
+
+                Portanto, a pergunta sobre "Opções de envio" só será mostrada se todas as condições anteriores falharem
+                (ou
+                seja, se nenhuma das condições definidas for satisfeita).
+            </details>
+
+            - **Usar expressão**: esta opção permite personalizar a expressão lógica entre as condições. Ao selecionar
+            esta opção, cada condição recebe um identificador, ex.: **A**.
+
+            Os identificadores representam cada uma das condições e servem para criar uma expressão que deverá ser
+            satisfeita para apresentar o conteúdo condicional. Exemplo:
+            ```mathematics
+            ($A and (not $B)) or $C
+            ```
+            Considerando essa expressão lógica, o conteúdo condicional só será apresentado somente se: **A** for
+            VERDADEIRO e **B** for FALSO, ou **C** for VERDADEIRO, sendo que **A**, **B** e **C** são as três condições
+            de exibição.
+        </td>
+    </tr>
+    </tbody>
+</table>
+````
+
+## Conteúdo padrão {#default-content}
+O conteúdo padrão é mostrado quando nenhuma das condições de exibição do conteúdo condicional for considerada válida.
+
+:::warning Atenção
+Sugere-se que não se exclua o conteúdo padrão, pois é necessário o elemento tenha ao menos um conteúdo. No caso onde
+nenhuma das condições anteriores sejam satisfeitas, o conteúdo padrão será mostrado ao usuário.
+:::
+
+### Regras de exibição  {#exibition-rules}
+
+As condições para exibição do conteúdo são avaliadas de cima pra baixo, ou seja, conforme a ordem de condições
+cadastradas, respeitando-se as seguintes regras:
+
+- O primeiro conteúdo que tenha suas condições atendidas será exibido.
+- Caso nenhuma condição seja atendida, o conteúdo padrão será exibido.
+- O conteúdo padrão é sempre o último da lista.
+
+## Exemplo prático  {#practical_example}
+Vamos criar um cenário para por em prática o exemplo dado acima, ou seja, ao escolher um Estado, o sistema apresentará
+automaticamente uma lista filtrada das cidades desse Estado.
+
+1. Crie um formulário, se necessário. [Saiba mais...](/forms/how-to-create-a-form)
+2. Insira um elemento do tipo **Seleção única (Menu)** e coloque um título, por exemplo, `Estado de nascimento:`.
+[Saiba mais...](/forms/elements/what-is-elements)
+3. Nas [opções de resposta](/forms/elements/answer-options) do elemento `Estado de nascimento:`, cadastre ou importe todos os Estados
+da Federação;
+4. Insira outro elemento do tipo **Seleção única (Menu)** e coloque um título `Cidade:`;
+5. [Cadastre os conteúdos condicionais](#to-add-conditional-content) para o elemento `Cidade:`, incluindo uma condição para
+cada um dos Estados da Federação. Por exemplo, para o Estado do Acre, coloque o identificador de conteúdo como `cidades_acre`,
+o título como `Cidades do Acre:`, como condição de exibição inclua o `Estado de nascimento:` igual à `AC-Acre` e marque para
+exibir quando `todas as condições forem satisfeitas`;
+6. Repita o passo 5 para todos os Estados;
+7. No canto superior direito do elemento, escolha o identificador de conteúdo, por exemplo, `cidades_acre`, e cadastre
+as opções de resposta para esse identificador, incluindo ou importando todas as cidades do Estado do Acre;
+8. Repita o passo 7 para cada identificador de conteúdo do elemento `Cidade:`.
+
+<img
+    src={require('../images/conditional-content/conditional_content_example.gif').default}
+    alt={conditionalContentExampleCaption}
+    title={conditionalContentExampleCaption}
+/>
+<p className="image-caption">{conditionalContentExampleCaption}</p>

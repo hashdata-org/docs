@@ -1,0 +1,72 @@
+---
+slug: add-navigation-logic
+sidebar_position: 5
+sidebar_label: Adicionar Lógica de Navegação
+---
+export const standardCaption = '. Clique na imagem para ampliá-la.'
+export const conditionalNavigationLogic = 'Funcionalidades da configuração da Lógica de Navegação' + standardCaption;
+
+# Adicionar Lógica de Navegação
+
+A **Lógica de Navegação** é uma funcionalidade que permite personalizar o fluxo de navegação do formulário por meio de ações,
+tornando o formulário mais dinâmico, relevante e adaptado ao contexto das respostas.
+
+### Como funciona?
+
+A lógica de navegação atua como um conjunto de **regras condicionais** que definem:
+1. **Quais perguntas serão exibidas**: Algumas perguntas podem ser puladas ou adicionadas ao fluxo com base nas respostas anteriores.
+2. **A ordem de exibição das perguntas**: O formulário pode guiar o usuário para diferentes seções ou perguntas específicas de acordo com critérios predefinidos.
+
+Por exemplo, após preencher uma parte do formulário, é apresentada a seguinte pergunta: *"Gostaríamos de saber mais sobre você. Temos mais algumas perguntas.
+Deseja continuar?"*:
+- Se o usuário selecionar "Sim", o formulário segue para a próxima pergunta, dando sequencia ao fluxo principal.
+- Caso a resposta seja "Não", o formulário pula para o encerramento, finalizando a coleta de dados.
+
+<img
+    src={require('../images/add-navigation-logic/add_navigation_logic.gif').default}
+    alt={conditionalNavigationLogic}
+    title={conditionalNavigationLogic}
+/>
+<p className="image-caption">{conditionalNavigationLogic}</p>
+
+### Benefícios da lógica de navegação
+- **Experiência personalizada:** O respondente visualiza apenas as perguntas relevantes para o seu caso.
+- **Eficiência:** Reduz o tempo necessário para completar o formulário, evitando perguntas desnecessárias.
+- **Precisão nos dados coletados:** Melhora a qualidade das informações ao eliminar respostas irrelevantes.
+- **Flexibilidade:** Permite criar formulários complexos com fluxos adaptáveis a diferentes cenários.
+
+### Para incluir lógica de navegação
+1. Estando na aba **Elementos**, clique em <img style={{width: "1.5rem"}} src={require('../images/add-navigation-logic/add_navigation_logic.webp').default}
+alt="Adicionar" className="no-zoom image-between-texts"/>, disponível na porção superior de cada elemento do formulário, exceto do primeiro;
+2. Crie quantas condições lógicas forem necessárias. Se não houver condições, a ação será executada sempre que a lógica for avaliada;
+<details>
+    <summary> Saiba mais sobre como criar **condições para a lógica de navegação**</summary>
+    <h3>Condições </h3>
+    1. Escolha a pergunta condicional. São mostradas todas as perguntas de cuja ordens são inferiores ao elemento corrente.
+
+    2. Após escolher a pergunta condicional, o sistema apresentará o operador lógico da condição de
+    acordo com o tipo do elemento da pergunta condicional. Por exemplo, para os elementos do tipo
+    **Seleção única** e **Múltiplas seleções**, será mostrada as seguintes opções: *igual a*, *estiver
+    preenchida* ou *estiver vazia*; para elementos do tipo **Texto**, serão apresentadas: *igual a*, *inclui*,
+    *estiver preenchida* e *estiver vazia*.
+
+    3. Defina o valor da pergunta condicional que deve ser satisfeita para completar a condição lógica.
+    Para elementos dos tipos **Seleção única** e **Múltiplas seleções**, por exemplo, são apresentadas as opções
+    de resposta disponíveis. Para elementos do tipo **Texto**, é necessário informar o texto esperado.
+
+    4. Inclua, por meio do botão <img style={{width: '6rem'}}
+                                      src={require('../images/condition_button.webp').default}
+                                      alt="Condição" className="no-zoom image-between-texts"/> quantas condições
+    de exibição forem necessárias.
+
+    5. O botão <img style={{width: "2%"}}
+                    src={require("../images/order_button.webp").default}
+                    alt="Ordena" className="no-zoom image-between-texts"/> ordena as condições lógicas
+    automaticamente, de acordo com a ordem que os elementos foram inseridos no formulário. Por exemplo, se uma
+    pergunta da uma condição precede a ordem da pergunta da condição anterior, aquela condição será colocada
+    antes desta.
+</details>
+3. Escolha a **Ação** que deve ser executada:
+    - **Ir para próxima pergunta do formulário**;
+    - **Ir para** (escolha a pergunta a qual se deseja encaminhar o fluxo de navegação do formulário);
+    - **Finalizar** (exibe a tela de encerramento)
