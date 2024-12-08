@@ -37,22 +37,50 @@ Certifique-se que a área de trabalho ativa é aquela na qual você deseja criar
 :::
 
 ## 2. Organize os Formulários em Pastas {#organize-the-forms-into-folders}
-Organizar formulários em pastas permite uma gestão mais eficiente, especialmente quando se lida com um grande volume de formulários.
+As **pastas** são uma forma de organizar os formulários em uma estrutura hierárquica, permitindo agrupá-los
+conforme suas características, finalidades, temas, projetos, datas ou departamentos. Essa organização facilita a
+navegação, o gerenciamento e o controle de acesso, especialmente quando se lida com um grande volume de formulários.
 
-As pastas e subpastas ajudam a categorizar os formulários por temas, projetos, datas ou departamentos, garantindo que cada um esteja no
-local correto. Além disso, essa estruturação possibilita uma visualização rápida, facilitando a localização de formulários
-antigos ou específicos, melhorando a colaboração entre equipes.
+:::danger Importante!
+A organização dos formulários em **pastas** juntamente com a organização dos **colaboradores** e das **contas de
+dispositivo** em **grupos (unidades organizacionais)** são a melhor forma de se gerenciar o controle de acesso aos
+formulários de uma área de trabalho.
 
-Quando um formulário for criado, será mostrada opção para que seja definida qual a pasta ou ou subpasta que o formulário
+Com essa abordagem, basta conceder aos grupos os acessos às devidas pastas. Desta forma, quando forem incluídos
+colaboradores nos grupos e formulários nas pastas, as configurações de acesso serão automaticamente aplicadas,
+facilitando a gestão de acessos aos formulários.
+
+[**Saiba mais**](/forms/setting-up-forms-access) como **configurar o acesso aos formulários**.
+
+[**Saiba mais**](/collaborators/#groups) como cadastrar **grupos**.
+
+[**Saiba mais**](/collaborators/#invite-collaborators) como **convidar colaboradores**.
+:::
+
+Quando um formulário for criado, será mostrada opção para ser definida qual a pasta ou subpasta que o formulário
 deverá ser criado.
 
 ### Gerenciamento de Pastas {#folders-management}
-No gerenciamento de pastas, você pode:
-* Incluir uma nova pasta;
-* Incluir uma subpasta;
-* Alterar o nome de uma pasta;
-* Definir os grupos de colaboradores que terão acesso à uma determinada pasta, e;
-* Excluir uma pasta.
+1. Para incluir pasta de primeiro nível, clique em **Nova pasta** <img style={{width: '2rem'}}
+src={require('../images/plus_button.webp').default} alt="Nova pasta"
+className="no-zoom image-between-texts" />, escolha o nome da pasta e confirme;
+2. À direita de cada pasta, clique no botão **Mais opções...** <img style={{width: '1.7rem'}}
+src={require('../images/ellipsis_vertical.webp').default} alt="Mais opções..."
+className="no-zoom image-between-texts" />:
+ - **Nova subpasta**: cria uma subpasta;
+ - **Alterar**: altera o nome da pasta;
+ - **Grupos autorizados**: define quais **grupos** terão acesso à pasta;
+ - **Excluir**: exclui a pasta.
+3. O botão **Grupos autorizados** <img style={{width: '1.7rem'}}
+src={require('../images/authorized_groups.webp').default} alt="Grupos autorizados"
+className="no-zoom image-between-texts" /> permite gerir quais são grupos que terão acesso à pasta.
+Ao clicar nesse botão, são mostradas, na porção direita da tela, todos **grupos** disponíveis. Selecione os grupos
+os quais devem ter acesso à pasta.
+
+:::warning Heranças de acesso
+Ao se autorizar um grupo para ter acesso a uma determinada pasta, grupos que estão em níveis mais elevados (subgrupos de
+outros grupos) não herdam o acesso à esta pasta, sendo necessário escolher cada grupo individualmente.
+:::
 
 ## 3. Crie um Formulário {#creating-a-form}
 
@@ -74,14 +102,14 @@ Na barra lateral esquerda dessa tela, estão disponíveis os **elementos**.
 Os **elementos** são os componentes que constituem a **estrutura** do formulário, permitindo a coleta dos dados.
 Em outros termos, os elementos são os tipos de perguntas disponíveis para serem inseridos em um formulário.
 
-[Saiba mais](/forms/elements/what-is-elements) como adicionar e configurar elementos no formulário.
+[**Saiba mais**](/forms/elements/what-is-elements) como adicionar e configurar elementos no formulário.
 
 ## 5. Defina as Configurações Gerais Formulário {#setting-up-a-form}
 As **configurações** do formulário permitem personalizar a maneira como os formulários são apresentados e processados.
 
-[Saiba mais](/forms/general-form-settings) como fazer as configurações gerais do formulário.
+[**Saiba mais**](/forms/general-form-settings) como fazer as configurações gerais do formulário.
 
 ## 5. Configure as Permissões de Acesso ao Formulário {#setting-up-form-access}
 As **configurações** do formulário permitem personalizar a maneira como os formulários são apresentados e processados.
 
-[Saiba mais](/forms/general-form-settings) como fazer as configurações gerais do formulário.
+[**Saiba mais**](/forms/general-form-settings) como fazer as configurações gerais do formulário.
