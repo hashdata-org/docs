@@ -1,15 +1,103 @@
 ---
 slug: setting-up-forms-access
 sidebar_position: 8
-sidebar_label: Como Configurar o Acesso ao Formulário?
+sidebar_label: Como Configurar o Acesso aos Formulário?
 ---
 
+import Mermaid from '@theme/Mermaid';
 export const standardCaption = '. Clique na imagem para ampliá-la.'
 export const initialScreamCaption = 'Apresentação das principais funcionalidades da tela Formulários, como gerenciamento ' +
     'de pastas e criação de formulários' + standardCaption;
 
-# Como Configurar o Acesso ao Formulário
+# Como Configurar o acesso aos Formulários?
 
-📢 Página em Construção
+Configurar os acessos aos formulários não é apenas uma questão técnica, mas também uma medida estratégica e ética para
+proteger informações, garantir a qualidade das coletas e atender às exigências legais e organizacionais.
 
-Estamos trabalhando para trazer mais conteúdo em breve! Fique atento e volte para conferir as novidades. 🚧
+A configuração adequada dos acessos visa garantir a confidencialidade e a integridade das informações coletadas,
+evitando-se acessos não autorizados e proteção de dados sensíveis, assegurando que apenas os usuários designados podem
+visualizar, responder ou gerenciar determinado formulário.
+
+## Formas de configurar o acesso aos formulários
+Há quatro formas de se configurar o acesso aos formulários:
+
+### 1. Individualmente, no próprio formulário
+1. Clique em **Formulários** <img style={{width: '2.5rem'}}
+src={require('../start-here/images/main-menu/forms.webp').default} alt="Formulários"
+className="no-zoom image-between-texts" />, disponível no [Menu Principal](/start-here/main-page#main-menu);
+2. Selecione a pasta onde o formulário está contido;
+3. Em seguida, clique no formulário desejado;
+4. No menu suspenso **Ações** ([**saiba mais...**](/forms/actions)), localizado na porção superior direita da tela, escolha
+a opção [**Usuários autorizados**](/forms/actions#authorized-users).
+5. Nessa opção, é possível escolher entre colaboradores/contas de dispositivo específicos ou grupos (unidades
+organizacionais).
+
+### 2. Na pasta na qual o formulário está inserido
+1. Clique em **Formulários** <img style={{width: '2.5rem'}}
+src={require('../start-here/images/main-menu/forms.webp').default} alt="Formulários"
+className="no-zoom image-between-texts" />, disponível no [Menu Principal](/start-here/main-page#main-menu);
+2. Selecione a pasta a qual se deseja configurar e clique em **Grupos autorizados** <img style={{width: '2rem'}}
+src={require('../images/authorized_groups.webp').default} alt="Grupos Autorizados"
+className="no-zoom image-between-texts" />.
+3. Selecione os grupos os quais terão autorização para acessar a pasta.
+
+:::warning Heranças de acesso
+Ao se autorizar um grupo para ter acesso a uma determinada pasta, grupos que estão em níveis mais elevados (subgrupos de
+outros grupos) não herdam o acesso à esta pasta, sendo necessário escolher cada grupo individualmente.
+
+[**Saiba mais**](/collaborators/#groups) sobre o cadastro de **grupos**.
+:::
+
+### 3. Individualmente, em cada colaborador ou conta de dispositivo
+1. Clique em **Colaboradores** <img style={{width: '2.5rem'}} src={require('../start-here/images/main-menu/collaborators.webp').default}
+alt="Colaboradores" className="no-zoom image-between-texts" />, disponível no [Menu Principal](/start-here/main-page#main-menu);
+2. Escolha o **grupo** que contenha o colaborador que se deseja configurar;
+3. Clique em **Mais opções...** <img style={{width: '2rem'}}
+src={require('../images/ellipsis.webp').default}
+alt="Mais opções..." className="no-zoom image-between-texts" />, localizado à direita do registro do colaborador ou
+conta de dispositivo, e escolha a opção **Acessos aos formulários**;
+3. Escolha entre permitir acesso a formulários específicos ou a pasta de formulários:
+
+### 4. 🚨 RECOMENDADO!: No grupo, ou unidade organizacional, que contém colaboradores ou contas de dispositivo;
+A melhor forma de gerenciar o controle de acesso aos formulários de uma área de trabalho é organizar os colaboradores em
+**grupos** (unidades organizacionais) e os formulários em **pastas**. Com essa abordagem basta conceder aos grupos os
+acessos às devidas pastas, as quais já contem os formulários.
+
+````mdx-code-block
+<div className="text-align-center">
+    <Mermaid
+        value={`
+%%{init: {"flowchart": {"htmlLabels": true}} }%%
+flowchart TD
+    subgraph s1["FORMULÁRIOS"]
+        s1n1["Cadastre \n as \n pastas"]
+        s1n2["Inclua \n formlários \n nas pastas"]
+    end
+    subgraph s2["COLABORADORES"]
+        s2n1["Crie \n os grupos"]
+        s2n2["Conceda, aos \n grupos, acesso \n às pastas"]
+        s2n3["Convide os \n colaboradores \n e crie as contas de \n dispositivos"]
+    end
+    inicio(["Início"]) --> s1
+    s1n1 --> s1n2
+    s1n2 --> s2
+    s2n1 --> s2n2
+    s2n2 --> s2n3
+    s2n3 --> fim(["Fim"])
+    `}
+    />
+</div>
+````
+
+Desta forma, quando houver novos colaboradores ou novos formulários, as configurações de acesso serão aplicadas
+automaticamente, facilitando a gestão de acessos aos formulários.
+
+[**Saiba mais**](./how-to-create-a-form#organize-the-forms-into-folders) como organizar formulários em **pastas**.
+
+[**Saiba mais**](/collaborators/#groups) sobre o cadastro de **grupos**.
+
+[**Saiba mais**](/collaborators/#invite-collaborators) sobre **convidar colaboradores**.
+
+
+
+

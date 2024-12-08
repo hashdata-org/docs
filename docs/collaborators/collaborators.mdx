@@ -1,0 +1,211 @@
+---
+sidebar_position: 4
+---
+import Mermaid from '@theme/Mermaid';
+
+# Colaboradores
+
+Colaboradores são os usuários que possuem acesso autorizado pelo proprietário para interagir com os formulários disponíveis
+em sua área de trabalho. Esses colaboradores podem desempenhar diferentes funções com base nos perfis de acesso
+atribuídos a eles, garantindo que as atividades dentro do HashData sejam realizadas de maneira organizada e segura.
+
+Algumas atribuições que podem ser dadas aos **colaboradores** são: gerenciar formulários, coletar dados, gerenciar dados
+coletados ou até gerenciar outros colaboradores, podendo inclusive assumir todas as tarefas do proprietário, exceto:
+- Alterar o nome da ára de trabalho;
+- Modificar a licença de uso, ou
+- Excluir o proprietário de sua própria área de trabalho.
+
+Para criar ou editar colaboradores e gerenciar suas permissões, clique em **Colaboradores** <img style={{width: '2.5rem'}}
+src={require('../start-here/images/main-menu/collaborators.webp').default} alt="Formulário"
+className="no-zoom image-between-texts" />, disponível no [Menu Principal](/start-here/main-page#main-menu).
+
+## Grupos (Unidades Organizacionais) {#groups}
+A forma recomendada para organizar os colaboradores numa área de trabalho é inserindo cada um deles em **grupos**
+ou **unidades organizacionais**. Esses grupos podem, por exemplo, espelhar a estrutura organizacional da empresa, de modo
+a facilitar a gestão dos colaboradores, a distribuição de suas responsabilidades e o controle de acesso aos formulários.
+
+:::danger Importante!
+A melhor forma de gerenciar o controle de acesso aos formulários de uma área de trabalho é organizar os colaboradores em
+**grupos** (unidades organizacionais) e os formulários em **pastas**. Com essa abordagem basta conceder aos grupos os
+acessos às devidas pastas, as quais já contem os formulários.
+
+Desta forma, quando houver novos colaboradores ou novos formulários, as configurações de acesso serão aplicadas
+automaticamente, facilitando a gestão de acessos aos formulários.
+
+[**Saiba mais**](./how-to-create-a-form#organize-the-forms-into-folders) como organizar formulários em pastas.
+:::
+
+### Como cadastrar grupos {#how-to-add-groups}
+Os grupos são organizados em níveis. Cada grupo em um nível superior, poderá conter quantos subgrupos forem necessários.
+Cada subgrupo, por sua vez, pode também conter outros subgrupos.
+
+1. Para incluir um grupo no primeiro nível, clique em **Novo grupo** <img style={{width: '2rem'}}
+src={require('../images/plus_button.webp').default} alt="Novo Grupo"
+className="no-zoom image-between-texts" />, escolha o nome do grupo e confirme;
+2. À direita de cada grupo, clique no botão **Mais opções...** <img style={{width: '1.7rem'}}
+src={require('../images/ellipsis_vertical.webp').default} alt="Mais opções..."
+className="no-zoom image-between-texts" />:
+ - **Novo subgrupo**: cria um novo subgrupo;
+ - **Alterar**: altera o nome do grupo;
+ - **Pastas autorizadas**: define quais pastas de formulários o grupo terá acesso;
+ - **Excluir**: exclui o grupo.
+
+3. O botão **Pastas autorizadas** <img style={{width: '1.7rem'}} src={require('./images/authorized_folders.webp').default} alt="Pastas autorizadas"
+className="no-zoom image-between-texts" /> permite gerir quais são as pastas de formulários que o grupo tem autorização de acesso.
+Ao clicar nesse botão, são mostradas, na porção direita da tela, todas as pastas de formulário disponíveis. Selecione as pastas
+as quais o grupo deverá ter acesso.
+
+:::warning Heranças de acesso
+Um grupo de nível mais elevado não herda os acessos às pastas definidos aos seus subgrupos, ou seja, os grupos/subgrupos têm que
+ter seus acessos configurados individualmente.
+
+Por exemplo, considere um grupo denominado **Recursos Humanos**, inserido no grupo **Departamento Administrativo e
+Financeiro**, que possui quatro subgrupos: **Clima Organizacional**, **Gestão de Benefícios**, **Recrutamento
+e Seleção** e **Treinamento e Desenvolvimento**. Ao se incluir um colaborador no grupo **Recursos Humanos**, esse
+colaborador não terá acesso às pastas de formulários do subgrupo **Clima Organizacional**, por exemplo. Se esse
+acesso for necessário, ele deve ser configurado diretamente no grupo **Recursos Humanos**.
+
+Por outro lado, na seleção de pastas de formulários, há herança de acesso, isto é, ao selecionar uma determinada pasta de
+formulários, suas subpastas são automaticamente selecionadas.
+
+Por exemplo, considere um conjunto de pastas que reflete a estrutura organizacional do exemplo anterior, isto é, uma
+pasta denominada **Recursos Humanos**, inserida na pasta **Departamento Administrativo e Financeiro**, que possui
+quatro subpastas: **Clima Organizacional**, **Gestão de Benefícios**, **Recrutamento e Seleção** e **Treinamento e
+Desenvolvimento**, cada uma delas armazenando formulários específicos. Ao se selecionar a pasta **Recursos Humanos**
+para conceder acesso ao grupo **Recursos Humanos**, todas subpastas da pasta **Recursos Humanos** são automaticamente
+selecionadas.
+:::
+
+## Convidar colaboradores {#invite-collaborators}
+Por meio do convite, o proprietário define quem são os colaboradores que podem interagir com sua área de trabalho e
+realizar as tarefas por ele determinadas:
+
+1. Para convidar colaboradores, clique em <img style={{width: '2rem'}}  src={require('./images/add_collaborators_button.webp').default}
+alt="Convidar colaboradores" className="no-zoom image-between-texts" /> para abrir a caixa de diálogos de configuração
+do convite;
+2. Os colaboradores podem ser incluídos, um a um, ao convite, por meio da opção **Adicionar colaborador**, ou você
+pode importar uma lista com todos os e-mails, clicando em **Importar lista**;
+3. Escolha o grupo do qual os colaboradores devem fazer parte;
+4. Defina as permissões do convite:
+ - Coletar dados;
+ - Visualizar dados coletados;
+ - Gerenciar dados coletados;
+ - Responder *follow-up*;
+ - Gerenciar colaborações;
+ - Gerenciar formulários;
+ - Gerenciar integração de sistemas;
+ - Visualizar logs (ações, modificações).
+5. Cada colaborador receberá um e-mail para aceitar o convite. O aceite direciona o colaborador para o sistema Hashdata
+para que ele crie uma conta no sistema, caso não tenha.
+
+:::warning Conta no Hashdata obrigatória
+Após receber um convite para ser colaborador, é necessário criar uma conta no Hashdata. Somente um usuário cadastrado no
+Hashdata poderá aceitar convites de colaboração.
+
+Não é permitido a um determinado colaborador aceitar um convite da sua própria área de trabalho.
+
+[**Saiba mais**](/#create-your-account) como criar um usuário no Hashdata.
+:::
+
+:::danger E-mail do convite não recebido?
+Se o colaborador não recebeu o e-mail do convite, oriente-o para verificar a caixa de **spam** ou **lixo eletrônico**.
+Dependendo das configurações do provedor de e-mail, mensagens automáticas podem ser direcionadas para essas pastas.
+
+Recomenda-se também que o endereço **no-reply@hashdata.com.br** seja cadastrado na lista de contatos.
+:::
+
+6. Após os colaboradores terem aceitado os convites, eles ficarão disponíveis nos grupos definidos, ou seja, é necessário
+selecionar o grupo para visualizar os colaboradores convidados.
+
+### Gerenciar colaboradores {#manage-collaborators}
+Todos os colaboradores são identificados com o avatar <img style={{width: '2rem'}}
+src={require('./images/collaborator_avatar.webp').default}
+alt="Avatar Colaboradores" className="no-zoom image-between-texts" />.
+
+1. Clique em **Mais opções...** <img style={{width: '2rem'}}
+src={require('../images/ellipsis.webp').default}
+alt="Mais opções..." className="no-zoom image-between-texts" />, localizado à direita do registro;
+2. É aberto um menu suspenso com as seguintes opções:
+ - **Acesso aos formulários**: define acessos à formulários individualmente ou à pastas de formulários;
+ - **Alterar senha**: permite a redefinição da senha de acesso;
+ - **Excluir**: exclui o colaborador.
+
+3. Escolha a opção desejada.
+
+## Contas de dispositivos {#devices-accounts}
+As contas de dispositivo são tipos especiais de contas, pois não estão vinculadas a uma pessoa específica. Essas contas
+tem permissão somente para acessar a versão *mobile* do Hashdata, disponível para [Android](https://play.google.com/store/apps/details?id=br.com.hashdata.mobileapp) e
+[IOS](https://itunes.apple.com/br/app/hashdata/id1379827155?ls=1&mt=8).
+
+Essas contas são utilizadas tão somente para realizar a coleta de dados, sem a necessidade de associar a pessoa
+responsável pela coleta.
+
+Ao acessar a versão *mobile* do Hashdata com uma conta de dispositivo, determinada pessoa tem permissão para realizar
+a coletas de dados em formulários selecionados, contidos na área de trabalho em que foram criados.
+
+:::info Fique ligado!
+A **conta de dispositivo** não pode ser destinatária de notificações e e-mails.
+:::
+
+### Gerenciar contas de dispositivo {#manage-devices-accounts}
+Todas as contas de dispositivo são identificadas com o avatar <img style={{width: '2rem'}}
+src={require('./images/device_account_avatar.webp').default}
+alt="Avatar Colaboradores" className="no-zoom image-between-texts" />.
+
+1. Clique em **Mais opções...** <img style={{width: '2rem'}}
+src={require('../images/ellipsis.webp').default}
+alt="Mais opções..." className="no-zoom image-between-texts" />, localizado à direita do registro;
+2. É aberto um menu suspenso com as seguintes opções:
+ - **Acesso aos formulários**: define acessos a formulários individualmente ou à pastas de formulários;
+ - **Promover a colaborador**: promove a conta de dispositivo para colaborador;
+ - **Alterar senha**: permite a redefinição da senha de acesso;
+ - **Excluir**: exclui a conta de dispositivo.
+
+:::info Promover a colaborador
+Ao promover uma **conta de dispositivo** para **colaborador**, o usuário terá acesso amplo aos recursos do sistema
+(incluindo a versão *web* do sistema), podendo inclusive receber permissões adicionais.
+
+Contudo, na promoção, é necessário vincular uma nova credencial de acesso com e-mail e senha. O e-mail deverá ser único
+no HashData, não podendo ser reaproveitado e-mail de outra conta. O usuário então deverá confirmar o e-mail no primeiro
+*login* com a nova credencial.
+:::
+
+3. Escolha a opção desejada.
+
+## Processo recomendado para a gestão de colaboradores {#recomended-process-to-manage-collaborators}
+
+````mdx-code-block
+<div className="text-align-center">
+    <Mermaid
+        value={`
+%%{init: {"flowchart": {"htmlLabels": true}} }%%
+flowchart TD
+ subgraph s1["COLABORADORES"]
+        s2
+        s1n1["Convidar \n colaboradores"]
+        s1d1{"A estrutura dos grupos \n atende aos requisitos de \n gestão de colaboradores?"}
+  end
+ subgraph s3["FORMULÁRIOS"]
+        s3n1["Cadastrar \n pastas"]
+        s3n2["Incluir \n formulários"]
+  end
+ subgraph s2["Cadastro de Grupos"]
+        s2n1["Cadastrar \n grupo"]
+        s2n2["Associar \n pastas \n autorizadas"]
+        s2d1{"As pastas associadas \n atendem aos requisitos de gestão \n de acesso aos formulários?"}
+  end
+    inicio(["Início"]) --> s2n1
+    s2n1 --> s2n2
+    s2n2 --> s2d1
+    s2d1 -- Não --> s3n1
+    s3n1 --> s2d1 & s3n2
+    s2d1 -- Sim --> s1d1
+    s1d1 -- Sim --> s1n1
+    s1d1 -- Não --> s2n1
+    s1n1 --> fim(["Fim"])
+    style s2 stroke:#FFD600
+    style s1 stroke:#2962FF
+    `}
+    />
+</div>
+````
