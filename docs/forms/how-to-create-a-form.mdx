@@ -78,8 +78,9 @@ Ao clicar nesse botão, são mostradas, na porção direita da tela, todos **gru
 os quais devem ter acesso à pasta.
 
 :::warning Heranças de acesso
-Ao se autorizar um grupo para ter acesso a uma determinada pasta, grupos que estão em níveis mais elevados (subgrupos de
-outros grupos) não herdam o acesso à esta pasta, sendo necessário escolher cada grupo individualmente.
+Subgrupos não herdam autorização de acesso do grupo pai (ascendente), ou seja, ao se autorizar um grupo para ter acesso
+a uma determinada pasta, os subgrupos dele não herdam o acesso à pasta.
+Logo, a determinação de quais pastas cada grupo pode acessar deve ser realizada individualmente (grupo a grupo).
 :::
 
 ## 3. Crie um Formulário {#creating-a-form}

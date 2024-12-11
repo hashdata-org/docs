@@ -95,6 +95,73 @@ pode importar uma lista com todos os e-mails, clicando em **Importar lista**;
  - Gerenciar formulários;
  - Gerenciar integração de sistemas;
  - Visualizar logs (ações, modificações).
+
+<details>
+    <summary>Saiba mais sobre as permissões do convite</summary>
+
+    1. **Coletar dados**: permite ao colaborador acessar os formulário publicados e realizar coleta de dados.
+
+    2. **Visualizar dados coletados**: a visualização de dados coletados permite ao colaborador:
+    <ol>
+        - Visualizar dados coletados (listagem de coletas);
+        - Visualizar gráficos (dados agregados);
+        - Geração de PDF da coleta;
+        - Visualização e *download* das fotos coletadas (arquivo ZIP).
+    </ol>
+
+    3. **Gerenciar dados coletados**: esta permissão concede ao colaborador os mesmos acessos da permissão **Visualizar
+    dados coletados** e também:
+    <ol>
+        - Alterar e excluir coletas;
+        - Excluir todas as coletas de uma vez;
+        - Compartilhar coleta (em formato PDF) por e-mail diretamente do sistema;
+        - Visualizar formulários privados (mas para responder é necessário a permissão **coletar dados** nesses
+        formulários);
+        - Visualizar o *dashboard* "Quantidade de respostas (mês atual e mês anterior)".
+    </ol>
+
+    4. **Responder *follow-up***: concede ao colaborador responder às perguntas de acompanhamento (*follow-up*),
+    que servem para documentar ações e acompanhamentos após o formulário ter sido respondido.
+    [Saiba mais...](/forms/general-form-settings#follow-up-questions)
+
+    5. **Gerenciar colaborações**: com a permissão de gerenciar colaboradores, é permitido:
+    <ol>
+        - Visualizar convites de colaboradores;
+        - Cancelar convite de colaborador (antes do aceite);
+        - Convidar colaborador;
+        - Visualizar colaborações;
+        - Editar e excluir colaboração;
+        - Criar, alterar e excluir grupos de colaboradores;
+        - Organizar colaboradores em grupos.
+        - Autorizar e revogar acesso de colaboradores/grupos a pastas/formulários;
+        - Visualizar acessos autorizados;
+        - Alterar permissões de outros colaboradores.
+    </ol>
+
+    6. **Gerenciar formulários**: a permissão de gerenciar formulários concede ao colaborador:
+    <ol>
+        - Criar, alterar, clonar, compartilhar e excluir formulários;
+        - Visualizar formulários privados (mas para responder é necessário a permissão **coletar dados** nesses
+        formulários);
+        - Criar, alterar, clonar, visualizar e excluir notificações sobre coletas;
+        - Publicar, despublicar e arquivar formulários;
+        - Simular respostas para formulários;
+        - Aceitar formulário compartilhado por outro usuário;
+        - Criar, alterar e excluir pastas de formulários;
+        - Organizar formulários em pastas.
+    </ol>
+
+    7. **Gerenciar integração de sistemas**: concede ao colaborador permissão para transferir coletas diretamente dos
+    servidores do HashData para um servidor local, um servidor na nuvem ou até mesmo servidores de terceiros.
+    [Saiba mais...](/integrations/managing-integrations)
+
+    8. **Visualizar logs (ações, modificações)**: com essa permissão, o colaborador tem acesso à funcionalidade de
+    visualização dos *logs* de formulários e de respostas, o que lhe permite monitorar todas as alterações.
+    [Saiba mais...](/forms/actions#view-form-logs)
+
+
+</details>
+
 5. Cada colaborador receberá um e-mail para aceitar o convite. O aceite direciona o colaborador para o sistema Hashdata
 para que ele crie uma conta no sistema, caso não tenha.
 
@@ -127,8 +194,12 @@ src={require('../images/ellipsis.webp').default}
 alt="Mais opções..." className="no-zoom image-between-texts" />, localizado à direita do registro;
 2. É aberto um menu suspenso com as seguintes opções:
  - **Acesso aos formulários**: define acessos à formulários individualmente ou à pastas de formulários;
- - **Alterar senha**: permite a redefinição da senha de acesso;
- - **Excluir**: exclui o colaborador.
+ - **Alterar senha**: esta opção está disponível apenas para usuários que foram migrados a partir da versão anterior
+sistema e que ainda tenham nenhum e-mail confirmado. Após a confirmação de e-mail o usuário poderá usar o procedimento de recuperar
+senha, caso a tenha esquecido ou necessite mudá-la;
+ - **Excluir**: esta opção exclui o acesso de um colaborador à uma determinada área de trabalho, ou seja, não exclui o
+colaborador (usuário) do sistema Hashdata. Caso esse colaborador tenha acesso a outras **áreas de trabalho**, ele poderá
+utilizar o sistema normalmente.
 
 3. Escolha a opção desejada.
 
@@ -158,7 +229,9 @@ alt="Mais opções..." className="no-zoom image-between-texts" />, localizado à
 2. É aberto um menu suspenso com as seguintes opções:
  - **Acesso aos formulários**: define acessos a formulários individualmente ou à pastas de formulários;
  - **Promover a colaborador**: promove a conta de dispositivo para colaborador;
- - **Alterar senha**: permite a redefinição da senha de acesso;
+ - **Alterar senha**: esta opção está disponível apenas para contas de dispositivos que foram migradas a partir da versão
+anterior sistema e que ainda tenham nenhum e-mail confirmado. Após a confirmação de e-mail o usuário da conta de
+dispositivo poderá usar o procedimento de recuperar senha, caso a tenha esquecido ou necessite mudá-la;
  - **Excluir**: exclui a conta de dispositivo.
 
 :::info Promover a colaborador

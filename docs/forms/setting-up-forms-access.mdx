@@ -19,7 +19,8 @@ evitando-se acessos não autorizados e proteção de dados sensíveis, asseguran
 visualizar, responder ou gerenciar determinado formulário.
 
 ## Formas de configurar o acesso aos formulários
-Há quatro formas de se configurar o acesso aos formulários:
+Há quatro formas de se configurar o acesso aos formulários, sendo que **recomendados a 4ª opção**. Vamos ver cada
+uma delas:
 
 ### 1. Individualmente, no próprio formulário
 1. Clique em **Formulários** <img style={{width: '2.5rem'}}
@@ -42,8 +43,9 @@ className="no-zoom image-between-texts" />.
 3. Selecione os grupos os quais terão autorização para acessar a pasta.
 
 :::warning Heranças de acesso
-Ao se autorizar um grupo para ter acesso a uma determinada pasta, grupos que estão em níveis mais elevados (subgrupos de
-outros grupos) não herdam o acesso à esta pasta, sendo necessário escolher cada grupo individualmente.
+Subgrupos não herdam autorização de acesso do grupo pai (ascendente), ou seja, ao se autorizar um grupo para ter acesso
+a uma determinada pasta, os subgrupos dele não herdam o acesso à pasta.
+Logo, a determinação de quais pastas cada grupo pode acessar deve ser realizada individualmente (grupo a grupo).
 
 [**Saiba mais**](/collaborators/#groups) sobre o cadastro de **grupos**.
 :::
@@ -58,7 +60,7 @@ alt="Mais opções..." className="no-zoom image-between-texts" />, localizado à
 conta de dispositivo, e escolha a opção **Acessos aos formulários**;
 3. Escolha entre permitir acesso a formulários específicos ou a pasta de formulários:
 
-### 4. 🚨 RECOMENDADO!: No grupo, ou unidade organizacional, que contém colaboradores ou contas de dispositivo;
+### 4. No grupo, ou unidade organizacional, que contém colaboradores ou contas de dispositivo - 🚨 OPÇÃO RECOMENDADA!
 A melhor forma de gerenciar o controle de acesso aos formulários de uma área de trabalho é organizar os colaboradores em
 **grupos** (unidades organizacionais) e os formulários em **pastas**. Com essa abordagem basta conceder aos grupos os
 acessos às devidas pastas, as quais já contem os formulários.
@@ -75,7 +77,7 @@ flowchart TD
     end
     subgraph s2["COLABORADORES"]
         s2n1["Crie \n os grupos"]
-        s2n2["Conceda, aos \n grupos, acesso \n às pastas"]
+        s2n2["Conceda aos \n grupos o acesso \n às pastas"]
         s2n3["Convide os \n colaboradores \n e crie as contas de \n dispositivos"]
     end
     inicio(["Início"]) --> s1
