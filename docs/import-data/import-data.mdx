@@ -1,0 +1,61 @@
+---
+sidebar_position: 8
+---
+
+# Importar Dados
+
+A **Importação de Dados** do HashData é uma ferramenta poderosa e prática que possibilita a integração de dados já
+existentes por meio da importação direta desses dados na plataforma, a partir de planilhas compatíveis com o Microsoft Excel.
+Essa funcionalidade é ideal para agilizar o trabalho, eliminar redundâncias e garantir que informações previamente
+organizadas em planilhas sejam incorporadas de forma eficiente aos formulários do sistema.
+
+### Principais características {#main-features}
+- **Importação para novos formulários**: é possível criar novos formulários a partir de dados contidos em uma planilha Excel.
+Essa funcionalidade converte os dados automaticamente em um formato que pode ser utilizado no HashData, reduzindo o esforço
+manual de coleta;
+- **Atualização de formulários pré-existentes**: além de criar novos formulários, a funcionalidade permite importar dados para
+formulários já existentes na plataforma. Isso é útil para complementar informações ou realizar atualizações em coletas previamente
+realizadas;
+- **Preservação de estrutura**: o processo de importação mantém a integridade dos dados originais, alinhando-os aos campos
+e parâmetros definidos no formulário, garantindo consistência e precisão;
+- **Facilidade de uso**: com uma interface intuitiva, a funcionalidade de importação orienta o usuário durante o processo,
+permitindo mapear colunas da planilha Excel para os campos do formulário de forma rápida e sem complicações;
+- **Flexibilidade e eficiência**: essa ferramenta economiza tempo ao eliminar a necessidade de inserir dados manualmente,
+especialmente em projetos que envolvem grandes volumes de informações;
+
+Para acessar a funcionalidade, clique em **Importação de dados** <img style={{width: '2.5rem'}}
+src={require('../start-here/images/main-menu/import_data.webp').default} alt="Importação de dados"
+className="no-zoom image-between-texts" />, disponível no [Menu Principal](/start-here/main-page#main-menu).
+
+![Apresentação da funcionalidade Importar dados do Hashdata. Clique na imagem para ampliá-la.](./images/import_data.gif
+"Apresentação da funcionalidade Importar dados do Hashdata. Clique na imagem para ampliá-la.")
+<p className="image-caption">Apresentação da funcionalidade Importar dados do Hashdata. Clique na imagem para ampliá-la</p>
+
+### Como importar dados? {#how-to-import-data}
+1. **Formulário**: selecione onde você deseja importar dos dados:
+   - **Em um formulário pré-existente**: selecione o formulário que receberá os dados importados;
+   - **Em um novo formulário**: informe o nome e a pasta de destino do novo formulário que seria criado durante a
+   importação;
+   - **Importar somente a estrutura em um novo formulário**: informe o nome e a pasta de destino do novo formulário
+   que seria criado durante a importação.
+2. **Upload**: selecione a planilha compatível com Microsoft Excel:
+    - O arquivo deve estar no formato XLSX/XLSM (Excel 2007 ou posterior);
+    - A primeira linha da tabela deve conter o nome das colunas.
+    - O arquivo não pode ser maior que 30 MB (30 megabytes). Caso seja necessário importar um arquivo maior,
+   entre em [contato conosco](/#user-support).
+3. **Configuração**: a partir da estrutura da planilha, ou seja, do nome da coluna, a plataforma sugere o nome do campo
+e o tipo de resposta. Personalize cada campo do formulário conforme necessidade do negócio. Em respostas do tipo **Data**
+e **Data** e **Data e hora**, o sistema permite configurar o formato do campo.
+
+:::info
+No momento, não é possível importar dados dos tipos: Imagem, Assinatura e Arquivos genéricos. Perguntas dos tipos
+citados não são exibidas como opções para vinculação.
+:::
+
+4. **Execução**: aguarde enquanto a plataforma realize a importação. Observe o log de execução e, caso ocorra algum erro,
+siga as orientações sugeridas pelo sistema.
+
+:::success Dica!
+Na porção superior da tela, são mostrados os quatro passos para a importação dos dados. Clicando neles, é possível
+retornar ou avançar em cada um dos passos da importação.
+:::
