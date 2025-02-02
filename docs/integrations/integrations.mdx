@@ -112,15 +112,13 @@ Use os parâmetros `instantStart` e `instantEnd` para paginar a resposta ou para
 Os parâmetros `instantStart` e `instantEnd` aceitam qualquer formato de `Date` do Javascript, por exemplo, data no
 formato string (ISO 8601): `2024-12-31T23:59:59.999Z` (hora UTC).
 
-Para evitar problemas com fuso horário, no caso do Horário Oficial Brasileiro (UTC-3), pode-se obter a data por meio de
-**parâmetros numéricos** (YYYY, MM, DD, HH, MM, SS, MS):
-```javascript
-const numericDate = new Date(2024, 11, 31, 23, 59, 59, 999);
-console.log(numericDate); // Exemplo: 2024-12-31T23:59:59.999Z
-```
-A URI para acessar as respostas do "Formulário de Dados Pessoais", a partir das 23:59:59 do dia 31/12/2024 seria:
+Por exemplo, a URI para acessar as respostas do "Formulário de Dados Pessoais", a partir das 12:00:00 do dia 01/01/2025 no horário
+oficial brasileiro seria:
 
-https://api2.hashdata.app/v1/export/forms/66f172c1dbb522a3729ab9a1/responses?token={TOKEN}&instantStart=2024-12-31T20:59:59.999Z
+https://api2.hashdata.app/v1/export/forms/66f172c1dbb522a3729ab9a1/responses?token={TOKEN}&instantStart=2025-01-01T15:00:00.000Z
+
+https://api2.hashdata.app/v1/export/forms/66f172c1dbb522a3729ab9a1/responses?token=jfRejrLXrQG7R3rO6kM0uCdGaq7zt_Y_f9uhw5Y1&instantStart=2025-01-01T15:00:00.000
+
 :::
 
 ````mdx-code-block
@@ -187,5 +185,19 @@ podem ter sua estrutura alterada a qualquer momento.
 
 
 ### 3. Configuração da integração dos Formulários
+Após habilitar as integrações, é necessário informar quais formulários devem ser integrados ao Hashdata Advanced Reports
+e quais devem ser exportados via API REST.
+
+1. Selecione o formulário para habilitar a integração desejada: Hashdata Advanced Reports, REST API ou ambas;
+2. Ao clicar em <img style={{width: "1.5rem"}} src={require("./images/setup.webp").default} alt="Configurações"
+className="no-zoom image-between-texts"/> para configurar as integrações;
+3. Defina, para cada elemento que compões o formulário, o **nome da questão**, que é um nome curto que identifica o
+elemento no sistema. O **nome da questão** e é utilizado também nas fórmulas matemáticas e na exportação de dados.
+Utilize o botão <img style={{width: "12rem"}} src={require("./images/autofill.webp").default} alt="Preencher automaticamente"
+     className="no-zoom image-between-texts"/>, para o sistema sugerir o **nome da questão**. Faça ajustes, caso
+necessário;
+4. Se a integração com o HashData Advanced Reports tiver habilitada, será mostrado  o campo **Nome do índice no Hashdata
+Advanced Reports**. Este campo é composto por um valor número, que não deve ser alterado, seguido por uma descrição que
+deve conter apenas letras, números, sublinhados e traços, por exemplo: `21261-formulario-dados-pessoais`;
 
 
