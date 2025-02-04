@@ -49,7 +49,7 @@ const config = {
             items: [
                 {to: '/', label: 'Guia do Usuário', position: 'right'},
                 {
-                    href: 'https://hashdata.com.br',
+                    href: 'https://www.hashdata.app',
                     label: 'Portal Web',
                     position: 'right',
                     'aria-label': 'Abre o portal Hashdata em uma nova janela.',
