@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhd_docs=self.webpackChunkhd_docs||[]).push([[9742],{6883:e=>{e.exports=JSON.parse('{"categoryGeneratedIndex":{"title":"Come\xe7e aqui","slug":"/category/come\xe7e-aqui","permalink":"/es/category/come\xe7e-aqui","sidebar":"tutorialSidebar","navigation":{"next":{"title":"Primeiros Passos","permalink":"/es/"}}}}')}}]);
