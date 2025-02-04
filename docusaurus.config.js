@@ -13,7 +13,7 @@ const config = {
     title: 'Hashdata Docs',
     tagline: 'Documentation of Hashdata\'s Softwares',
     url: 'https://docs.hashdata.app', // Set the /<baseUrl>/ pathname under which your site is served
-    baseUrl: '/docs/',
+    baseUrl: '/',
     favicon: 'img/favicon.ico',
     organizationName: 'hashdata-org', // Usually your GitHub org/user name.
     projectName: 'docs', // Usually your repo name.
