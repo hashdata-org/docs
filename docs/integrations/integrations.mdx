@@ -15,34 +15,127 @@ entre os sistemas, eliminando silos de informação e melhorando a eficiência o
 * **Melhoria da produtividade:** evitar retrabalho e aumentar a velocidade dos processos operacionais;
 * **Aperfeiçoamento da experiência do usuário:** fornecer uma visão integrada e consistente de dados em diferentes plataformas.
 
-## Como funciona a integração entre sistemas do Hashdata?
+## Como funciona a integração entre sistemas no Hashdata? {#how-it-works}
 A integração entre sistemas permite transferir todas as coletas diretamente dos servidores do **HashData** para um
 servidor local (*on-premises*), um servidor na nuvem ou até mesmo servidores de terceiros.
 
 Há duas opções de integração, via **API REST** ou com **Hashdata Advanced Reports**.
 
-### 1. Integração via API REST
+*  **API REST**
+
 Uma API REST (*Application Programming Interface Representational State Transfer*) é uma interface de comunicação
 entre sistemas que segue os princípios do REST (*Representational State Transfer*), um estilo de arquitetura para
-projetar serviços de rede.
-
-A integração via API REST permite que outros sistemas acessem os dados armazenados no Hashdata. A comunicação entre os
+projetar serviços de rede. A integração via API REST permite que outros sistemas acessem os dados armazenados no Hashdata. A comunicação entre os
 sistemas é feita via requisições HTTPS, utilizando um ***token* de autenticação** para garantir a segurança das informações.
 
+*  **Hashdata Advanced Reports**
+
+A integração com o [**Hashdata Advanced Reports**](/advanced-reports) permite a criação relatórios e painéis avançados atualizados em tempo real,
+ou seja, os dados inseridos nos formulários são automaticamente exportados para os relatórios e painéis. Tanto os
+painéis quanto os relatórios são fáceis de criar e não requerem conhecimento especializado. Após a configuração, as integrações
+e sincronizações são realizadas automaticamente pelo Hashdata em tempo real.
+
+
+## Habilitar integrações {#enable-integrations}
+
+Para habilitar as integrações, selecione o ícone de Integrações no menu principal (lateral esquerda).
+Depois siga as instruções da página e escolha quais integrações deseja habilitar.
+
+
+### Configuração da integração dos Formulários {#config}
+Após habilitar as integrações, é necessário informar quais formulários devem ser integrados ao Hashdata Advanced Reports
+e quais devem ser exportados via API REST.
+
+1. Selecione o formulário para habilitar a integração desejada: Hashdata Advanced Reports, REST API ou ambas;
+2. Ao clicar em <img style={{width: "1.5rem"}} src={require("./images/setup.webp").default} alt="Configurações"
+className="no-zoom image-between-texts"/> para configurar as integrações;
+3. Defina, para cada elemento que compões o formulário, o **nome da questão**, que é um nome curto que identifica o
+elemento no sistema. O **nome da questão** e é utilizado também nas fórmulas matemáticas e na exportação de dados.
+Utilize o botão <img style={{width: "12rem"}} src={require("./images/autofill.webp").default} alt="Preencher automaticamente"
+className="no-zoom image-between-texts"/>, para o sistema sugerir o **nome da questão**. Faça ajustes, caso
+necessário;
+4. Se a integração com o HashData Advanced Reports tiver habilitada, será mostrado  o campo **Nome do índice no Hashdata
+Advanced Reports**. Este campo é composto por um valor número, que não deve ser alterado, seguido por uma descrição que
+deve conter apenas letras, números, sublinhados e traços, por exemplo: `21261-formulario-dados-pessoais`;
+
+:::warning Atenção!
+Somente os formulários marcadas para exportação via API REST ficarão acessíveis via API REST. E, da mesma forma, somente
+os formulários marcados para integração com o Hashdata Advanced Reports ficarão visíveis na ferramenta.
+:::
+
+:::warning Atenção!
+Os rascunhos de formulários também podem ser exportados / integrados, mas é necessário ter em mente que esses formulários
+podem ter sua estrutura alterada a qualquer momento.
+:::
+
+
+## Integração via API REST {#api-rest}
+
+A comunicação entre os sistemas é feita via requisições HTTPS, utilizando um token de autenticação para garantir a segurança das informações.
 Um token de autenticação é uma sequência alfanumérica única, utilizada para autenticar e autorizar um usuário ou
 aplicação que está acessando uma API REST. Ele funciona como uma "chave digital" que comprova que quem está realizando
 a requisição tem permissão para fazê-lo.
 
 Após habilitar a integração API REST é necessário selecionar os formulários acessíveis por meio desta integração.
 
-O acesso aos dados é feito por meio dos *end-point*. As URI's de cada recurso é apresentadas a seguir:
+O acesso aos dados é feito por meio dos *end-point*. As URI's de cada recurso são apresentadas a seguir,
+mas antes é necessário entender como funciona a autenticação.
 
-#### **FORMULÁRIOS**
+:::success Autenticação
+
+### Envio do Token de Autenticação: URI vs. Cabeçalho {#auth}
+
+Na API Hashdata, o **token de autenticação** pode ser enviado de duas formas para validar e autorizar
+o acesso a recursos protegidos:
+
+1. **Envio pela URI (*Query Parameter*)**
+2. **Envio pelo Cabeçalho HTTP (HD-API-TOKEN)** 👈 Opção RECOMENDADA
+
+Cada método tem vantagens e desvantagens, especialmente quando se trata de **segurança da informação**.
+
+##### 1. Envio do Token pela URI
+Exemplo de requisição com o token na **query string** da URL:
+```
+GET /users/export?token=abc123
+```
+###### **Vantagens**
+- ✅ **Facilidade de implementação**: é simples incluir o token como um parâmetro na URL, sem necessidade de modificar cabeçalhos da requisição.
+- ✅ **Uso em links diretos**: pode ser útil quando o cliente precisa compartilhar um link autenticado para um recurso específico.
+
+###### **Desvantagens**
+- ❌ **Exposição em logs e históricos**: como a URL fica visível no navegador, histórico do usuário e logs do servidor, o token pode ser facilmente comprometido.
+- ❌ **Facilidade de interceptação**: se a requisição não estiver protegida por **HTTPS**, um atacante pode capturar o token ao monitorar o tráfego de rede.
+- ❌ **Risco de cache**: algumas configurações de proxy e servidores podem armazenar a URL com o token, permitindo acesso indevido posteriormente.
+
+---
+
+##### 2. Envio do Token pelo Cabeçalho HTTP (HD-API-TOKEN)
+Exemplo de requisição enviando o token no **cabeçalho HTTP**:
+```
+GET /users/export
+HD-API-TOKEN: abc123
+```
+###### **Vantagens**
+- ✅ **Maior segurança**: o token não é exposto na URL, reduzindo o risco de vazamento em logs, históricos de navegação ou caches.
+- ✅ **Melhor controle de acesso**: cabeçalhos HTTP são mais fáceis de manipular para políticas de segurança, como restrições de CORS e proteção contra ataques de **replay**.
+- ✅ **Compatível com autenticação JWT e OAuth**: esse método é amplamente utilizado para autenticação baseada em tokens, como **JWT (JSON Web Token)** e **OAuth 2.0**.
+
+###### **Desvantagens**
+- ❌ **Maior complexidade na implementação**: requer que o cliente configure corretamente o cabeçalho da requisição, o que pode ser mais difícil em algumas aplicações.
+- ❌ **Incompatibilidade com alguns serviços**: certos navegadores ou clientes HTTP podem ter restrições para modificar cabeçalhos personalizados.
+
+:::warning Atenção
+Todos exemplos abaixo assumem que o token de autenticação será enviado via HTTP Header: `HD-API-TOKEN`
+:::
+
+### FORMULÁRIOS {#forms}
 Para listar os formulários habilitados para integração, utilize o seguinte *end-point*:
 
-* https://api2.hashdata.app/v1/export/forms?token={TOKEN}
+```text
+GET https://api2.hashdata.app/v1/export/forms
+```
 
-Considerando que o único formulário configurado para a integração é o "Formulário de Dados Pessoais", ao executar a
+Considerando que na conta de exemplo o único formulário configurado para a integração é o "Formulário de Dados Pessoais", ao executar a
 requisição para o *end-point* de formulários, obtém-se uma resposta como ao do exemplo a seguir:
 
 ```json
@@ -55,13 +148,98 @@ requisição para o *end-point* de formulários, obtém-se uma resposta como ao 
 ]
 ```
 
-#### **USUÁRIOS**
-Para listar todos os usuários de uma determinada área de trabalho, utiliza o seguinte *end-point*:
+#### Atributos Exportados
 
-* https://api2.hashdata.app/v1/export/users?token={TOKEN}
+É possível criar atributos personalizados ([Atributos exportados](/forms/general-form-settings#exported-atributes)) que podem ser usados para selecionar, filtrar ou agrupar os formulários e as coletas.
+
+Por exemplo: Imagine que em uma Organização existam alguns formulários de auditoria entre outras centenas de formulários e que a empresa deseja identificar e exportar apenas os dados de tais
+formulários sem vincular diretamente ao ID dos formulários. Há várias formas de fazer isso, sendo uma delas criar um "Atributo exportado" chamado "tipo-de-formulario" com o valor "auditoria" em todos os formulários de auditorias.
+Assim, ao exportar a lista de formulários, pode-se escolher apenas os formulários que tenham o valor "auditoria" na chave/campo "tipo-de-formulario", ex.:
+
+```json
+[
+  {
+    "form_id":"66f172c1dbb522a3729ab9a1",
+    "form_name":"Formulário de Dados Pessoais",
+    "form_status":"DRAFT",
+    "tipo-de-formulario": "auditoria"
+  }
+]
+```
+
+### RESPOSTAS {#responses}
+Para obter as respostas de um determinado formulário é necessário informar o `formId` (identificador do formulário):
+
+```text
+GET https://api2.hashdata.app/v1/export/forms/{formId}/responses
+```
+<small>*Substitua \{formId} pelo identificador do formulário, ex.: 66f172c1dbb522a3729ab9a1*</small>
+<br/>
+<br/>
+
+O *end-point* possui também os seguintes parâmetros opcionais:
+
+* `from`: *DateTime* - Data/hora inicial usada para filtrar as respostas;
+* `to`: *DateTime* - Data/hora final usada para filtrar as respostas.
+* `removeNewLineFromTexts`: *boolean* - remove quebras de linhas das respostas do tipo texto (é recomendado configurar com 'true');
+
+Use os parâmetros `from` e `to` para paginar a resposta ou para obter os dados progressivamente (conforme inseridos no sistema).
+
+:::success Formatos aceitos
+Os parâmetros `from` e `to` aceitam qualquer formato de `Date` do Javascript, por exemplo, data no
+formato string (ISO 8601): `2024-12-31T23:59:59.999Z` (hora UTC). Os milesegundos são opcionais, ex.: `2024-12-31T23:59:59Z`
+
+Por exemplo, a URI para acessar as respostas do "Formulário de Dados Pessoais", a partir das 12:00:00 do dia 01/01/2025 no horário
+oficial brasileiro seria:
+
+```text
+GET https://api2.hashdata.app/v1/export/forms/66f172c1dbb522a3729ab9a1/responses?from=2025-01-01T15:00:00Z
+```
+
+E, a URI para acessar as respostas enviadas entre o dia 01/01/2025 e 02/01/2025 no horário
+oficial brasileiro seria:
+
+```text
+GET https://api2.hashdata.app/v1/export/forms/66f172c1dbb522a3729ab9a1/responses?from=2025-01-01T03:00:00Z&to=2025-01-02T03:00:00Z
+```
+:::
+
+#### Exemplo de resposta da chamada HTTP (body)
+
+```json
+[
+    {
+        "col_id": "6705960061539e305ab18576",
+        "form_id": "66f172c1dbb522a3729ab9a1",
+        "user_id": "64282604d86b5ebe18373ab2",
+        "collection_date": "2024-01-01T20:25:19.592Z",
+        "collection_received_date": "2024-01-01T20:30:01.156Z",
+        "auditor": "João da Silva",
+        "data": "2024-10-09T12:00:00",
+        "fabrica": "ABC",
+        "peso1": 22,
+        "peso2": 23,
+        "peso3": 21,
+        "peso-medio-calculado": 22,
+        "pontos-na-auditoria": 706,
+        "resultado-final-auditoria": 95,
+        "tipo-de-formulario": "auditoria"
+    },
+    { ... },
+    { ... },
+]
+```
+
+
+### COLABORADORES (USUÁRIOS) {#users}
+Para listar todos os colaboradores de uma determinada área de trabalho, utiliza o seguinte *end-point*:
+
+```text
+GET https://api2.hashdata.app/v1/export/users
+```
 
 Por padrão, esse *end-point* retorna os dados no formato JSON.
-Ao executar a requisição informando apenas o *token* de autenticação, obtém-se uma resposta como a do exemplo a seguir:
+Ao executar a requisição sem informar parâmetros, obtém-se uma resposta como a do exemplo a seguir:
 
 ```json
 [
@@ -80,11 +258,11 @@ Ao executar a requisição informando apenas o *token* de autenticação, obtém
 ]
 ```
 
-É possível receber os dados dos usuários no formato CSV (*Comma-Separated Values*). Para isso, basta informar mais dois
+É possível receber os dados dos colaboradores no formato CSV (*Comma-Separated Values*). Para isso, basta informar mais dois
 parâmetros: `format` e `separator`. Por exemplo:
 
 ```text
-https://api2.hashdata.app/v1/export/users?token={TOKEN}&format=csv&separator=;
+GET https://api2.hashdata.app/v1/export/users?format=csv&separator=;
 ```
 Obtendo-se o seguinte resultado:
 
@@ -93,111 +271,3 @@ user_id;user_nickname;user_full_name;user_department
 66ae9f205c7ed7e95d183804;Pedro;Pedro Alcântara;
 6752ff2b2536410b2897de91;José;José da Silva;
 ```
-
-#### **RESPOSTAS**
-Para obter as respostas de um determinado formulário, é necessário informar, além do *token* de autenticação, o `formID`
-(identificação do formulário):
-
-* https://api2.hashdata.app/v1/export/forms/{formId}/responses?token={TOKEN}
-
-O *end-point* possui também os seguintes parâmetros opcionais:
-
-* `removeNewLineFromTexts`: *boolean* - remove quebras de linhas das respostas do tipo texto (é recomendado configurar com 'true');
-* `instantStart`: *DateTime* - Data/hora inicial usada para filtrar as respostas;
-* `instantEnd`: *DateTime* - Data/hora final usada para filtrar as respostas.
-
-Use os parâmetros `instantStart` e `instantEnd` para paginar a resposta ou para obter os dados progressivamente (conforme inseridos no sistema).
-
-:::success Formatos aceitos
-Os parâmetros `instantStart` e `instantEnd` aceitam qualquer formato de `Date` do Javascript, por exemplo, data no
-formato string (ISO 8601): `2024-12-31T23:59:59.999Z` (hora UTC).
-
-Por exemplo, a URI para acessar as respostas do "Formulário de Dados Pessoais", a partir das 12:00:00 do dia 01/01/2025 no horário
-oficial brasileiro seria:
-
-https://api2.hashdata.app/v1/export/forms/66f172c1dbb522a3729ab9a1/responses?token={TOKEN}&instantStart=2025-01-01T15:00:00.000Z
-
-https://api2.hashdata.app/v1/export/forms/66f172c1dbb522a3729ab9a1/responses?token=jfRejrLXrQG7R3rO6kM0uCdGaq7zt_Y_f9uhw5Y1&instantStart=2025-01-01T15:00:00.000
-
-:::
-
-````mdx-code-block
-<details>
-    <summary>**🔒 Envio do Token de Autenticação em uma API REST: URI vs. Cabeçalho**</summary>
-    <article>
-        Em uma API REST, o **token de autenticação** pode ser enviado de duas formas para validar e autorizar
-o acesso a recursos protegidos:
-
-        1. **Envio pela URI (*Query Parameter*)**
-        2. **Envio pelo Cabeçalho HTTP (HD-API-TOKEN)**
-
-        Cada método tem vantagens e desvantagens, especialmente quando se trata de **segurança da informação**.
-
-        ---
-
-        <h3> **1. Envio do Token pela URI** </h3>
-        Exemplo de requisição com o token na **query string** da URL:
-        ```
-        GET /users/export?token=abc123
-        ```
-        <h4> **Vantagens** </h4>
-        - ✅ **Facilidade de implementação**: é simples incluir o token como um parâmetro na URL, sem necessidade de modificar cabeçalhos da requisição.
-        - ✅ **Uso em links diretos**: pode ser útil quando o cliente precisa compartilhar um link autenticado para um recurso específico.
-
-        <h4> **Desvantagens** </h4>
-        - ❌ **Exposição em logs e históricos**: como a URL fica visível no navegador, histórico do usuário e logs do servidor, o token pode ser facilmente comprometido.
-        - ❌ **Facilidade de interceptação**: se a requisição não estiver protegida por **HTTPS**, um atacante pode capturar o token ao monitorar o tráfego de rede.
-        - ❌ **Risco de cache**: algumas configurações de proxy e servidores podem armazenar a URL com o token, permitindo acesso indevido posteriormente.
-
-        ---
-
-        <h3> **2. Envio do Token pelo Cabeçalho HTTP (HD-API-TOKEN)** </h3>
-        Exemplo de requisição enviando o token no **cabeçalho HTTP**:
-        ```
-        GET /users/export
-        HD-API-TOKEN: abc123
-        ```
-        <h4> **Vantagens** </h4>
-        - ✅ **Maior segurança**: o token não é exposto na URL, reduzindo o risco de vazamento em logs, históricos de navegação ou caches.
-        - ✅ **Melhor controle de acesso**: cabeçalhos HTTP são mais fáceis de manipular para políticas de segurança, como restrições de CORS e proteção contra ataques de **replay**.
-        - ✅ **Compatível com autenticação JWT e OAuth**: esse método é amplamente utilizado para autenticação baseada em tokens, como **JWT (JSON Web Token)** e **OAuth 2.0**.
-
-        <h4> **Desvantagens** </h4>
-        - ❌ **Maior complexidade na implementação**: requer que o cliente configure corretamente o cabeçalho da requisição, o que pode ser mais difícil em algumas aplicações.
-        - ❌ **Incompatibilidade com alguns serviços**: certos navegadores ou clientes HTTP podem ter restrições para modificar cabeçalhos personalizados.
-    </article>
-</details>
-````
-
-### 2. Integração com Hashdata Advanced Reports
-A integração com o [**Hashdata Advanced Reports**](/advanced-reports) permite a criação relatórios e painéis avançados atualizados em tempo real,
-ou seja, os dados inseridos nos formulários são automaticamente exportados para os relatórios e painéis. Tanto os
-painéis quanto os relatórios são fáceis de criar e não requerem conhecimento especializado.
-
-<h4></h4> 3. Formulários exportados
-Após definir quais integrações serão utilizadas, é necessário informar quais formulários devem ser integrados ao
-Hashdata Advanced Reports e quais devem ser exportados via API REST.
-
-:::warning Atenção!
-Os rascunhos de formulários também podem ser exportados / integrados, mas é necessário ter em mente que esses formulários
-podem ter sua estrutura alterada a qualquer momento.
-:::
-
-
-### 3. Configuração da integração dos Formulários
-Após habilitar as integrações, é necessário informar quais formulários devem ser integrados ao Hashdata Advanced Reports
-e quais devem ser exportados via API REST.
-
-1. Selecione o formulário para habilitar a integração desejada: Hashdata Advanced Reports, REST API ou ambas;
-2. Ao clicar em <img style={{width: "1.5rem"}} src={require("./images/setup.webp").default} alt="Configurações"
-className="no-zoom image-between-texts"/> para configurar as integrações;
-3. Defina, para cada elemento que compões o formulário, o **nome da questão**, que é um nome curto que identifica o
-elemento no sistema. O **nome da questão** e é utilizado também nas fórmulas matemáticas e na exportação de dados.
-Utilize o botão <img style={{width: "12rem"}} src={require("./images/autofill.webp").default} alt="Preencher automaticamente"
-     className="no-zoom image-between-texts"/>, para o sistema sugerir o **nome da questão**. Faça ajustes, caso
-necessário;
-4. Se a integração com o HashData Advanced Reports tiver habilitada, será mostrado  o campo **Nome do índice no Hashdata
-Advanced Reports**. Este campo é composto por um valor número, que não deve ser alterado, seguido por uma descrição que
-deve conter apenas letras, números, sublinhados e traços, por exemplo: `21261-formulario-dados-pessoais`;
-
-
