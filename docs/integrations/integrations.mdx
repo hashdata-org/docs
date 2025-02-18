@@ -182,6 +182,7 @@ O *end-point* possui também os seguintes parâmetros opcionais:
 * `from`: *DateTime* - Data/hora inicial usada para filtrar as respostas;
 * `to`: *DateTime* - Data/hora final usada para filtrar as respostas.
 * `removeNewLineFromTexts`: *boolean* - remove quebras de linhas das respostas do tipo texto (é recomendado configurar com 'true');
+* `<nome-do-campo>`: *texto* ou *número* - filtra pelo "nome-do-campo". Ver [Nome do campo em Atributos do Elemento](/forms/elements/what-is-elements#element-attributes) e [Filtrar por campos do formulário](#filter-by-question-name)
 
 Use os parâmetros `from` e `to` para paginar a resposta ou para obter os dados progressivamente (conforme inseridos no sistema).
 
@@ -223,12 +224,42 @@ GET https://api2.hashdata.app/v1/export/forms/66f172c1dbb522a3729ab9a1/responses
         "peso-medio-calculado": 22,
         "pontos-na-auditoria": 706,
         "resultado-final-auditoria": 95,
-        "tipo-de-formulario": "auditoria"
+        "tipo-de-formulario": "auditoria",
+        "nao-conformidades_files": ["6705960061539e734ea934ac", "6705960061539e734ea836ef"]
     },
     { ... },
     { ... },
 ]
 ```
+
+#### Filtrar por campos do formulário (questões do formulário) {#filter-by-question-name}
+
+Podemos utilizar as questões dos formulários nos filtros, por exemplo: no caso da resposta/coleta (JSON) exibida acima,
+podemos filtrar todas as coletas da fábrica cujo identificador é "ABC", ex.:
+
+```text
+GET https://api2.hashdata.app/v1/export/forms/66f172c1dbb522a3729ab9a1/responses?from=2025-01-01T15:00:00Z&fabrica=ABC
+```
+
+:::warning Importante!
+É altamente recomendado usar os parâmetros `from` e `to`, ou pelo menos o parâmetro `from`, para limitar o espaço temporal onde as coletas serão procuradas.
+Assim você terá uma resposta rápida, com baixa latência.
+Se não especificar nenhum dos parâmetros citados o sistema efetuará uma busca em todas as coletas e isso pode demorar, resultando em uma alta latência.
+:::
+
+### DOWNLOAD DE IMAGENS E OUTROS ARQUIVOS
+
+Vários tipos de arquivos podem ser anexados às questões dos formulários, tais como fotos, planilhas, documentos, etc.
+Para buscar qualquer arquivo anexado a uma resposta, utilize o end-point:
+
+```text
+GET https://api2.hashdata.app/v1/export/forms/{{formId}}/responses/{{responseId}}/files/{{fileId}}
+```
+Na URL acima, substitua os parâmetros `{{formId}}`, `{{responseId}}` e `{{fileId}}` pelos dados obtidos na coleta.
+No caso da coleta citada acima, usada como exemplo, os valores seriam:
+- `formId`: 66f172c1dbb522a3729ab9a1 ➡️ `form_id`
+- `responseId`: 6705960061539e305ab18576 ➡️ `col_id`
+- `fileId`: 6705960061539e734ea934ac ➡️ `nao-conformidades_files`
 
 
 ### COLABORADORES (USUÁRIOS) {#users}
