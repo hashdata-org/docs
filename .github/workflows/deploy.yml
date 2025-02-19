@@ -32,7 +32,9 @@ jobs:
 #       TODO: create static/images/{en,es} folders, then copy then to i18n/{en,es}
 
       - name: Build website
-        run: npm run build
+        run: | 
+          npm run build
+          copy -f CNAME ./build/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
